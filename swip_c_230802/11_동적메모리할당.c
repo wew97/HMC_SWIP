@@ -37,3 +37,92 @@ int main(void) {
 }
 #endif
 
+#if 0
+int main(void) {
+	int* p = malloc(sizeof(int)); // 4B
+	if (p != NULL) {
+		// ...
+
+		free(p);
+	}
+
+	int n;
+	scanf("%d", &n);
+
+	int* arr = malloc(sizeof(int) * n); // 1차원 배열
+	if (arr != NULL) {
+		for (int i = 0; i < n; i++) {
+			arr[i] = i * n;
+		}
+		for (int i = 0; i < n; i++) {
+			printf("%d\n", arr[i]);
+		}
+
+		free(arr);
+	}
+
+	return 0;
+}
+#endif
+
+#if 0
+int main(void) {
+	int x[2][3] = { {10,20,30}, {40,50,60} };
+
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 3; j++) {
+			printf("%d\n", x[i][j]);
+		}
+	}
+
+	int n;
+	scanf("%d", &n);
+
+	int(*arr)[3] = malloc(sizeof(int[3]) * n);
+	if (arr != NULL) {
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < 3; j++) {
+				arr[i][j] = (i + 1) * j;
+			}
+		}
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < 3; j++) {
+				printf("%d ", arr[i][j]);
+			}
+			printf("\n");
+		}
+
+		free(arr);
+	}
+
+	return 0;
+}
+#endif
+
+// C언어에서 메모리 할당을 하는 4가지 방법
+// 1) 지역 변수
+// - 초기화 X: 쓰레기값
+// - 함수가 시작될 때 생성되고, 함수가 끝나면 사라집니다.
+
+// 2) 전역 변수
+// - 초기화 X: 0
+// - 프로그램이 시작할 때 생성되고, 프로그램이 종료될 때 사라집니다.
+
+// 3) 정적 지역 변수
+// - 초기화 X: 0
+// - 함수가 최초에 수행되는 시점에 초기화되고, 프로그램이 종료될 때 사라집니다.
+
+// 4) 동적 메모리 할당
+// - 초기화 X: 쓰레기값
+// - 개발자가 원하는 시점에 생성하고, 개발자가 원하는 시점에 파괴할 수 있습니다.
+
+int main(void) {
+	int* p = malloc(sizeof(int));
+	// malloc으로 할당된 메모리의 초기값은 미지정 사항입니다.
+	// => 쓰레기값
+
+	printf("%d\n", *p);
+
+	return 0;
+}
