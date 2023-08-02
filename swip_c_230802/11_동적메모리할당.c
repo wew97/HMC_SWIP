@@ -117,12 +117,47 @@ int main(void) {
 // - 초기화 X: 쓰레기값
 // - 개발자가 원하는 시점에 생성하고, 개발자가 원하는 시점에 파괴할 수 있습니다.
 
+#if 0
 int main(void) {
 	int* p = malloc(sizeof(int));
 	// malloc으로 할당된 메모리의 초기값은 미지정 사항입니다.
 	// => 쓰레기값
 
 	printf("%d\n", *p);
+
+	return 0;
+}
+#endif
+
+// 사용자로부터 n을 입력 받아서, n명
+// 각 사람마다 3과목을 입력 받고, 입력 받은 각 사람의 점수의 합계와 평균을
+// 출력하는 프로그램을 작성해보세요.
+
+int main(void) {
+	int n;
+	scanf("%d", &n);
+
+	int(*score)[3] = malloc(sizeof(int[3]) * n);
+	if (score != NULL) {
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < 3; j++) {
+				scanf("%d", &score[i][j]);
+			}
+		}
+
+		for (int i = 0; i < n; i++) {
+			int sum = 0;
+			for (int j = 0; j < 3; j++) {
+				sum += score[i][j];
+			}
+			printf("\n[User %d]\n", i);
+			printf("Sum: %d\n", sum);
+			printf("Average: %0.2f\n", (float)sum / 3);
+			printf("-------------\n");
+		}
+
+		free(score);
+	}
 
 	return 0;
 }
