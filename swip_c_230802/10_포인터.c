@@ -1,9 +1,7 @@
-// 10_Æ÷ÀÎÅÍ.c
-
 #include <stdio.h>
 
-int main(void) {
+int main() {
 
-
+	
 	return 0;
 }
