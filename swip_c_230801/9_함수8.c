@@ -71,6 +71,7 @@ int main(void) {
 // F(1) => 1
 // F(N) => F(N-1) + F(N-2)
 
+#if 0
 int Fib(int n) {
 	if (n == 0 || n == 1) {
 		return 1;
@@ -82,3 +83,4 @@ int Fib(int n) {
 int main(void) {
 	printf("%d\n", Fib(100));
 }
+#endif
