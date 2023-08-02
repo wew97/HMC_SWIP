@@ -133,6 +133,7 @@ int main(void) {
 // 각 사람마다 3과목을 입력 받고, 입력 받은 각 사람의 점수의 합계와 평균을
 // 출력하는 프로그램을 작성해보세요.
 
+#if 0
 int main(void) {
 	int n;
 	scanf("%d", &n);
@@ -150,14 +151,24 @@ int main(void) {
 			for (int j = 0; j < 3; j++) {
 				sum += score[i][j];
 			}
-			printf("\n[User %d]\n", i);
-			printf("Sum: %d\n", sum);
-			printf("Average: %0.2f\n", (float)sum / 3);
+
+			printf("Sum: %d, Average: %0.2lf\n", sum, sum / 3.);
 			printf("-------------\n");
 		}
 
 		free(score);
 	}
+
+	return 0;
+}
+#endif
+
+int main(void) {
+	int* p = NULL;
+
+	free(p);
+	// free는 NULL이 전달될 경우, 아무 일도 수행하지 않습니다.
+	// 불필요한 null체크는 생랼할 수 있습니다.
 
 	return 0;
 }
