@@ -1,11 +1,11 @@
 // 13_사용자정의타입6.c
 #include <stdio.h>
 
+#if 0
 // 1. 구조체 타입(사용자 정의 타입)의 크기는
 //    멤버에 의해서 결정됩니다.
 // => 구조체 타입의 크기는 멤버의 총합과 일치하지 않을 수 있습니다.
 //   "구조체 패딩"
-
 struct AAA {
     int a;
     char b;
@@ -46,5 +46,46 @@ int main(void)
     printf("%lu\n", (unsigned long)&a);
     printf("%lu\n", (unsigned long)&b);
 
+    return 0;
+}
+#endif
+
+// 구조체의 패딩을 조절하기 위해서,
+// 정렬을 변경할 수 있습니다.
+//  => 구조체 패킹
+//  => 컴파일러 확장 명령
+
+// : 구조체 메모리를 파일에 저장하거나, 네트워크로 전송하는 경우
+
+// #pragma pack(1)
+
+// MSVC
+#if 0
+#pragma pack(push, 1)
+struct AAA {
+    char b;
+    double c;
+    int a;
+};
+#pragma pack(pop)
+#endif
+
+// GCC / Clang
+struct AAA {
+    char b;
+    double c;
+    int a;
+} __attribute__((packed)); // 컴파일 지시어
+
+struct BBB {
+    int a;
+    char b;
+    double c;
+};
+
+int main(void)
+{
+    printf("%zu\n", sizeof(struct AAA));
+    printf("%zu\n", sizeof(struct BBB));
     return 0;
 }
