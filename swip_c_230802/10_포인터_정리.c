@@ -313,7 +313,7 @@ void PrintArray(const int* x, int n) {
         printf("%3d ", x[i]);
     }
 
-    // x[0] = 1000;
+    x[0] = 1000;
 
     printf("\n");
 }

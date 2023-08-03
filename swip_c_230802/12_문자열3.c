@@ -54,17 +54,34 @@ int main(void) {
 // 문자열의 길이를 구하는 함수: strlen
 // - size_t strlen( const char *str );
 
-size_t xstrlen(const char* str) {
+#if 0
+size_t xstrlen(const char* str) { // while문 사용
 	// 함수를 직접 구현해보세요!
-	int cnt = 0;
-	int i = 0;
+	size_t i = 0;
+	while (str[i++] != NULL) {}
+	return --i;
+}
+#endif
 
-	while (str[i++] != NULL) {
-		cnt++;
-	}
-
+#if 1
+size_t xstrlen(const char* str) { // for문 사용
+	size_t cnt = 0;
+	for (cnt; str[cnt] != NULL; cnt++);
+	
 	return cnt;
 }
+#endif
+
+#if 0
+size_t xstrlen(const char* str) { // while문 + const 사용
+	const char* p = str;
+	while (*p) {
+		p++;
+	}
+
+	return p - str;
+}
+#endif
 
 int main(void) {
 	char str[32] = "hello";
