@@ -10,6 +10,5 @@
 
 - [사용자정의타입 (Day 4)](https://github.com/wew97/HMC_SWIP/tree/main/swip_c_230803)
 
-<br>
-주소
-https://skribbl.io/?8bCYm5RW
+skribbl 주소
+https://.........
