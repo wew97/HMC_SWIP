@@ -56,7 +56,7 @@ int main(void) {
 }
 #endif
 
-#if 1
+#if 0
 struct User {
 	char name[32];
 	int age;
