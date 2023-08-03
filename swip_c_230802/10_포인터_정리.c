@@ -144,6 +144,7 @@ int main(void)
 }
 #endif
 
+#if 0
 int main(void)
 {
     // [ int[3] ][ int[3] ]
@@ -161,6 +162,167 @@ int main(void)
 
     printf("%p\n", x);
     printf("%p\n", x + 1);
+
+    return 0;
+}
+#endif
+
+#if 0
+int main(void) {
+    
+    int x[5] = { 10,20,30,40,50 };
+
+    printf("%p\n", x);  // Decay -> &*x[0] -> int*
+    printf("%p\n", &x); // x: int[5], &x: int(*)[5]
+
+    printf("%p\n", x + 1);  // x + sizeof(int) * 1
+    printf("%p\n", &x + 1); // x + sizeof(int[5]) * 1
+
+    return 0;
+}
+#endif
+
+#if 0
+// 아래 함수는 배열의 원소타입이 int인 모든 1차원 배열이 사용할 수 있는
+// 함수입니다.
+// void PrintArray(int x[5]) 
+void PrintArray(int *x, int n){
+    for (int i = 0; i < n; i++) {
+        printf("%3d ", x[i]);
+    }
+    printf("\n");
+}
+
+int main(void) {
+    int x[15] = { 10,20,30,40,50 };
+
+    PrintArray(x, 5);
+
+    int a[3] = { 100,200,300 };
+    PrintArray(a, 3);
+
+    return 0;
+}
+#endif
+
+#if 0
+// 배열의 원소 타입이 int[3]인 모든 2차원 배열이 사용할 수 있는 
+// 함수입니다.
+void PrintArray(int(*x)[3], int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%3d ", x[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
+int main(void) {
+    int arr[6] = { 1,2,3,4,5,6 };
+    // 메모리를 원하는 형태로 해석할 수 있습니다.
+    // 다른 포인터 간의 암묵적인 변화는 컴파일러가 위험하다고 판단합니다.
+    // C => 경고, C++ => 에러
+    //  : 명시적인 변환을 통해 의도했다는 사실을 알려야 합니다.
+    // 주의 - 명시적인 변환 또는 암묵적인 변환으로 인한 잘못된 메모리 접근은
+    //        미정의 동작이 발생하지 않도록 주의해야 합니다.
+
+    PrintArray((int(*)[3])arr, 2);
+
+    int y[1][3] = { {100,200,300} };
+    PrintArray(y, 1);
+
+    // [ int[3] ][ [int[3] ]
+    int x[2][3] = { 10,20,30,40,50,60 };
+
+    // PrintArray(x, 2);
+    PrintArray(x, sizeof(x) / sizeof(x[0]));
+
+    return 0;
+}
+#endif
+
+#if 0
+//PrintArray 함수를 직접 구현해보세요.
+void PrintArray(int (*x)[2], int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < 2; j++) {
+            printf("%3d ", x[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
+int main(void) {
+    int x1[3][2] = { 1,2,3,4,5,6 };
+    PrintArray(x1, 3);
+
+    int x2[1][2] = { 1,2 };
+    PrintArray(x2, 1);
+
+    int arr[6] = { 10,20,30,40,50,60 };
+    PrintArray((int (*)[2])arr, 3);
+    // 위의 1차원 1배열을 PrintArray를 통해서 출력하는 코드를 작성해보세요.
+    // => 명시적인 캐스팅
+
+    return 0;
+}
+#endif
+
+// void*
+// => 포인터인데 대상체의 타입 정보가 없는 포인터 타입입니다.
+// 1) 모든 주소를 보관할 수 있습니다.
+// 2) 다른 포인터 타입으로의 암묵적인 변환이 허용됩니다.
+
+// * 대상체의 타입 정보가 없기 때문에,
+//   구체적인 포인터 타입으로 변환하거나, 다른 포인터 타입으로 전달해서
+//   사용해야 합니다.
+
+#if 0
+int main(void) {
+    int n = 42;
+    double d = 3.14;
+
+    void* p;
+    p = &n;
+
+    int* pn = p;
+    printf("%d\n", *pn);
+    printf("%d\n", *(int*)p);
+
+    p = &d;
+
+    p = NULL;
+    // printf("%p\n", p + 1); // p + sizeof(*p) * 1;
+    // 위의 코드는 표준이 아닙니다.
+    // GNU / clang 컴파일러에서는 허용합니다.
+
+    printf("%p\n", (char*)p + 1);
+    printf("%p\n", (int*)p + 1);
+
+    return 0;
+}
+#endif
+
+// 포인터를 전달받는 함수에서,
+// 대상체의 값을 변경하지 않고 읽기만 하는 경우
+// 반드시 cosnt를 사용해야 합니다.
+void PrintArray(const int* x, int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%3d ", x[i]);
+    }
+
+    // x[0] = 1000;
+
+    printf("\n");
+}
+
+int main(void) {
+    int x[3] = { 10,20,30 };
+    PrintArray(x, 3);
+
+    printf("%d\n", x[0]);
 
     return 0;
 }
