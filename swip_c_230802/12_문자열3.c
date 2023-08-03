@@ -63,7 +63,7 @@ size_t xstrlen(const char* str) { // while문 사용
 }
 #endif
 
-#if 1
+#if 0
 size_t xstrlen(const char* str) { // for문 사용
 	size_t cnt = 0;
 	for (cnt; str[cnt] != NULL; cnt++);
@@ -81,7 +81,6 @@ size_t xstrlen(const char* str) { // while문 + const 사용
 
 	return p - str;
 }
-#endif
 
 int main(void) {
 	char str[32] = "hello";
@@ -91,3 +90,42 @@ int main(void) {
 
 	return 0;
 }
+#endif
+
+#if 0
+// 문자열 복사: strcpy
+// - char *strcpy( char *dest, const char *src );
+//  : src의 문자열이 dest에 복사될 수 있는 충분한 메모리가 확보되어 있어야 합니다.
+//   => 잘못된 경우 미정의 동작이 발생합니다.
+
+// b = a;
+int main(void) {
+	char src[32] = "hello";
+	char dst[6];
+
+	// strcpy
+	strcpy(dst, src);
+	printf("%s\n", dst);
+
+	return 0;
+}
+#endif
+
+// 문자열 연결: strcat
+// - char *strcat( char *dest, const char *src );
+//  : dest가 남은 메모리 공간이 src를 복사할 수 있을 정도가 되어야 합니다.
+//  => 잘못된 경우 미정의 동작의 위험성이 있습니다.
+
+#if 1
+int main(void) {
+	char src[32] = "hello";
+	char dest[32];
+
+	strcpy(dest, src);
+
+	strcat(dest, "world");
+	printf("dest: %s\n", dest);
+
+	return 0;
+}
+#endif
