@@ -12,5 +12,5 @@
 
 - [(Day 5)](https://github.com/wew97/HMC_SWIP/tree/main/swip_c_230804)
 
-### skribbl 주소
+## skribbl 주소 (08/04 updated)
 https://skribbl.io/?nMCGOhzC

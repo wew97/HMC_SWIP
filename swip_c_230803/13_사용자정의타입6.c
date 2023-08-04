@@ -1,7 +1,7 @@
 // 13_사용자정의타입6.c
 #include <stdio.h>
 
-#if 0
+#if 2
 // 1. 구조체 타입(사용자 정의 타입)의 크기는
 //    멤버에 의해서 결정됩니다.
 // => 구조체 타입의 크기는 멤버의 총합과 일치하지 않을 수 있습니다.
@@ -20,6 +20,7 @@ struct BBB {
     double b;
     int c;
 };
+
 // 0       4       8              16              24
 // |a|p|p|p|p|p|p|p|b|b|b|b|b|b|b|b|c|c|c|c|p|p|p|p|-|-|-|-|
 
@@ -70,6 +71,7 @@ struct AAA {
 #pragma pack(pop)
 #endif
 
+#if 0
 // GCC / Clang
 struct AAA {
     char b;
@@ -89,3 +91,4 @@ int main(void)
     printf("%zu\n", sizeof(struct BBB));
     return 0;
 }
+#endif
