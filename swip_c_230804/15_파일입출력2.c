@@ -1,4 +1,5 @@
 // 15_파일입출력2.c
+
 #include <stdio.h>
 #include <string.h>
 #include <errno.h> // errno 전역 변수
