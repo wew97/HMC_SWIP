@@ -52,13 +52,13 @@ enum State {
     STATE_A = 100,
     STATE_B,
     STATE_C
-};
+}; // 자동으로 1씩 증가
 
 int main(void)
 {
-    printf("%d\n", STATE_A);
-    printf("%d\n", STATE_B);
-    printf("%d\n", STATE_C);
+    printf("%d\n", STATE_A); // 100
+    printf("%d\n", STATE_B); // 101
+    printf("%d\n", STATE_C); // 102
 
     return 0;
 }
