@@ -25,6 +25,10 @@ int main(void) {
 
 // - FILE *fopen(const char* path, const char* mode);
 
+// 파일의 경로(위치)
+// - 절대 경로
+//   : C:\Users\Administrator\Desktop\a.txt\home\
+
 int main(void) {
 
 
