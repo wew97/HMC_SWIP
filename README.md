@@ -14,7 +14,7 @@
 
 ## Embedded System C Programming ('23/08/10 ~ '23/08/14)
 
-- [Embeeded C](./swip_embedded_c.md)
+- Refer to [swip_embedded_c.md](./swip_embedded_c.md)
 
 ## skribbl 주소 (08/04 updated)
 https://skribbl.io/?nMCGOhzC
