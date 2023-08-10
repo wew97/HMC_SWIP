@@ -15,7 +15,7 @@
 ## Embedded System C Programming ('23/08/10 ~ '23/08/14)
 
 - Refer to [swip_embedded_c.md](./swip_embedded_c.md)
-- [Google Drive](https://drive.google.com/drive/folders/1MJMIj6ZnjHLNdF-J_YQzzrAuZomUoO9y)
+- [Google Drive 주소](https://drive.google.com/drive/folders/1MJMIj6ZnjHLNdF-J_YQzzrAuZomUoO9y)
 
 ## skribbl 주소 (08/04 updated)
 https://skribbl.io/?nMCGOhzC
