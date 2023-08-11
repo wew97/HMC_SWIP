@@ -16,7 +16,7 @@
 
 Refer to [swip_embedded_c.md](./swip_embedded_c.md)
 - [실습 링크](https://drive.google.com/drive/folders/1MJMIj6ZnjHLNdF-J_YQzzrAuZomUoO9y)
-- [Code](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_c_230810)
+- [Code](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_c_code)
 
 ## skribbl 주소 (08/11 오후 updated)
 https://skribbl.io/?NiCu3sfX
