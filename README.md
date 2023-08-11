@@ -20,3 +20,14 @@ Refer to [swip_embedded_c.md](./swip_embedded_c.md)
 
 ## skribbl 주소 (08/11 오후 updated)
 https://skribbl.io/?NiCu3sfX
+
+CC = gcc
+CFLAGS = -Wall
+
+all: main
+
+main: main.c printBinary.c
+	$(CC) $(CFLAGS) -o main main.c printBinary.c -lm
+
+clean:
+	rm -f main
