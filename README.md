@@ -18,5 +18,5 @@ Refer to [swip_embedded_c.md](./swip_embedded_c.md)
 - [실습 링크](https://drive.google.com/drive/folders/1MJMIj6ZnjHLNdF-J_YQzzrAuZomUoO9y)
 - [Code](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_c_230810)
 
-## skribbl 주소 (08/04 updated)
-https://skribbl.io/?nMCGOhzC
+## skribbl 주소 (08/11 updated)
+https://skribbl.io/?WzC5ZLhX
