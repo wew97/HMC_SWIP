@@ -14,10 +14,14 @@
 
 ## Embedded System C Programming ('23/08/10 ~ '23/08/14)
 - [실습 링크(Google Drive)](https://drive.google.com/drive/folders/1hSKt0XnoClkn1umUGRXyY4-6QL13OZPz?usp=sharing)
-- [Code](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_c_code)
+- [Code](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_c)
 
 ## Embedded System MCU Programming ('23/08/16 ~ '23/08/21)
-..
+- [실습 링크(Google Drive)](https://drive.google.com/drive/folders/1hSKt0XnoClkn1umUGRXyY4-6QL13OZPz?usp=sharing)
+-[Code](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_mcu)
 
 ## skribbl 주소 (08/11 오후 updated)
 https://skribbl.io/?NiCu3sfX
+
+## 주식 공부
+https://modu-stock.tistory.com/33
