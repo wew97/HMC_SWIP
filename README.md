@@ -19,7 +19,7 @@ Refer to [swip_embedded_c.md](./swip_embedded_c.md)
 - [Code](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_c_code)
 
 ## Embedded System MCU Programming ('23/08/16 ~ '23/08/21)
-...
+..
 
 ## skribbl 주소 (08/11 오후 updated)
 https://skribbl.io/?NiCu3sfX
