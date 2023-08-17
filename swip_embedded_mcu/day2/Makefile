@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -lwiringPi
-OBJS = lcd_moving.o
-TARGET = lcd_moving
+OBJS = servomotor_sw.o
+TARGET = servomotor_sw
 
 $(TARGET) : $(OBJS)
 	$(CC) -o $@ $(OBJS) $(CFLAGS)
