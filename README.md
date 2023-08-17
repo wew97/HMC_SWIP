@@ -1,5 +1,4 @@
 # SW Intensive Program ('23/07/31 - '23/10/20)
-공유하고 싶은 링크가 있다면 밑에 추가해봐요!
 <br>
 
 ## C Programming ('23/07/31 - '23/08/04)
@@ -23,8 +22,5 @@
 
 - [Code](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_mcu)
 
-## skribbl 주소 (08/17 10:12 updated)
+## skribbl URL (08/17 10:12 updated)
 (Closed) https://skribbl.io/?DLC7Aput (Closed)
-
-## 주식 공부
-https://modu-stock.tistory.com/33
