@@ -22,8 +22,8 @@
 
 - [Code](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_mcu)
 
-## skribbl 주소 (08/16 오후 updated)
-https://skribbl.io/?CMCXfAv6
+## skribbl 주소 (08/17 10:12 updated)
+https://skribbl.io/?DLC7Aput
 
 ## 주식 공부
 https://modu-stock.tistory.com/33
