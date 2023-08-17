@@ -161,7 +161,7 @@ int main(void)
             }
         }
 
-        delay(300);
+        delay(350);
     }
 
     return 0;
