@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -lwiringPi
-OBJS = lcd.o
-TARGET = lcd
+OBJS = lcd_moving.o
+TARGET = lcd_moving
 
 $(TARGET) : $(OBJS)
 	$(CC) -o $@ $(OBJS) $(CFLAGS)

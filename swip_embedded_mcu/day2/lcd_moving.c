@@ -98,7 +98,7 @@ void displayText(const char *stringPointer)
 }
 
 // Change the text line
-void changeLine(int line)
+void changeLine(int line, int i)
 {
     // Assignment 2: Insert your code here
     // so that changeLine(line) changes the cursor position to the requested "line"
@@ -106,11 +106,14 @@ void changeLine(int line)
     // sendBitsToLCD("\n", 0x01);
     if (line == 0)
     {
-        sendBitsToLCD(0x80, LCD_RS_INST | LCD_RW_WRITE);
+        sendBitsToLCD(0x01, LCD_RS_INST | LCD_RW_WRITE);
+        sendBitsToLCD(0x80 + (0x01 * i), LCD_RS_INST | LCD_RW_WRITE);
     }
+
     else if (line == 1)
     {
-        sendBitsToLCD(0xC0, LCD_RS_INST | LCD_RW_WRITE);
+        // sendBitsToLCD(0x01, LCD_RS_INST | LCD_RW_WRITE);
+        sendBitsToLCD(0xC0 + (0x01 * i), LCD_RS_INST | LCD_RW_WRITE);
     }
 }
 
@@ -122,15 +125,44 @@ int main(void)
     printf("deviceHandle = %d\n", deviceHandle);
     initializeLCD();
 
-    char textString1[] = "Hello World!";
-    char textString2[] = "This is LCD.";
+    char textString1[] = "Hello World";
+    char textString2[] = "This is LCD";
 
     // Display 'Hello World' on the first line
     printf("Hello World.\n");
-    changeLine(0);
-    displayText(textString1);
-    changeLine(1);
-    displayText(textString2);
+
+    int i = 0;
+    int right = 1; // True when going right side
+
+    while (1)
+    {
+        if (right == 1)
+        {
+            changeLine(0, i);
+            displayText(textString1);
+            changeLine(1, i);
+            displayText(textString2);
+            i++;
+            if (i == 5)
+            {
+                right = 0;
+            }
+        }
+        else
+        {
+            changeLine(0, i);
+            displayText(textString1);
+            changeLine(1, i);
+            displayText(textString2);
+            i--;
+            if (i == 0)
+            {
+                right = 1;
+            }
+        }
+
+        delay(300);
+    }
 
     return 0;
 }
