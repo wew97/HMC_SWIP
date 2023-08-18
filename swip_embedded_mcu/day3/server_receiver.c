@@ -21,6 +21,8 @@ void receiveFile(int sockfd, const char *filename) {
         fwrite(buffer, 1, bytesRead, stdout);  // Print to stdout
     }
 
+    printf("\n");
+
     fclose(fp);
 }
 
