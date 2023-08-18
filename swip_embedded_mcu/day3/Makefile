@@ -1,11 +1,14 @@
 CC = gcc
-CFLAGS = -lwiringPi
-OBJS = servomotor_hw.o
-TARGET = servomotor_hw
+TARGET = server_receiver.out client_sender.out
 
-$(TARGET) : $(OBJS)
-	$(CC) -o $@ $(OBJS) $(CFLAGS)
+all: $(TARGET)
+
+server_receiver.out: server_receiver.c
+	$(CC) -o server_receiver.out $^
+
+client_sender.out: client_sender.c
+	$(CC) -o client_sender.out $^
 
 clean:
-	rm	-f	*.o
-	rm	-f	$(TARGET)
+	rm -f *.out
+	rm -f $(TARGET)
