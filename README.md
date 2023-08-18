@@ -22,5 +22,5 @@
 
 - [Code](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_mcu)
 
-## skribbl URL (08/17 10:12 updated)
-(Closed) https://skribbl.io/?DLC7Aput (Closed)
+## skribbl URL (08/18 09:08 updated)
+(Open) https://skribbl.io/?f8CEVvXF (Open)
