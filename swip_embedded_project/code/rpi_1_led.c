@@ -2,10 +2,10 @@
 #include "wiringPi.h"
 #define GPIO 17
 
-extern int led_status = 0;
+int led_status = 0;
 // status = 0: default
 // status = 1: 20cm이내
-int led(void){
+void led(void){
 
     while(1){
         if (led_status == 0){

@@ -1,1 +1,1 @@
-int led(int GPIO, int status);
+void led(void);
