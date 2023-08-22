@@ -2,6 +2,8 @@
 #include "wiringPi.h"
 #define GPIO 17
 
+#include "rpi_1_led.h"
+
 int led_status = 0;
 // status = 0: default
 // status = 1: 20cm이내
@@ -11,7 +13,7 @@ void led(void){
         if (led_status == 0){
             digitalWrite(GPIO, HIGH);
             delay(1000);
-            digitalWrite(GPIO, LOW); 
+            digitalWrite(GPIO, LOW);
         }else if (led_status == 1){
             for (int i = 0; i < 10; i++){
                 digitalWrite(GPIO, HIGH);
@@ -20,5 +22,4 @@ void led(void){
             }
         }
     }
-
 }
