@@ -12,7 +12,8 @@ void *led(void *argumentPointer){
         if (led_status == 0){
             digitalWrite(GPIO, HIGH);
             delay(1000);
-            digitalWrite(GPIO, LOW); 
+            digitalWrite(GPIO, LOW);
+            delay(1000); 
         }else{
             for (int i = 0; i < 10; i++){
                 digitalWrite(GPIO, HIGH);
