@@ -6,7 +6,7 @@ int led_status = 0;
 // status = 0: default
 // status = 1: 20cm이내
 void *led(void *argumentPointer){
-    printf("Started LED.\n");
+    printf("Started LED.\n\n");
     pinMode(LED_GPIO, OUTPUT);
     while(1){
         if (led_status == 0){

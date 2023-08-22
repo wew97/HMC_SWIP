@@ -1,66 +1,65 @@
 #include <stdio.h>
-#include <stdbool.h>
+#include <stdlib.h>
 #include <limits.h>
+#include "rpi_1_dijkstra.h"
 
-#define V 6 // 정점의 수
+int graph[MAX_NODES][MAX_NODES];
+int numNodes;
 
-// 최단 경로를 찾기 위한 다이크스트라 알고리즘 함수
-void findShortestPath(int graph[V][V], int start) {
-    int distance[V];
-    bool visited[V];
-
-    // 초기화
-    for (int i = 0; i < V; i++) {
-        distance[i] = INT_MAX;
-        visited[i] = false;
+void readGraph(const char *filename) {
+    FILE *file = fopen(filename, "r");
+    if (file == NULL) {
+        printf("Error opening file %s\n", filename);
+        exit(1);
     }
 
-    distance[start] = 0;
+    fscanf(file, "%d", &numNodes);
 
-    for (int count = 0; count < V - 1; count++) {
-        int min_distance = INT_MAX;
-        int min_index = -1;
-
-        // 최소 거리의 정점 선택
-        for (int v = 0; v < V; v++) {
-            if (!visited[v] && distance[v] <= min_distance) {
-                min_distance = distance[v];
-                min_index = v;
-            }
-        }
-
-        int u = min_index;
-        visited[u] = true;
-
-        // 선택한 정점과 연결된 정점들의 거리 갱신
-        for (int v = 0; v < V; v++) {
-            if (!visited[v] && graph[u][v] && distance[u] != INT_MAX &&
-                distance[u] + graph[u][v] < distance[v]) {
-                distance[v] = distance[u] + graph[u][v];
-            }
+    for (int i = 0; i < numNodes; i++) {
+        for (int j = 0; j < numNodes; j++) {
+            fscanf(file, "%d", &graph[i][j]);
         }
     }
 
-    // 결과 출력
-    printf("Vertex\tDistance from Start\n");
-    for (int i = 0; i < V; i++) {
-        printf("%d\t%d\n", i, distance[i]);
-    }
+    fclose(file);
 }
 
-int main() {
-    int graph[V][V] = {
-        {0, 4, 0, 0, 0, 0},
-        {4, 0, 8, 0, 0, 0},
-        {0, 8, 0, 7, 0, 4},
-        {0, 0, 7, 0, 9, 14},
-        {0, 0, 0, 9, 0, 10},
-        {0, 0, 4, 14, 10, 0}
-    };
+void findShortestPath(int source, int destination, char buffer[], int *len) {
+    int dist[MAX_NODES];
+    int visited[MAX_NODES];
+    int prev[MAX_NODES];
+    for (int i = 0; i < numNodes; i++) {
+        dist[i] = INF;
+        visited[i] = 0;
+        prev[i] = -1;
+    }
 
-    int start = 0; // 시작 정점
+    dist[source] = 0;
 
-    dijkstra(graph, start);
+    for (int count = 0; count < numNodes - 1; count++) {
+        int u = -1;
+        for (int i = 0; i < numNodes; i++) {
+            if (!visited[i] && (u == -1 || dist[i] < dist[u])) {
+                u = i;
+            }
+        }
 
-    return 0;
+        visited[u] = 1;
+
+        for (int v = 0; v < numNodes; v++) {
+            if (!visited[v] && graph[u][v] && dist[u] != INF && dist[u] + graph[u][v] < dist[v]) {
+                dist[v] = dist[u] + graph[u][v];
+                prev[v] = u;
+            }
+        }
+    }
+
+    *len = 0;
+    
+    int currentNode = destination;
+    while (currentNode != -1) {
+        (*len) += snprintf(buffer + (*len), MAX_NODES - (*len), "%d", currentNode);
+        currentNode = prev[currentNode];
+    }
+
 }
