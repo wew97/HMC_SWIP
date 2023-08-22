@@ -53,8 +53,8 @@ int main(void)
 
     findShortestPath(source, destination, buffer, &len);
 
-    printf("The shortest path is %c -> %c -> %c\n\n", buffer[2],buffer[1],buffer[0]);
-    //buffer => path를 담고 있음 2 -> 1 -> 0 순서로
+    printf("The shortest path is %c -> %c -> %c\n\n", buffer[2], buffer[1], buffer[0]);
+    // buffer => path를 담고 있음 2 -> 1 -> 0 순서로
 
     // dijkstra_end
 
@@ -63,24 +63,27 @@ int main(void)
 
     // 원격 LCD 출력
     // printf("SocketCAN Sender\n");
-    if ((socketCANDescriptor = socket(PF_CAN, SOCK_RAW, CAN_RAW)) < 0) {
+    if ((socketCANDescriptor = socket(PF_CAN, SOCK_RAW, CAN_RAW)) < 0)
+    {
         perror("Socket creation failed.");
         return -1;
     }
 
-    strcpy(ifr.ifr_name, "can0" );
+    strcpy(ifr.ifr_name, "can0");
     ioctl(socketCANDescriptor, SIOCGIFINDEX, &ifr);
     memset(&addr, 0, sizeof(addr));
-    
-    addr.can_family = AF_CAN;        
+
+    addr.can_family = AF_CAN;
     addr.can_ifindex = ifr.ifr_ifindex;
 
-    if (bind(socketCANDescriptor, (struct sockaddr *)&addr, sizeof(addr)) < 0) {
+    if (bind(socketCANDescriptor, (struct sockaddr *)&addr, sizeof(addr)) < 0)
+    {
         perror("Bind failed");
         return -1;
     }
 
-    while(1) {                
+    while (1)
+    {
         printf("Enter your text to display on RPi #2's LCD: ");
         fgets(inputString, 128, stdin);
 
@@ -90,12 +93,14 @@ int main(void)
         strncpy((char *)frame.data, inputString, frame.can_dlc);
 
         // Send the CAN frame
-        if (write(socketCANDescriptor, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) {
+        if (write(socketCANDescriptor, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame))
+        {
             perror("Write failed");
             return -1;
         }
     }
-    if (close(socketCANDescriptor) < 0) {
+    if (close(socketCANDescriptor) < 0)
+    {
         perror("Terminating RPi #1.");
         return -1;
     }

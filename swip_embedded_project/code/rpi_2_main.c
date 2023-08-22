@@ -40,7 +40,7 @@ int main(void)
     int socketCANDescriptor;
     struct ifreq ifr;
     struct sockaddr_can addr;
-    char quit_command[] = "quit";
+    char quit_command[5] = "quit";
     char receiveMessage[8];
     int nbytesReceived;
 
@@ -76,12 +76,9 @@ int main(void)
         printf("0x%03X [%d] ", frame.can_id, frame.can_dlc);                
         memcpy(receiveMessage, (unsigned char *)(frame.data), frame.can_dlc);
         receiveMessage[frame.can_dlc] = '\n';
-        printf("%s", receiveMessage);
+        printf("%s\n", receiveMessage);
 
-        if (strcmp(receiveMessage, quit_command) == 0) {
-            printf("RPC request 'QUIT' command received.\n");
-            break;
-        }
+        // quit까지
 
         bzero(receiveMessage, 8);
     }
