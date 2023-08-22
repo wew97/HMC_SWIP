@@ -19,7 +19,7 @@
 // #include "rpi_1_stub.h"
 #include "rpi_1_led.h"
 // #include "rpi_1_ultrasonic.h"
-// #include "rpi_1_dijkstra.h"
+#include "rpi_1_dijkstra.h"
 
 #define NUM_MAX 100000
 #define LED_GPIO 17
@@ -41,8 +41,8 @@ int main(void)
     printf("Started LED.");
 
     // 다익스트라
-    // path = dijkstra(map_file_name);
-    // printf("The shortest path is %s", path);
+    path = dijkstra(map_file_name);
+    printf("The shortest path is %s", path);
     
     // 초음파 쓰레드
     // pthread_create(&threads[1], NULL, ultrasonic, &quadrantNumer[i]);

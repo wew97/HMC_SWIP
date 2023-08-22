@@ -18,7 +18,7 @@ void *led(void *argumentPointer){
             for (int i = 0; i < 10; i++){
                 digitalWrite(GPIO, HIGH);
                 delay(100);
-                digitalWrite(GPIO, LOW); 
+                digitalWrite(GPIO, LOW);
             }
         }
     }
