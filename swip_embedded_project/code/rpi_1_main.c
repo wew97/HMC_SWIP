@@ -28,6 +28,12 @@ int main(void)
 {
     pthread_t threads[4];
     char path[NUM_MAX];
+    char inputString[128];
+    struct can_frame frame;
+    int socketCANDescriptor;
+    struct ifreq ifr;
+    struct sockaddr_can addr;
+    char quit_command[] = "quit";
 
     wiringPiSetupGpio();
     printf("RPi #1 is ready.\n");
@@ -42,6 +48,45 @@ int main(void)
     
     // 초음파 쓰레드
     pthread_create(&threads[1], NULL, ultrasonic, NULL);
+
+    // 원격 LCD 출력
+    // printf("SocketCAN Sender\n");
+    if ((socketCANDescriptor = socket(PF_CAN, SOCK_RAW, CAN_RAW)) < 0) {
+        perror("Socket creation failed.");
+        return -1;
+    }
+
+    strcpy(ifr.ifr_name, "can0" );
+    ioctl(socketCANDescriptor, SIOCGIFINDEX, &ifr);
+    memset(&addr, 0, sizeof(addr));
+    
+    addr.can_family = AF_CAN;        
+    addr.can_ifindex = ifr.ifr_ifindex;
+
+    if (bind(socketCANDescriptor, (struct sockaddr *)&addr, sizeof(addr)) < 0) {
+        perror("Bind failed");
+        return -1;
+    }
+
+    while(1) {                
+        printf("Enter your text to display on RPi #2's LCD: ");
+        fgets(inputString, 128, stdin);
+
+        // Prepare the CAN frame
+        frame.can_id = 0x123; // Arbitrary CAN ID
+        frame.can_dlc = strlen(inputString);
+        strncpy((char *)frame.data, inputString, frame.can_dlc);
+
+        // Send the CAN frame
+        if (write(socketCANDescriptor, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) {
+            perror("Write failed");
+            return -1;
+        }
+    }
+    if (close(socketCANDescriptor) < 0) {
+        perror("Terminating RPi #1.");
+        return -1;
+    }
 
     pthread_join(threads[0], NULL);
     // pthread_join(threads[1], NULL);
