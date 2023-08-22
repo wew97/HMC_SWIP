@@ -23,7 +23,6 @@
 ## Embedded System Project ('23/08/22 ~ '23/08/24)
 
 - Refer to [swip_embedded_project](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_project)
-- [Notion](https://www.notion.so/Embedded-System-Project-f559f85ac4dd47dcae55df8045256b2b?pvs=4)
 - [Notion](https://www.notion.so/yoonjii/HMC-SWIP-project-c5f215f8196a421c8a00b28efb331d88?pvs=4)
 
 ## skribbl URL (08/18 09:08 updated)
