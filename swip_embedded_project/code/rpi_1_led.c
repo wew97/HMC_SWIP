@@ -12,7 +12,7 @@ int led(void){
             digitalWrite(GPIO, HIGH);
             delay(1000);
             digitalWrite(GPIO, LOW); 
-        }else{
+        }else if (led_status == 1){
             for (int i = 0; i < 10; i++){
                 digitalWrite(GPIO, HIGH);
                 delay(100);

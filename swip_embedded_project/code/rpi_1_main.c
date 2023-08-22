@@ -28,7 +28,6 @@
 int main(void) 
 {
     pthread_t threads[4];
-    // int led_arg[2] = {LED_GPIO, 0};
     int *led_status = 0;
     char path[NUM_MAX];
 
