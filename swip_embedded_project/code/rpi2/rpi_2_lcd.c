@@ -8,8 +8,6 @@
 
 #include "rpi_2_lcd.h"
 
-#define Detected_DEVICE_ID_BY_I2C 0x27 // Device ID detected by I2C
-                                       // Seems that it maps to the device's address
 #define LCD_BACKLIGHT_ON 0x08          // On             "0000 1000"
 #define LCD_BACKLIGHT_OFF 0x00         // Off            "0000 0000"
 #define LCD_ENABLE 0x04                // Enable         "0000 0100"
@@ -19,7 +17,9 @@
 #define LCD_RS_DATA 0x01               // Data           "0000 0001"
 #define LCD_RS_INST 0x00               // Instruction    "0000 0000"
 
-int deviceHandle; // Seems that it maps to the register address of the device
+int deviceHandle;
+
+void changeLine(int line);
 
 void toggleLCDEnable(int eightBits)
 {
@@ -74,9 +74,11 @@ void initializeLCD()
 }
 
 // Display text string
-void displayText(const char *stringPointer)
+void displayText(int lineNum, const char *stringPointer)
 {
     char characterToSend;
+
+    changeLine(lineNum);
 
     while (*stringPointer)
     {
@@ -108,11 +110,7 @@ void changeLine(int line)
 
 void lcd(char textString[])
 {
-    // Initialize wiringPI, I2C, and LCD
-    deviceHandle = wiringPiI2CSetup(Detected_DEVICE_ID_BY_I2C);
-
     initializeLCD();
 
-    changeLine(0);
-    displayText(textString);
+    displayText(0, textString);
 }
