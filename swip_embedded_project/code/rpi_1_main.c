@@ -23,7 +23,6 @@
 
 #define NUM_MAX 100000
 
-#define map_file_name "map_data.txt"
 
 int main(void)
 {
@@ -43,18 +42,28 @@ int main(void)
     pthread_create(&threads[0], NULL, led, NULL);
 
     // dijkstra_start
-    readGraph(map_file_name);
+    // readGraph(map_file_name);
 
     int source = 3;
     int destination = 6;
 
-    char buffer[MAX_NODES * 6];
+    char buffer[MAX_NODES];
     int len = 0;
 
+    // buffer => path를 담고 있음 dest -> .. -> source 순서로
     findShortestPath(source, destination, buffer, &len);
 
-    printf("The shortest path is %c -> %c -> %c\n\n", buffer[2], buffer[1], buffer[0]);
-    // buffer => path를 담고 있음 2 -> 1 -> 0 순서로
+    printf("The shortest path is ");
+    for (int i = len - 1; i >= 0; i--) {
+        printf("%c", buffer[i]);
+
+        if(i > 0) {
+            printf(" -> ");
+        } else {
+            printf("\n\n");
+        }
+    }
+    // printf("The shortest path is %c -> %c -> %c\n\n", buffer[2], buffer[1], buffer[0]);
 
     // dijkstra_end
 

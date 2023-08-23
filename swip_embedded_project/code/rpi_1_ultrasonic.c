@@ -8,10 +8,10 @@
 
 #define LED 17
 
-struct timeval tv1;
-struct timeval tv2;
-long time1;
-long time2;
+// struct timeval tv1;
+// struct timeval tv2;
+// long time1;
+// long time2;
 extern int led_status;
 
 // float measureDistance(void)
@@ -46,7 +46,7 @@ void measureDistance(void)
     distance = (elapsedMicros * 0.0343) / 2;
 
     // return distance;
-    if (distance < 10.0)
+    if (distance < 20.0)
         led_status = 1;
     else
         led_status = 0;
@@ -56,8 +56,8 @@ void *ultrasonic(void *argumentPointer)
 {
     float distance;
 
-    struct timeval tv1;
-    struct timeval tv2;
+    // struct timeval tv1;
+    // struct timeval tv2;
 
     printf("Started Ultrasonic sensor.\n");
 
@@ -71,7 +71,7 @@ void *ultrasonic(void *argumentPointer)
         // distance = measureDistance();
         // printf("%0.2f cm\n", distance);
 
-        delay(1000);
+        delay(100);
     }
 
     return 0;

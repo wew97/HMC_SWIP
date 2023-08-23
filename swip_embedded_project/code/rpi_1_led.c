@@ -8,18 +8,14 @@ int led_status = 0;
 void *led(void *argumentPointer){
     printf("Started LED.\n\n");
     pinMode(LED_GPIO, OUTPUT);
+
     while(1){
-        if (led_status == 0){
-            digitalWrite(LED_GPIO, HIGH);
-            delay(1000);
-            digitalWrite(LED_GPIO, LOW);
-            delay(1000); 
-        }else{
-            digitalWrite(LED_GPIO, HIGH);
-            delay(100);
-            digitalWrite(LED_GPIO, LOW);
-            delay(100);
-        }
+        int delay_ms = led_status == 0 ? 1000 : 100;
+
+        digitalWrite(LED_GPIO, HIGH);
+        delay(delay_ms);
+        digitalWrite(LED_GPIO, LOW);
+        delay(delay_ms); 
     }
 
 }
