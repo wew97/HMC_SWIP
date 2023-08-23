@@ -10,14 +10,18 @@
 // Function ID, arg length, arg
 // char func_arg[50];
 
-// 4: Arg length
-// 4: Function ID
-// 8: Args
+// 8: Total packets
+// 8: Function ID
+// ~: Args
 
 extern int socketCANDescriptor;
 
 void displayTextMarshall(int lineNum, const char* inputString, char *buffer, size_t buffer_size) {
-    ;
+    int total_packets = strlen(inputString);
+    int function_id = 1;
+    buffer[0] = total_packets;
+    buffer[8] = function_id;
+    buffer[12] = inputString; 
 }
 
 // 0
@@ -32,6 +36,7 @@ void displayText(int lineNum, const char* inputString)
     // strncpy((char *)frame.data, inputString, frame.can_dlc);
 
     displayTextMarshall(lineNum, inputString, buffer, sizeof(buffer));
+    printf("%d",(int*)buffer);
     
     // frame.data = buffer;
 
