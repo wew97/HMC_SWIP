@@ -108,9 +108,11 @@ void changeLine(int line)
     }
 }
 
+/*
 void lcd(char textString[])
 {
-    initializeLCD();
+    //initializeLCD();
 
     displayText(0, textString);
 }
+*/

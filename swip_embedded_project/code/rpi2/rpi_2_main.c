@@ -20,6 +20,7 @@
 #include "rpi_2_can.h"
 #include "rpi_2_lcd.h"
 #include "rpi_2_motor.h"
+#include "rpi_2_stub.h"
 
 #define NUM_MAX 100000
 #define Detected_DEVICE_ID_BY_I2C 0x27 // Device ID detected by I2C
@@ -34,6 +35,7 @@ int main(void)
     int socketCANDescriptor;
 
     wiringPiSetupGpio();
+    // initializeLCD();
     printf("RPi #2 is ready to accept RPC requests.\n");
 
     deviceHandle = wiringPiI2CSetup(Detected_DEVICE_ID_BY_I2C);
@@ -44,13 +46,13 @@ int main(void)
         return -1;
     }
 
-    // processCANFrames(socketCANDescriptor);
     struct can_frame frame;
     char quit_command[] = "quit\n";
     char receiveMessage[8];
     int nbytesReceived;
 
     while (1) {
+        initializeLCD();
         nbytesReceived = read(socketCANDescriptor, &frame, sizeof(struct can_frame));
         if (nbytesReceived < 0) {
             perror("Read failed");
@@ -62,16 +64,23 @@ int main(void)
         receiveMessage[frame.can_dlc] = '\n';
         printf("%s\n", receiveMessage);
 
+        //여기서 stub 실행 위에 애들도 바꿔주어야함.
+        stub(receiveMessage);
+
+        /*
+        이거 나중에 terminateRPC(char *text)로 뺄거임
+        */
         if (strncmp(receiveMessage, quit_command, frame.can_dlc) == 0 && (frame.can_dlc == strlen(quit_command))) {
             printf("RPC request 'QUIT' command received\n\n");
             printf("Terminating RPi #2.\n");
-            lcd("Bye Bye!");
+            displayText(0, "Bye Bye!");
             delay(2000);
             initializeLCD();
             break;
         }
+        // 여기까지
 
-        lcd(receiveMessage);
+        displayText(0, receiveMessage);
 
         bzero(receiveMessage, 8);
     }
