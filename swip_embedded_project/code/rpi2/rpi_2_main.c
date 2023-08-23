@@ -17,22 +17,26 @@
 #include "wiringPi.h"
 #include "rpi_2_can.h"
 #include "rpi_2_lcd.h"
+#include "rpi_2_motor.h"
 
 #define NUM_MAX 100000
 
-int main(void) {
+int main(void)
+{
     pthread_t threads[4];
 
     int socketCANDescriptor;
-    
 
     wiringPiSetupGpio();
     printf("RPi #2 is ready to accept RPC requests.\n");
 
     socketCANDescriptor = setupCANSocket("can0");
-    if (socketCANDescriptor < 0) {
+    if (socketCANDescriptor < 0)
+    {
         return -1;
     }
+
+    moveMotor(0);
 
     processCANFrames(socketCANDescriptor);
 
