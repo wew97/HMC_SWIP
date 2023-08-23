@@ -22,7 +22,8 @@
 #include "rpi_1_dijkstra.h"
 
 #define NUM_MAX 100000
-
+#define SOURCE 3
+#define DEST 6
 
 int main(void)
 {
@@ -42,16 +43,11 @@ struct ifreq ifr;
     pthread_create(&threads[0], NULL, led, NULL);
 
     // dijkstra_start
-    // readGraph(map_file_name);
-
-    int source = 3;
-    int destination = 6;
-
     char buffer[MAX_NODES];
     int len = 0;
 
     // buffer => path를 담고 있음 dest -> .. -> source 순서로
-    findShortestPath(source, destination, buffer, &len);
+    findShortestPath(SOURCE, DEST, buffer, &len);
 
     printf("The shortest path is ");
     for (int i = len - 1; i >= 0; i--) {
@@ -63,9 +59,6 @@ struct ifreq ifr;
             printf("\n\n");
         }
     }
-    // printf("The shortest path is %c -> %c -> %c\n\n", buffer[2], buffer[1], buffer[0]);
-
-    // dijkstra_end
 
     // 초음파 쓰레드
     pthread_create(&threads[1], NULL, ultrasonic, NULL);
@@ -79,5 +72,6 @@ struct ifreq ifr;
     processCANFrames(socketCANDescriptor);
 
     closeCANSocket(socketCANDescriptor);
+    
     return 0;
 }

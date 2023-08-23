@@ -2,9 +2,12 @@
 
 #include <stdio.h>
 #include "wiringPi.h"
+#include "rpi_1_led.h"
+
 #define LED_GPIO 17
 
 int led_status = 0;
+
 // status = 0: default
 // status = 1: 20cm이내
 void *led(void *argumentPointer){

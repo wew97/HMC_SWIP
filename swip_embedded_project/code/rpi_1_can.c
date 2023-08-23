@@ -57,7 +57,6 @@ void processCANFrames(int socketCANDescriptor){
         // Send the CAN frame
         if (write(socketCANDescriptor, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) {
             perror("Write failed");
-            return -1;
         }
         if (strncmp(inputString, quit_command, frame.can_dlc) == 0 && frame.can_dlc == strlen(quit_command)){
            printf("\nTerminating RPi #1.\n");
