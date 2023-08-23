@@ -50,12 +50,16 @@ int main(void)
     findShortestPath(SOURCE, DEST, buffer, &len);
 
     printf("The shortest path is ");
-    for (int i = len - 1; i >= 0; i--) {
+    for (int i = len - 1; i >= 0; i--)
+    {
         printf("%c", buffer[i]);
 
-        if(i > 0) {
+        if (i > 0)
+        {
             printf(" -> ");
-        } else {
+        }
+        else
+        {
             printf("\n\n");
         }
     }
@@ -69,7 +73,8 @@ int main(void)
 
     // 원격 LCD 출력
     socketCANDescriptor = setupCANSocket("can0");
-    if (socketCANDescriptor < 0) {
+    if (socketCANDescriptor < 0)
+    {
         return -1;
     }
 
@@ -92,6 +97,6 @@ int main(void)
     }
 
     closeCANSocket(socketCANDescriptor);
-    
+
     return 0;
 }

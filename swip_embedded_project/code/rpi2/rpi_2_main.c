@@ -19,6 +19,7 @@
 
 #include "rpi_2_can.h"
 #include "rpi_2_lcd.h"
+#include "rpi_2_motor.h"
 
 #define NUM_MAX 100000
 #define Detected_DEVICE_ID_BY_I2C 0x27 // Device ID detected by I2C
@@ -26,11 +27,11 @@
 
 int deviceHandle;
 
-int main(void) {
+int main(void)
+{
     pthread_t threads[4];
 
     int socketCANDescriptor;
-    
 
     wiringPiSetupGpio();
     printf("RPi #2 is ready to accept RPC requests.\n");
@@ -38,7 +39,8 @@ int main(void) {
     deviceHandle = wiringPiI2CSetup(Detected_DEVICE_ID_BY_I2C);
 
     socketCANDescriptor = setupCANSocket("can0");
-    if (socketCANDescriptor < 0) {
+    if (socketCANDescriptor < 0)
+    {
         return -1;
     }
 

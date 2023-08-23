@@ -54,6 +54,11 @@ void processCANFrames(int socketCANDescriptor) {
     char quit_command[] = "quit\n";
     char receiveMessage[8];
     int nbytesReceived;
+<<<<<<< HEAD
+=======
+
+    deviceHandle = wiringPiI2CSetup(Detected_DEVICE_ID_BY_I2C);
+>>>>>>> 24b1abbbb4b477639c281a795d4025bfbee81978
     
     while (1) {
         nbytesReceived = read(socketCANDescriptor, &frame, sizeof(struct can_frame));

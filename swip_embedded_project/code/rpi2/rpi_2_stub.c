@@ -1,5 +1,4 @@
 // rpi_2_stub.c
-
 #include <stdio.h>
 #include <rpc/rpc.h>
 // #include "rpc_2_stub.h"

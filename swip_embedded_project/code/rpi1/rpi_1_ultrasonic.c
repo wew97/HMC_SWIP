@@ -1,11 +1,11 @@
 // rpi_1_ultrasonic.c
 
-#include <wiringPi.h> 
-#include <stdio.h> 
+#include <wiringPi.h>
+#include <stdio.h>
 #include <sys/time.h>
 #include "rpi_1_ultrasonic.h"
 
-#define Trig 23 
+#define Trig 23
 #define Echo 24
 
 extern int led_status;
