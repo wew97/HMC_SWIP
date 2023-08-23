@@ -52,7 +52,7 @@ int main(void)
     int len = 0;
 
     findShortestPath(source, destination, buffer, &len);
-
+    
     printf("The shortest path is %c -> %c -> %c\n\n", buffer[2], buffer[1], buffer[0]);
     // buffer => path를 담고 있음 2 -> 1 -> 0 순서로
 
