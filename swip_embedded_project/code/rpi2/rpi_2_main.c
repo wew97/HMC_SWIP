@@ -36,8 +36,6 @@ int main(void)
         return -1;
     }
 
-    moveMotor(0);
-
     processCANFrames(socketCANDescriptor);
 
     closeCANSocket(socketCANDescriptor);
