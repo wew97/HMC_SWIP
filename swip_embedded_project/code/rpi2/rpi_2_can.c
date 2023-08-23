@@ -11,10 +11,18 @@
 #include <linux/can.h>
 #include <linux/can/raw.h>
 
+#include <wiringPiI2C.h>
+
+#include "wiringPi.h"
 #include "rpi_2_can.h"
 #include "rpi_2_lcd.h"
 
+#define Detected_DEVICE_ID_BY_I2C 0x27 // Device ID detected by I2C
+                                       // Seems that it maps to the device's address
+
 #define NUM_MAX 100000
+
+extern int deviceHandle;
 
 int setupCANSocket(const char *interfaceName) {
     int socketCANDescriptor;
@@ -47,6 +55,9 @@ void processCANFrames(int socketCANDescriptor) {
     char receiveMessage[8];
     int nbytesReceived;
 
+
+    deviceHandle = wiringPiI2CSetup(Detected_DEVICE_ID_BY_I2C);
+    
     while (1) {
         nbytesReceived = read(socketCANDescriptor, &frame, sizeof(struct can_frame));
         if (nbytesReceived < 0) {
