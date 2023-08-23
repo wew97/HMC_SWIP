@@ -1,1 +1,0 @@
-void displayText(int lineNum, const char* inputString);

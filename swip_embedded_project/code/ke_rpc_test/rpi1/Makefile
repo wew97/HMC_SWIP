@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -lpthread
-OBJS = main.o stub.o
+OBJS = main.o rpi_1_stub.o rpi_1_can.o
 TARGET = executable
 
 $(TARGET) : $(OBJS)

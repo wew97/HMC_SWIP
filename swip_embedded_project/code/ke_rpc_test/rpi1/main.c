@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include "stub.h"
+#include "rpi_1_stub.h"
+
+int socketCANDescriptor;
 
 int main(void)
 {
@@ -11,6 +13,9 @@ int main(void)
         fgets(inputString, 128, stdin);
 
         displayText(0, (const char*)inputString);
+        displayText(1, (const char*)inputString);
+        moveMotor(25);
+        terminateRPC("quit");
     }
 
     return 0;
