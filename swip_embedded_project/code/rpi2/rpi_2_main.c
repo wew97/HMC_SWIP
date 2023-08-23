@@ -16,7 +16,7 @@
 
 #include "wiringPi.h"
 #include "rpi_2_can.h"
-//#include "rpi_2_lcd.h"
+#include "rpi_2_lcd.h"
 
 #define NUM_MAX 100000
 

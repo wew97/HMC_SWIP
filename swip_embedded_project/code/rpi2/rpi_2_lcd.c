@@ -32,11 +32,10 @@ void toggleLCDEnable(int eightBits)
 
 void sendBitsToLCD(int eightBits, int mode)
 {
-   
+
     int highFourBits;
     int lowFourBits;
 
- 
     highFourBits = mode | (eightBits & 0xF0) | LCD_BACKLIGHT_ON;       // Let's always turn on the backlight
     lowFourBits = mode | ((eightBits << 4) & 0xF0) | LCD_BACKLIGHT_ON; // Let's always turn on the backlight
 
@@ -79,17 +78,19 @@ void displayText(const char *stringPointer)
 {
     char characterToSend;
 
-  while (*stringPointer) {
-    characterToSend = *stringPointer;
+    while (*stringPointer)
+    {
+        characterToSend = *stringPointer;
 
-    // Don't send LF (line feed or new line) since LCD will display LF as some character on the screen 
-    // Note that ASCII code of LF is 10
-    if ((unsigned int)characterToSend != 10) {
-      sendBitsToLCD(*(stringPointer++), LCD_RS_DATA | LCD_RW_WRITE);
+        // Don't send LF (line feed or new line) since LCD will display LF as some character on the screen
+        // Note that ASCII code of LF is 10
+        if ((unsigned int)characterToSend != 10)
+        {
+            sendBitsToLCD(*(stringPointer++), LCD_RS_DATA | LCD_RW_WRITE);
+        }
+        else
+            return;
     }
-    else
-      return;
-  }
 }
 
 // Change the text line
@@ -99,18 +100,17 @@ void changeLine(int line)
     {
         sendBitsToLCD(0x80, LCD_RS_INST | LCD_RW_WRITE);
     }
-    // else if (line == 1)
-    // {
-    //     sendBitsToLCD(0xC0, LCD_RS_INST | LCD_RW_WRITE);
-    // }
+    else if (line == 1)
+    {
+        sendBitsToLCD(0xC0, LCD_RS_INST | LCD_RW_WRITE);
+    }
 }
 
 void lcd(char textString[])
 {
     // Initialize wiringPI, I2C, and LCD
-    wiringPiSetupGpio();
     deviceHandle = wiringPiI2CSetup(Detected_DEVICE_ID_BY_I2C);
-    printf("deviceHandle = %d\n", deviceHandle);
+
     initializeLCD();
 
     changeLine(0);
