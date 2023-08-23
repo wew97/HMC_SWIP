@@ -75,10 +75,10 @@ int sendCANFrames(int socketCANDescriptor, char* buffer, int bufferSize) {
             memcpy(sendMessage, buffer + (i * PACK_SIZE), lastPacketSize);
         }
 
-        // if (write(socketCANDescriptor, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) {
-        //     perror("Write failed");
-        //     return -1;
-        // }   
+        if (write(socketCANDescriptor, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) {
+            perror("Write failed");
+            return -1;
+        }   
 
         // Print packet
         printf("0x%03X [%d] ",frame.can_id, frame.can_dlc);
