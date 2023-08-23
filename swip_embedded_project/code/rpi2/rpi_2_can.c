@@ -74,7 +74,7 @@ void processCANFrames(int socketCANDescriptor) {
             printf("RPC request 'QUIT' command received\n\n");
             printf("Terminating RPi #2.\n");
             lcd("Bye Bye!");
-            delay(1500);
+            delay(2000);
             initializeLCD();
             break;
         }
