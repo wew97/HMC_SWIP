@@ -4,6 +4,9 @@
 #include <wiringPi.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "wiringPi.h"
+
+#include "rpi_2_lcd.h"
 
 #define Detected_DEVICE_ID_BY_I2C 0x27 // Device ID detected by I2C
                                        // Seems that it maps to the device's address
@@ -20,7 +23,6 @@ int deviceHandle; // Seems that it maps to the register address of the device
 
 void toggleLCDEnable(int eightBits)
 {
-    // Toggle enable pin on LCD display
     delayMicroseconds(500);
     wiringPiI2CWrite(deviceHandle, (eightBits | LCD_ENABLE));
     delayMicroseconds(500);
@@ -30,21 +32,11 @@ void toggleLCDEnable(int eightBits)
 
 void sendBitsToLCD(int eightBits, int mode)
 {
-    // Send data or instruction to LCD I/O register
-    // eightBits = the data or instruction to send
-    // mode can be OR'ed with LCD_BACKLIGH_ON/OFF, LCD_ENABLE/DISABLE, LCD_RW_READ/WRITE, LCD_RS_DATA/INST
-    // Since we use 4-bit mode, we first send high 4 bits (highFourBits), and then send low 4 bits (lowFourBits)
+   
     int highFourBits;
     int lowFourBits;
 
-    // The LCD's I/O register reads only the four high order data pins each time the Enable pin is pulsed
-    // Let 'xxxx yyyy' be "eightBits" received as the parameter of sendBitsToLCD() function
-    // We will first send highFourBits in the form of 'xxxx abcd', and then send lowFourBits in the form of 'yyyy abcd'
-    // We found that wiringPi uses the remaining 4-bit 'abcd' to control LCD pins as follows
-    //    'a': LCD_BACKLIGHT_ON or LCD_BACKLIGHT_OFF
-    //    'b': LCD_ENABLE or LCD_DISABLE
-    //    'c': LCD_RW_READ or LCD_RW_WRITE
-    //    'd': LCD_RS_DATA or LCD_RS_INST
+ 
     highFourBits = mode | (eightBits & 0xF0) | LCD_BACKLIGHT_ON;       // Let's always turn on the backlight
     lowFourBits = mode | ((eightBits << 4) & 0xF0) | LCD_BACKLIGHT_ON; // Let's always turn on the backlight
 
@@ -57,11 +49,6 @@ void sendBitsToLCD(int eightBits, int mode)
     toggleLCDEnable(lowFourBits);
 }
 
-// Let's initialize LCD
-// We found that, to make LCD work correctly, we need to perform some operation more than once
-// We also found that, to make LCD work correctly, we need to use some specific values for undefined bit fields
-// It seems like that there is something unpublished, or LCD may have some bugs
-// So do not change the following initialization function
 void initializeLCD()
 {
     // Instruction: Function Set '001D NF--'
@@ -90,33 +77,35 @@ void initializeLCD()
 // Display text string
 void displayText(const char *stringPointer)
 {
-    // Assignment 1: Insert your code here
-    // so that displayText(stringPointer) prints the requested string on LCD
-    // You have to send characters one by one each time using the sendBitsToLCD() function
-    for (int i = 0; stringPointer[i]; i++)
-    {
-        sendBitsToLCD(stringPointer[i], 0x01);
+    char characterToSend;
+
+  while (*stringPointer) {
+    characterToSend = *stringPointer;
+
+    // Don't send LF (line feed or new line) since LCD will display LF as some character on the screen 
+    // Note that ASCII code of LF is 10
+    if ((unsigned int)characterToSend != 10) {
+      sendBitsToLCD(*(stringPointer++), LCD_RS_DATA | LCD_RW_WRITE);
     }
+    else
+      return;
+  }
 }
 
 // Change the text line
 void changeLine(int line)
 {
-    // Assignment 2: Insert your code here
-    // so that changeLine(line) changes the cursor position to the requested "line"
-    // You also have to move the cursor to the start of the "line"
-    // sendBitsToLCD("\n", 0x01);
     if (line == 0)
     {
         sendBitsToLCD(0x80, LCD_RS_INST | LCD_RW_WRITE);
     }
-    else if (line == 1)
-    {
-        sendBitsToLCD(0xC0, LCD_RS_INST | LCD_RW_WRITE);
-    }
+    // else if (line == 1)
+    // {
+    //     sendBitsToLCD(0xC0, LCD_RS_INST | LCD_RW_WRITE);
+    // }
 }
 
-int main(void)
+void lcd(char textString[])
 {
     // Initialize wiringPI, I2C, and LCD
     wiringPiSetupGpio();
@@ -124,15 +113,6 @@ int main(void)
     printf("deviceHandle = %d\n", deviceHandle);
     initializeLCD();
 
-    char textString1[] = "Hello World!";
-    char textString2[] = "This is LCD.";
-
-    // Display 'Hello World' on the first line
-    printf("Hello World.\n");
     changeLine(0);
-    displayText(textString1);
-    changeLine(1);
-    displayText(textString2);
-
-    return 0;
+    displayText(textString);
 }

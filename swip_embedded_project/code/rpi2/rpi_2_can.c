@@ -12,6 +12,7 @@
 #include <linux/can/raw.h>
 
 #include "rpi_2_can.h"
+#include "rpi_2_lcd.h"
 
 #define NUM_MAX 100000
 
@@ -61,9 +62,13 @@ void processCANFrames(int socketCANDescriptor) {
         if (strncmp(receiveMessage, quit_command, frame.can_dlc) == 0 && (frame.can_dlc == strlen(quit_command))) {
             printf("RPC request 'QUIT' command received\n\n");
             printf("Terminating RPi #2.\n");
-            
+            lcd("Bye Bye!");
+            delay(1500);
+            initializeLCD();
             break;
         }
+
+        lcd(receiveMessage);
 
         bzero(receiveMessage, 8);
     }
