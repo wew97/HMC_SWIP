@@ -1,3 +1,5 @@
+// rpi_1_led.c
+
 #include <stdio.h>
 #include "wiringPi.h"
 #define LED_GPIO 17
@@ -17,5 +19,5 @@ void *led(void *argumentPointer){
         digitalWrite(LED_GPIO, LOW);
         delay(delay_ms); 
     }
-
+    
 }
