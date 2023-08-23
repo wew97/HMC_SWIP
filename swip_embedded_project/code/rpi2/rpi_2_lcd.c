@@ -17,7 +17,7 @@
 #define LCD_RS_DATA 0x01               // Data           "0000 0001"
 #define LCD_RS_INST 0x00               // Instruction    "0000 0000"
 
-int deviceHandle;
+extern int deviceHandle;
 
 void changeLine(int line);
 
