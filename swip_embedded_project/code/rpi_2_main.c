@@ -1,5 +1,4 @@
 // rpi_2_main.c
-// main.c
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,19 +15,15 @@
 #include <linux/can/raw.h>
 
 #include "wiringPi.h"
-#include "rpi_2_can.h" // Include the header for can.c functions
+#include "rpi_2_can.h"
 
 #define NUM_MAX 100000
 
 int main(void) {
     pthread_t threads[4];
-    char path[NUM_MAX];
-    char inputString[128];
-    struct can_frame frame;
+
     int socketCANDescriptor;
-    char quit_command[] = "quit\n";
-    char receiveMessage[8];
-    int nbytesReceived;
+    
 
     wiringPiSetupGpio();
     printf("RPi #2 is ready to accept RPC requests.\n");
@@ -38,9 +33,7 @@ int main(void) {
         return -1;
     }
 
-    while (processCANFrames(socketCANDescriptor)) {
-        // Additional processing or cleanup can be added here
-    }
+    processCANFrames(socketCANDescriptor);
 
     closeCANSocket(socketCANDescriptor);
     return 0;

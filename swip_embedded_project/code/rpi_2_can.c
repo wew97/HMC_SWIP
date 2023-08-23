@@ -11,7 +11,7 @@
 #include <linux/can.h>
 #include <linux/can/raw.h>
 
-#include "rpi_2_can.h" // Header file for can.c functions
+#include "rpi_2_can.h"
 
 #define NUM_MAX 100000
 
@@ -40,7 +40,7 @@ int setupCANSocket(const char *interfaceName) {
     return socketCANDescriptor;
 }
 
-int processCANFrames(int socketCANDescriptor) {
+void processCANFrames(int socketCANDescriptor) {
     struct can_frame frame;
     char quit_command[] = "quit\n";
     char receiveMessage[8];
@@ -67,12 +67,10 @@ int processCANFrames(int socketCANDescriptor) {
 
         bzero(receiveMessage, 8);
     }
-
-    return 0;
 }
 
 void closeCANSocket(int socketCANDescriptor) {
     if (close(socketCANDescriptor) < 0) {
-        perror("Closing socket failed");
+        perror("Close failed");
     }
 }

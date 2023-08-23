@@ -2,6 +2,7 @@
     "files.associations": {
         "rpi_1_dijkstra.h": "c",
         "can.h": "c",
-        "rpi_2_can.h": "c"
+        "rpi_2_can.h": "c",
+        "pthread.h": "c"
     }
 }
