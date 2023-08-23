@@ -25,13 +25,14 @@
 #define SOURCE 3
 #define DEST 6
 
+int socketCANDescriptor;
+
 int main(void)
 {
     pthread_t threads[4];
     char path[NUM_MAX];
     char inputString[128];
     struct can_frame frame;
-    int socketCANDescriptor;
     struct ifreq ifr;
     struct sockaddr_can addr;
     char quit_command[] = "quit";
