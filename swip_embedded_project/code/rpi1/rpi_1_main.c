@@ -32,10 +32,7 @@ int main(void)
     pthread_t threads[4];
     char path[NUM_MAX];
     char inputString[128];
-    struct can_frame frame;
-    struct ifreq ifr;
-    struct sockaddr_can addr;
-    char quit_command[] = "quit";
+    char quit_command[] = "quit\n";
 
     wiringPiSetupGpio();
     printf("RPi #1 is ready.\n\n");
@@ -81,20 +78,16 @@ int main(void)
 
     // processCANFrames(socketCANDescriptor);
 
-    struct can_frame frame;
-    char quit_command[] = "quit\n";
-    char inputString[128];
-
     while(1) {                
         printf("Enter your text to display on RPi #2's LCD: ");
         fgets(inputString, 128, stdin);
 
-        displayText(inputString);
+        displayText(0, (const char*)inputString);
 
-        if (strncmp(inputString, quit_command, frame.can_dlc) == 0 && frame.can_dlc == strlen(quit_command)){
-            printf("\nTerminating RPi #1.\n");
-            break;
-        }
+        // if (strncmp(inputString, quit_command, frame.can_dlc) == 0 && frame.can_dlc == strlen(quit_command)){
+        //     printf("\nTerminating RPi #1.\n");
+        //     break;
+        // }
     }
 
     closeCANSocket(socketCANDescriptor);

@@ -2,10 +2,17 @@
 
 #include <stdio.h>
 #include <rpc/rpc.h>
-// #include "rpc_2_stub.h"
+#include <linux/can.h>
+#include <linux/can/raw.h>
+
+#include "rpi_1_stub.h"
 
 // Function ID, arg length, arg
 // char func_arg[50];
+
+// 4: Arg length
+// 4: Function ID
+// 8: Args
 
 extern int socketCANDescriptor;
 
@@ -13,6 +20,7 @@ void displayTextMarshall(int lineNum, const char* inputString, char *buffer, siz
     ;
 }
 
+// 0
 void displayText(int lineNum, const char* inputString)
 {
     struct can_frame frame;
@@ -23,9 +31,9 @@ void displayText(int lineNum, const char* inputString)
     frame.can_dlc = strlen(inputString);
     // strncpy((char *)frame.data, inputString, frame.can_dlc);
 
-    displayTextMarshall(lineNum, inputString, buffer, sizeof(buffer))
+    displayTextMarshall(lineNum, inputString, buffer, sizeof(buffer));
     
-    frame.data = buffer;
+    // frame.data = buffer;
 
     // Send the CAN frame
     if (write(socketCANDescriptor, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) {
