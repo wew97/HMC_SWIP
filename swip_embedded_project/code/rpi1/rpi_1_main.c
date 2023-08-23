@@ -16,7 +16,7 @@
 
 #include "wiringPi.h"
 #include "rpi_1_can.h"
-// #include "rpi_1_stub.h"
+#include "rpi_1_stub.h"
 #include "rpi_1_led.h"
 #include "rpi_1_ultrasonic.h"
 #include "rpi_1_dijkstra.h"
@@ -29,10 +29,10 @@ int main(void)
 {
     pthread_t threads[4];
     char path[NUM_MAX];
-char inputString[128];
+    char inputString[128];
     struct can_frame frame;
     int socketCANDescriptor;
-struct ifreq ifr;
+    struct ifreq ifr;
     struct sockaddr_can addr;
     char quit_command[] = "quit";
 
@@ -60,8 +60,12 @@ struct ifreq ifr;
         }
     }
 
+
     // 초음파 쓰레드
     pthread_create(&threads[1], NULL, ultrasonic, NULL);
+
+    // moveMotor()
+    // displayText()
 
     // 원격 LCD 출력
     socketCANDescriptor = setupCANSocket("can0");
@@ -69,7 +73,23 @@ struct ifreq ifr;
         return -1;
     }
 
-    processCANFrames(socketCANDescriptor);
+    // processCANFrames(socketCANDescriptor);
+
+    struct can_frame frame;
+    char quit_command[] = "quit\n";
+    char inputString[128];
+
+    while(1) {                
+        printf("Enter your text to display on RPi #2's LCD: ");
+        fgets(inputString, 128, stdin);
+
+        displayText(inputString);
+
+        if (strncmp(inputString, quit_command, frame.can_dlc) == 0 && frame.can_dlc == strlen(quit_command)){
+            printf("\nTerminating RPi #1.\n");
+            break;
+        }
+    }
 
     closeCANSocket(socketCANDescriptor);
     
