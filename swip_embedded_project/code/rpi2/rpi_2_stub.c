@@ -26,7 +26,7 @@ void displayTextResponse(const char* inputString)
     memcpy(buffer, &function_id, sizeof(function_id));
 
     int strLen = strlen(inputString);
-    memcpy(buffer + 4, &strLen, sizeof(strLen));
+    memcpy(&buffer[4], &strLen, sizeof(strLen));
 
     sendCANFrames(socketCANDescriptor, buffer, sizeof(buffer));
 }
@@ -42,7 +42,7 @@ void moveMotorResponse(int inputValue)
     int function_id = MOVE_MOTOR;
 
     memcpy(buffer, &function_id, sizeof(function_id));
-    memcpy(buffer + 4, &inputValue, sizeof(inputValue));
+    memcpy(&buffer[4], &inputValue, sizeof(inputValue));
 
     sendCANFrames(socketCANDescriptor, buffer, sizeof(buffer));
 }
