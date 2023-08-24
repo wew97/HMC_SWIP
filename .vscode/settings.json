@@ -6,7 +6,8 @@
         "pthread.h": "c",
         "rpi_1_ultrasonic.h": "c",
         "rpi_2_motor.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "rpi_2_stub.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
