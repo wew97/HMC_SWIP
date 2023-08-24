@@ -53,7 +53,7 @@ int main(void)
         }
         else
         {
-            sprintf(&pathStr[pathStrLen], "%c.", buffer[i]);
+            sprintf(&pathStr[pathStrLen], "%c", buffer[i]);
             pathStrLen += sizeof(buffer[i]) + 2;
         }
     }
@@ -73,9 +73,12 @@ int main(void)
     char *inputPathStr = (char *)malloc(pathStrLen);
     strncpy(inputPathStr, pathStr, pathStrLen);
 
+    inputPathStr[pathStrLen-1] = '\0';
+
     displayText(0, inputPathStr);
-    //displayText(1, "You made it!\n");
-    printf("length: %d\n", pathStrLen);
+    delay(1000);
+    displayText(1, "You made it!");
+
     free(inputPathStr);
     while (1)
     {
