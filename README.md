@@ -13,17 +13,18 @@
 - [전처리기/파일입출력 (Day 5)](https://github.com/wew97/HMC_SWIP/tree/main/swip_c_230804)
 
 ## Embedded System C Programming ('23/08/10 ~ '23/08/14)
+- Go to [swip_embedded_c/](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_c)
 - [Google Drive](https://drive.google.com/drive/folders/1hSKt0XnoClkn1umUGRXyY4-6QL13OZPz?usp=sharing)
-- [Code](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_c)
 
 ## Embedded System MCU Programming ('23/08/16 ~ '23/08/21)
+- Go to [swip_embedded_mcu/](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_mcu)
 - [Google Drive](https://drive.google.com/drive/folders/1hSKt0XnoClkn1umUGRXyY4-6QL13OZPz?usp=sharing)
-- [Code](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_mcu)
 
 ## Embedded System Project ('23/08/22 ~ '23/08/24)
-
-- Refer to [swip_embedded_project/](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_project)
+- Go to [swip_embedded_project/](https://github.com/wew97/HMC_SWIP/tree/main/swip_embedded_project)
 - [Notion](https://www.notion.so/yoonjii/HMC-SWIP-project-c5f215f8196a421c8a00b28efb331d88?pvs=4)
+
+## Matlab + Simulink + Stateflow ('23/08/25 ~ '23/08/31)
 
 ## skribbl URL (08/18 09:08 updated)
 (Closed) https://skribbl.io/?f8CEVvXF (Closed)

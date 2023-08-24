@@ -37,7 +37,9 @@ int main(void)
             printf("0x%03X [%d] ", frame.can_id, frame.can_dlc);                
             memcpy(receiveMessage, (unsigned char *)(frame.data), frame.can_dlc);
             receiveMessage[frame.can_dlc] = '\n';
-            printf("%s", receiveMessage);
+            printf("%d %d\n", receiveMessage[0],receiveMessage[1]);
+
+            printf("\n");
 
             if ((receiveMessage[0] == 'q') && (frame.can_dlc == 2)) {
                     printf("QUIT COMMAND!\n");
