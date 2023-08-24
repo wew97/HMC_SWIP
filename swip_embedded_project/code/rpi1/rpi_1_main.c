@@ -28,11 +28,11 @@ int main(void)
     pthread_t threads[4];
     char quit_command[] = "quit\n";
 
-    // wiringPiSetupGpio();
+    wiringPiSetupGpio();
     printf("RPi #1 is ready.\n\n");
 
     // LED 쓰레드
-    // pthread_create(&threads[0], NULL, led, NULL);
+    pthread_create(&threads[0], NULL, led, NULL);
     printf("Started LED.\n\n");
 
     // dijkstra_start
@@ -55,6 +55,7 @@ int main(void)
     }
 
     printf("The shortest path is %s\n", pathStr);
+    displayText(0, pathStr);
 
     // 초음파 쓰레드
     pthread_create(&threads[1], NULL, ultrasonic, NULL);
@@ -80,7 +81,8 @@ int main(void)
             terminateRPC(quit_command);
             break;
         }else{
-            displayText(0, (const char*)inputString);
+
+            // displayText(0, (const char*)inputString);
             // displayText(1, (const char*)inputString);
             // terminateRPC("quit");
         }
