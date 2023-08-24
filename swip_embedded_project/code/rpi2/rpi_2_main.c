@@ -75,6 +75,9 @@ int main(void)
             displayTextUnmarshall(buffer, bytesTotal, lineNum, inputString);
             initializeLCD();
             displayText(*lineNum, inputString);
+            // inputString[strlen(inputString)] = '\0';
+            // printf("length: %d\n", strlen(inputString));
+            printf("RPC request 'displayText(%d, %s)' received and processed.\n\n", *lineNum+1, inputString);
             break;
         }
         case MOVE_MOTOR:
@@ -83,20 +86,22 @@ int main(void)
 
             moveMotorUnmarshall(buffer, inputVal);
             moveMotor(*inputVal);
+            printf("RPC request 'moveMotor(%d)' received and processed.\n\n", *inputVal);
             break;
         }
         case TERMINATE:
         {
             char *inputString;
-            //terminateRPCUnmarshall(buffer, inputString);
-            printf("Terminating RPI #2.\n");
-            goto terminate_rpc;
-            break;
+
+            terminateRPC(inputString);
+            printf("RPC request 'QUIT' command received.\n\n");
+            printf("Terminating RPi #2.\n");
+            // goto terminate_rpc;
+            return 0;
         }
         }
     }
 
 terminate_rpc:
-    closeCANSocket(socketCANDescriptor);
     return 0;
 }

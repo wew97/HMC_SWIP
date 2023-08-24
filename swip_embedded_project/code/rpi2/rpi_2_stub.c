@@ -24,7 +24,7 @@ void moveMotorUnmarshall(char *buffer, int *inputVal)
 {
     memcpy(inputVal, &buffer[PACK_SIZE*2],4);
 }
-void terminateRPCUnmarshall(char *buffer, char *inputString)
+void terminateRPC(char *text)
 {
-    memcpy(inputString, &buffer[PACK_SIZE * 2], );
+    closeCANSocket(socketCANDescriptor);
 }

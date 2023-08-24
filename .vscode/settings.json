@@ -7,7 +7,9 @@
         "rpi_1_ultrasonic.h": "c",
         "rpi_2_motor.h": "c",
         "string.h": "c",
-        "rpi_2_stub.h": "c"
+        "rpi_2_stub.h": "c",
+        "wiringpii2c.h": "c",
+        "rpi_2_lcd.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
