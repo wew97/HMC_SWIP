@@ -92,6 +92,57 @@ int receiveCANFrames(int socketCANDescriptor, char* buffer, int bufferSize) {
     return 0;
 }
 
+int sendCANFrames(int socketCANDescriptor, char* buffer, int bufferSize) {
+
+    int packetTotal = bufferSize / PACK_SIZE;
+    int lastPacketSize = bufferSize % PACK_SIZE;
+    if (lastPacketSize > 0) packetTotal++;
+
+    // Fill buffer[0] with bufferSize
+    memcpy(&buffer[0], &bufferSize, sizeof(bufferSize));
+    
+    // Send CAN frame one by one
+    for (int i = 0; i < packetTotal; i++) {
+
+        // Prepare the CAN frame
+        struct can_frame frame;
+        frame.can_id = 0x123; // Arbitrary CAN ID
+        
+        // For print
+        char sendMessage[PACK_SIZE];
+
+        if (i < packetTotal - 1) { // If this is not last packet
+            frame.can_dlc = PACK_SIZE;
+            memcpy(frame.data, buffer + (i * PACK_SIZE), PACK_SIZE);
+
+            // For print
+            memcpy(sendMessage, buffer + (i * PACK_SIZE), PACK_SIZE);
+        }
+        else { // If this is last packet
+            frame.can_dlc = lastPacketSize;
+            memcpy(frame.data, buffer + (i * PACK_SIZE), lastPacketSize);
+
+            // For print
+            memcpy(sendMessage, buffer + (i * PACK_SIZE), lastPacketSize);
+        }
+
+        if (write(socketCANDescriptor, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) {
+            perror("Write failed");
+            return -1;
+        }   
+
+        // // Print packet
+        // printf("0x%03X [%d] ",frame.can_id, frame.can_dlc);
+        // printf("%d %d\n", sendMessage[0], sendMessage[1]);
+        // for(int j = 0; j < frame.can_dlc; j++) {
+        //     printf("%c ", sendMessage[j]);
+        // }
+        // printf("\n");
+    }
+
+    return 0;
+}
+
 void closeCANSocket(int socketCANDescriptor) {
     if (close(socketCANDescriptor) < 0) {
         perror("Close failed");

@@ -51,15 +51,14 @@ int main(void)
             pathStrLen += sizeof(buffer[i]) + 4;
         } else {
             sprintf(&pathStr[pathStrLen], "%c.\n", buffer[i]);
+            pathStrLen += sizeof(buffer[i]) + 2;
         }
     }
 
     printf("The shortest path is %s\n", pathStr);
-    displayText(0, pathStr);
 
     // 초음파 쓰레드
     pthread_create(&threads[1], NULL, ultrasonic, NULL);
-    printf("Started Ultrasonic sensor.\n\n");
 
     // Create CAN socket
     socketCANDescriptor = setupCANSocket("can0");
@@ -67,24 +66,23 @@ int main(void)
     {
         return -1;
     }
-
     moveMotor(120);
-    moveMotor(12);
-    // displayText(0, (const char*)buffer);
+    displayText(0, pathStr);
+    displayText(1, "You made it!\n");
+    printf("length: %d\n",pathStrLen);
     while(1)
     {
         char inputString[128];
         printf("Enter your text to display on RPi #2's LCD: ");
         fgets(inputString, 128, stdin);
 
-        if ((strcmp(inputString, quit_command) == 0) && (strlen(inputString) == 5)){
+        if ((strcmp(inputString, quit_command) == 0) && (strlen(inputString) == strlen(quit_command))){
             terminateRPC(quit_command);
             break;
         }else{
 
-            // displayText(0, (const char*)inputString);
+            displayText(0, (const char*)inputString);
             // displayText(1, (const char*)inputString);
-            // terminateRPC("quit");
         }
     }
 

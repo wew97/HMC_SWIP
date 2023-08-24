@@ -12,7 +12,6 @@ int led_status = 0;
 // status = 1: 20cm이내
 void *led(void *argumentPointer)
 {
-    printf("Started LED.\n\n");
     pinMode(LED_GPIO, OUTPUT);
 
     int delay_ms = 1000; // default

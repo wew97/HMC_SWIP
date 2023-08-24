@@ -103,5 +103,7 @@ int main(void)
     }
 
 terminate_rpc:
+    initializeLCD();
+    closeCANSocket(socketCANDescriptor);
     return 0;
 }

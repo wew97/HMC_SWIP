@@ -130,13 +130,13 @@ int sendCANFrames(int socketCANDescriptor, char* buffer, int bufferSize) {
             return -1;
         }   
 
-        // Print packet
-        printf("0x%03X [%d] ",frame.can_id, frame.can_dlc);
-        printf("%d %d\n", sendMessage[0], sendMessage[1]);
-        for(int j = 0; j < frame.can_dlc; j++) {
-            printf("%c ", sendMessage[j]);
-        }
-        printf("\n");
+        // // Print packet
+        // printf("0x%03X [%d] ",frame.can_id, frame.can_dlc);
+        // printf("%d %d\n", sendMessage[0], sendMessage[1]);
+        // for(int j = 0; j < frame.can_dlc; j++) {
+        //     printf("%c ", sendMessage[j]);
+        // }
+        // printf("\n");
     }
 
     return 0;

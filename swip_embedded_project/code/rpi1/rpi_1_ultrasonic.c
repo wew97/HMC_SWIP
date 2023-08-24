@@ -50,8 +50,6 @@ void *ultrasonic(void *argumentPointer)
 {
     float distance;
 
-    printf("Started Ultrasonic sensor.\n");
-
     pinMode(Echo, INPUT);
     pinMode(Trig, OUTPUT);
 
