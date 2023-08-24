@@ -39,7 +39,7 @@ int main(void)
     // LED 쓰레드
     pthread_create(&threads[0], NULL, led, NULL);
 
-    // dijkstra_start
+    // dijkstra_startt
     char buffer[MAX_NODES];
     int len = 0;
 
@@ -75,18 +75,22 @@ int main(void)
         return -1;
     }
 
-    // processCANFrames(socketCANDescriptor);
-
-    while(1) {                
+    moveMotor(120);
+    moveMotor(12);
+    // displayText(0, (const char*)buffer);
+    while(1)
+    {
         printf("Enter your text to display on RPi #2's LCD: ");
         fgets(inputString, 128, stdin);
 
-        displayText(0, (const char*)inputString);
-
-        // if (strncmp(inputString, quit_command, frame.can_dlc) == 0 && frame.can_dlc == strlen(quit_command)){
-        //     printf("\nTerminating RPi #1.\n");
-        //     break;
-        // }
+        if ((strcmp(inputString, quit_command) == 0) && (strlen(inputString) == 5)){
+            terminateRPC(quit_command);
+            break;
+        }else{
+            displayText(0, (const char*)inputString);
+            // displayText(1, (const char*)inputString);
+            // terminateRPC("quit");
+        }
     }
 
     closeCANSocket(socketCANDescriptor);
