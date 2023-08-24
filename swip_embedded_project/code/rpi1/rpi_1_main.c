@@ -76,8 +76,9 @@ int main(void)
     inputPathStr[pathStrLen-1] = '\0';
 
     displayText(0, inputPathStr);
-    delay(1000);
+    delay(2000);
     displayText(1, "You made it!");
+    moveMotor(30);
 
     free(inputPathStr);
     while (1)
@@ -99,6 +100,12 @@ int main(void)
             displayText(0, (const char *)inputString);
             // displayText(1, (const char*)inputString);
         }
+
+        // int inputValue;
+        // printf("Enter your value to move motor on RPI #2: ");
+        // scanf("%d", &inputValue);
+
+        // moveMotor(inputValue);
     }
 
     closeCANSocket(socketCANDescriptor);
