@@ -1,60 +1,25 @@
-// #include <stdio.h>
-// #include <string.h>
-// #include <stdlib.h>
-
-// #include "rpi_2_stub.h"
-// #include "rpi_2_can.h"
-
-// // 8: Total packets
-// // 8: Function ID
-// // ~: Args
-
-// typedef enum FUNC_ID
-// {
-//     DISPLAY_TEXT,
-//     MOVE_MOTOR,
-//     TERMINATE
-// }FUNC_ID;
-
-// void unmarshall(char *buffer)
-// {
-//     int burffersize = PACK_SIZE * 3;
-//     FUNC_ID funcID = buffer[7];
-
-//     switch (funcID)
-//     {
-//     case DISPLAY_TEXT:
-//         // displayText() 실행
-//         break;
-//     case MOVE_MOTOR:
-//         // moveMotor() 실행
-//         break;
-//     case TERMINATE:
-//         // terminateRPC() 실행
-//         break;
-//     }
-// }
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
 #include "rpi_2_stub.h"
 #include "rpi_2_can.h"
+#include "rpi_2_lcd.h"
+#include "rpi_2_motor.h"
 
 // 8: Total packets
 // 8: Function ID
 // ~: Args
 
-void displayTextUnmarshall(char* buffer, int* lineNum, char* inputString)
+void displayTextUnmarshall(char *buffer, int bytesTotal, int *lineNum, char *inputString)
 {
-
+    memcpy(&lineNum, &buffer[PACK_SIZE * 2], 4);
+    memcpy(inputString, &buffer[PACK_SIZE * 3], bytesTotal - 24);
 }
-void moveMotorUnmarshall(char* buffer, int* inputVal)
+void moveMotorUnmarshall(char *buffer, int *inputVal)
 {
-
+    memcpy(&inputVal, &buffer[PACK_SIZE*2], 4);
 }
-void terminateRPCUnmarshall(char* buffer, char* inputString)
+void terminateRPCUnmarshall(char *buffer, char *inputString)
 {
-    
 }

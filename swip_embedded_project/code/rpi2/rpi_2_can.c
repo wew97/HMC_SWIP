@@ -58,11 +58,10 @@ int receiveCANFrames(int socketCANDescriptor, char* buffer, int bufferSize) {
     memcpy(&buffer[0], &bufferSize, sizeof(bufferSize));
     
     // Receive CAN frame one by one
-    for (int i = 0; i < packetTotal; i++) {
+    for (int i = 1; i < packetTotal; i++) {
 
         // Prepare the CAN frame
-        struct can_frame frame;
-
+        struct can_frame frame; 
         int nbytesReceived = read(socketCANDescriptor, &frame, sizeof(struct can_frame));
         if (nbytesReceived < 0) {
             perror("Read failed");
