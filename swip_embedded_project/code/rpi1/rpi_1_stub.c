@@ -9,8 +9,6 @@
 // 8: Function ID
 // ~: Args
 
-extern int socketCANDescriptor;
-
 enum FUNC_ID { DISPLAY_TEXT, MOVE_MOTOR, TERMINATE };
 
 // Function ID: 0

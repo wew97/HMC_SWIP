@@ -4,4 +4,5 @@
 
 int setupCANSocket(const char *interfaceName);
 int receiveCANFrames(int socketCANDescriptor, char *buffer, int bytesTotal);
+int sendCANFrames(int socketCANDescriptor, char* buffer, int bufferSize);
 void closeCANSocket(int socketCANDescriptor);

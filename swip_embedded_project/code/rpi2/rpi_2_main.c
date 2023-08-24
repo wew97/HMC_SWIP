@@ -28,6 +28,8 @@
 int deviceHandle;
 int socketCANDescriptor;
 
+enum FUNC_ID { DISPLAY_TEXT, MOVE_MOTOR, TERMINATE };
+
 int main(void)
 {
     pthread_t threads[4];
@@ -47,52 +49,50 @@ int main(void)
     while (1)
     {
         struct can_frame frame;
-        char* buffer;
+        char buffer[128];
         char receiveMessage[8];
 
         int nbytesReceived = read(socketCANDescriptor, &frame, sizeof(struct can_frame));
-        if (nbytesReceived < 0) {
-                perror("Read failed");
-                return -1;
+        if (nbytesReceived < 0)
+        {
+            perror("Read failed");
+            return -1;
         }
 
         int bytesTotal;
         memcpy(&bytesTotal, frame.data, 4);
         receiveCANFrames(socketCANDescriptor, buffer, bytesTotal);
-
         int function_id;
         memcpy(&function_id, &buffer[PACK_SIZE], 4);
 
-        switch(function_id) {
+        switch (function_id)
+        {
         case DISPLAY_TEXT:
         {
             int lineNum;
-            char* inputString;
-            displayTextUnmarshall(buffer, &lineNum, inputString);
+            char inputString[128];
+            displayTextUnmarshall(buffer, bytesTotal, &lineNum, inputString);
             initializeLCD();
             displayText(lineNum, inputString);
-            break; 
+            break;
         }
         case MOVE_MOTOR:
         {
             int inputVal;
             moveMotorUnmarshall(buffer, &inputVal);
+            printf("here: %d\n", inputVal);
             moveMotor(inputVal);
             break;
         }
         case TERMINATE:
         {
-            char* inputString;
-            terminateRPCUnmarshall(buffer, inputString);
-            printf("~~~\n");
+            char *inputString;
+            //terminateRPCUnmarshall(buffer, inputString);
+            printf("Terminating RPI #2.\n");
             goto terminate_rpc;
             break;
         }
         }
-
-        // // 여기서 stub 실행 위에 애들도 바꿔주어야함.
-        // unmarshall(receiveMessage);
-
         // /*
         // 이거 나중에 terminateRPC(char *text)로 뺄거임
         // */
@@ -106,7 +106,6 @@ int main(void)
         //     break;
         // }
         // // 여기까지
-
     }
 
 terminate_rpc:
