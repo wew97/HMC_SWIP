@@ -48,41 +48,56 @@ int setupCANSocket(const char *interfaceName) {
 
     return socketCANDescriptor;
 }
+int receiveCANFrames(int socketCANDescriptor, char* buffer, int bufferSize) {
 
-/*
-void processCANFrames(int socketCANDescriptor) {
-    struct can_frame frame;
-    char quit_command[] = "quit\n";
-    char receiveMessage[8];
-    int nbytesReceived;
+    int packetTotal = bufferSize / PACK_SIZE;
+    int lastPacketSize = bufferSize % PACK_SIZE;
+    if (lastPacketSize > 0) packetTotal++;
+
+    // Fill buffer[0] with bufferSize
+    memcpy(&buffer[0], &bufferSize, sizeof(bufferSize));
     
-    while (1) {
-        nbytesReceived = read(socketCANDescriptor, &frame, sizeof(struct can_frame));
+    // Receive CAN frame one by one
+    for (int i = 0; i < packetTotal; i++) {
+
+        // Prepare the CAN frame
+        struct can_frame frame;
+
+        int nbytesReceived = read(socketCANDescriptor, &frame, sizeof(struct can_frame));
         if (nbytesReceived < 0) {
             perror("Read failed");
-            break;
+            return -1;
+        }
+        
+        // For print
+        char receivedMessage[PACK_SIZE];
+
+        if (i < packetTotal - 1) { // If this is not last packet
+            frame.can_dlc = PACK_SIZE;
+            memcpy(buffer + (i * PACK_SIZE), frame.data, PACK_SIZE);
+
+            // For print
+            memcpy(receivedMessage, frame.data, PACK_SIZE);
+        }
+        else { // If this is last packet
+            frame.can_dlc = lastPacketSize;
+            memcpy(buffer + (i * PACK_SIZE), frame.data, lastPacketSize);
+
+            // For print
+            memcpy(receivedMessage, frame.data, PACK_SIZE);
         }
 
-        printf("0x%03X [%d] ", frame.can_id, frame.can_dlc);
-        memcpy(receiveMessage, (unsigned char *)(frame.data), frame.can_dlc);
-        receiveMessage[frame.can_dlc] = '\n';
-        printf("%s\n", receiveMessage);
-
-        if (strncmp(receiveMessage, quit_command, frame.can_dlc) == 0 && (frame.can_dlc == strlen(quit_command))) {
-            printf("RPC request 'QUIT' command received\n\n");
-            printf("Terminating RPi #2.\n");
-            lcd("Bye Bye!");
-            delay(2000);
-            initializeLCD();
-            break;
+        // Print packet
+        printf("0x%03X [%d] ",frame.can_id, frame.can_dlc);
+        printf("%d %d\n", receivedMessage[0], receivedMessage[1]);
+        for(int j = 0; j < frame.can_dlc; j++) {
+            printf("%c ", receivedMessage[j]);
         }
-
-        lcd(receiveMessage);
-
-        bzero(receiveMessage, 8);
+        printf("\n");
     }
+
+    return 0;
 }
-*/
 
 void closeCANSocket(int socketCANDescriptor) {
     if (close(socketCANDescriptor) < 0) {

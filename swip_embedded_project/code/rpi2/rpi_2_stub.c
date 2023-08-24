@@ -1,24 +1,36 @@
-// rpi_2_stub.c
-
 #include <stdio.h>
-#include <rpc/rpc.h>
+#include <string.h>
+#include <stdlib.h>
+
 #include "rpi_2_stub.h"
+#include "rpi_2_can.h"
 
-// Function ID, arg length, arg
-char func_arg[50];
+// 8: Total packets
+// 8: Function ID
+// ~: Args
 
-void marshall(const char *func, char *buffer, size_t buffer_size) {
-    memcpy(buffer, func, sizeof(func));
-}
+typedef enum FUNC_ID
+{
+    DISPLAY_TEXT,
+    MOVE_MOTOR,
+    TERMINATE
+}FUNC_ID;
 
-void unmarshall(const char *buffer, char *func, size_t buffer_size) {
-    memcpy(func, buffer, sizeof(func));
-}
+void unmarshall(char *buffer)
+{
+    int burffersize = PACK_SIZE * 3;
+    FUNC_ID funcID = buffer[7];
 
-void stub(char *receiveStub){
-    // receiveStub을 unmarshall로 해석
-    // Case 1) displayText(int lineNum, char *text)
-    // Case 2) moveMotor(int inputValue)
-
-    return;
+    switch (funcID)
+    {
+    case DISPLAY_TEXT:
+        // displayText() 실행
+        break;
+    case MOVE_MOTOR:
+        // moveMotor() 실행
+        break;
+    case TERMINATE:
+        // terminateRPC() 실행
+        break;
+    }
 }
