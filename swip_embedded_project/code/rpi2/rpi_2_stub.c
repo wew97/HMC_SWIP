@@ -27,7 +27,7 @@ void unmarshall(char *buffer)
         // displayText() 실행
         break;
     case MOVE_MOTOR:
-        // moveMotor() 실행
+        // moveMotor(buffer[]) 실행
         break;
     case TERMINATE:
         // terminateRPC() 실행
