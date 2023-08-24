@@ -51,6 +51,7 @@ int main(void)
             pathStrLen += sizeof(buffer[i]) + 4;
         } else {
             sprintf(&pathStr[pathStrLen], "%c.\n", buffer[i]);
+            pathStrLen += sizeof(buffer[i]) + 2;
         }
     }
 
@@ -58,7 +59,6 @@ int main(void)
 
     // 초음파 쓰레드
     pthread_create(&threads[1], NULL, ultrasonic, NULL);
-    printf("Started Ultrasonic sensor.\n\n");
 
     // Create CAN socket
     socketCANDescriptor = setupCANSocket("can0");
@@ -76,9 +76,8 @@ int main(void)
         printf("Enter your text to display on RPi #2's LCD: ");
         fgets(inputString, 128, stdin);
 
-        if ((strcmp(inputString, quit_command) == 0) && (strlen(inputString) == 5)){
+        if ((strcmp(inputString, quit_command) == 0) && (strlen(inputString) == strlen(quit_command) + 1)){
             terminateRPC(quit_command);
-            printf("Terminating RPi1 #1.");
             break;
         }else{
 
