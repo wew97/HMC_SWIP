@@ -14,7 +14,6 @@ enum FUNC_ID { DISPLAY_TEXT, MOVE_MOTOR, TERMINATE };
 // Function ID: 0
 int displayText(int lineNum, const char* inputString)
 {
-    printf("Requested RPC displayText(%d, %s)\n", lineNum, inputString);
     int result;
 
     int bufferSize = PACK_SIZE*3 + strlen(inputString);
@@ -26,9 +25,15 @@ int displayText(int lineNum, const char* inputString)
     memcpy(&buffer[PACK_SIZE * 2], &lineNum, sizeof(lineNum));
     memcpy(&buffer[PACK_SIZE * 3], inputString, strlen(inputString));
 
-    result = sendCANFrames(socketCANDescriptor, buffer, bufferSize);
+    sendCANFrames(socketCANDescriptor, buffer, bufferSize);
 
     free(buffer);
+
+    // Receive displayText response
+    char res_buffer[PACK_SIZE];
+    receiveCANFrames(socketCANDescriptor, res_buffer, PACK_SIZE);
+    result = ((int*)res_buffer)[1];
+    printf("Requested RPC displayText(%d, %s) and received return value %d\n", lineNum, inputString, result);
 
     return result;
 }
@@ -36,7 +41,6 @@ int displayText(int lineNum, const char* inputString)
 // Function ID: 1
 int moveMotor(int inputVal) 
 {
-    printf("Requested RPC moveMotor(%d)\n", inputVal);
     int result;
 
     int bufferSize = PACK_SIZE*2 + sizeof(inputVal);
@@ -50,6 +54,13 @@ int moveMotor(int inputVal)
     result = sendCANFrames(socketCANDescriptor, buffer, bufferSize);
 
     free(buffer);
+
+    // Receive moveMotor response
+    char res_buffer[PACK_SIZE];
+    receiveCANFrames(socketCANDescriptor, res_buffer, PACK_SIZE);
+    result = ((int*)res_buffer)[1];
+
+    printf("Requested RPC moveMotor(%d) and received return value %d\n", inputVal, result);
 
     return result;
 }

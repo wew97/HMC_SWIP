@@ -28,11 +28,11 @@ int main(void)
     pthread_t threads[4];
     char quit_command[] = "quit\n";
 
-    // wiringPiSetupGpio();
+    wiringPiSetupGpio();
     printf("RPi #1 is ready.\n\n");
 
     // LED 쓰레드
-    // pthread_create(&threads[0], NULL, led, NULL);
+    pthread_create(&threads[0], NULL, led, NULL);
     printf("Started LED.\n\n");
 
     // dijkstra_start
@@ -51,14 +51,15 @@ int main(void)
             pathStrLen += sizeof(buffer[i]) + 4;
         } else {
             sprintf(&pathStr[pathStrLen], "%c.\n", buffer[i]);
+            pathStrLen += sizeof(buffer[i]) + 2;
         }
     }
 
     printf("The shortest path is %s\n", pathStr);
+    displayText(0, pathStr);
 
     // 초음파 쓰레드
     pthread_create(&threads[1], NULL, ultrasonic, NULL);
-    printf("Started Ultrasonic sensor.\n\n");
 
     // Create CAN socket
     socketCANDescriptor = setupCANSocket("can0");
@@ -76,8 +77,9 @@ int main(void)
         printf("Enter your text to display on RPi #2's LCD: ");
         fgets(inputString, 128, stdin);
 
-        if ((strcmp(inputString, quit_command) == 0) && (strlen(inputString) == 5)){
+        if ((strcmp(inputString, quit_command) == 0) && (strlen(inputString) == strlen(quit_command) + 1)){
             terminateRPC(quit_command);
+            printf("Terminating RPI #1.\n");
             break;
         }else{
             displayText(0, (const char*)inputString);

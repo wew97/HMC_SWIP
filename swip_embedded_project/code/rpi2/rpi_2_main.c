@@ -75,6 +75,7 @@ int main(void)
             displayTextUnmarshall(buffer, bytesTotal, lineNum, inputString);
             initializeLCD();
             displayText(*lineNum, inputString);
+            displayTextResponse(inputString);
             break;
         }
         case MOVE_MOTOR:
@@ -83,6 +84,7 @@ int main(void)
 
             moveMotorUnmarshall(buffer, inputVal);
             moveMotor(*inputVal);
+            moveMotorResponse(*inputVal);
             break;
         }
         case TERMINATE:
@@ -97,6 +99,7 @@ int main(void)
     }
 
 terminate_rpc:
+    initializeLCD();
     closeCANSocket(socketCANDescriptor);
     return 0;
 }

@@ -17,12 +17,34 @@ void displayTextUnmarshall(char *buffer, int bytesTotal, int *lineNum, char *inp
 {
     memcpy(lineNum, &buffer[PACK_SIZE * 2], 4);
     memcpy(inputString, &buffer[PACK_SIZE * 3], bytesTotal - 24);
-
-    
 }
+void displayTextResponse(const char* inputString)
+{
+    char buffer[8];
+
+    int function_id = DISPLAY_TEXT;
+    memcpy(buffer, &function_id, sizeof(function_id));
+
+    int strLen = strlen(inputString);
+    memcpy(buffer + 4, &strLen, sizeof(strLen));
+
+    sendCANFrames(socketCANDescriptor, buffer, sizeof(buffer));
+}
+
 void moveMotorUnmarshall(char *buffer, int *inputVal)
 {
     memcpy(inputVal, &buffer[PACK_SIZE*2],4);
+}
+void moveMotorResponse(int inputValue)
+{
+    char buffer[8];
+
+    int function_id = MOVE_MOTOR;
+
+    memcpy(buffer, &function_id, sizeof(function_id));
+    memcpy(buffer + 4, &inputValue, sizeof(inputValue));
+
+    sendCANFrames(socketCANDescriptor, buffer, sizeof(buffer));
 }
 void terminateRPCUnmarshall(char *buffer, char *inputString)
 {
