@@ -48,4 +48,5 @@ void moveMotorResponse(int inputValue)
 }
 void terminateRPCUnmarshall(char *buffer, char *inputString)
 {
+    memcpy(inputString, &buffer[PACK_SIZE * 2], );
 }

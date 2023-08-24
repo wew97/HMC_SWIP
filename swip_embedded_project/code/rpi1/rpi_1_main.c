@@ -82,7 +82,8 @@ int main(void)
             printf("Terminating RPI #1.\n");
             break;
         }else{
-            displayText(0, (const char*)inputString);
+
+            // displayText(0, (const char*)inputString);
             // displayText(1, (const char*)inputString);
             // terminateRPC("quit");
         }
