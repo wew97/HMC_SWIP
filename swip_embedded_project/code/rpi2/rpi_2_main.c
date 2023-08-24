@@ -50,6 +50,7 @@ int main(void)
     {
         struct can_frame frame;
         char buffer[128];
+        bzero(buffer, 128);
         char receiveMessage[8];
 
         int nbytesReceived = read(socketCANDescriptor, &frame, sizeof(struct can_frame));
@@ -64,30 +65,30 @@ int main(void)
         receiveCANFrames(socketCANDescriptor, buffer, bytesTotal);
         int function_id;
         memcpy(&function_id, &buffer[PACK_SIZE], 4);
-
         switch (function_id)
         {
         case DISPLAY_TEXT:
         {
-            int lineNum;
+            int *lineNum = (int *)malloc(sizeof(int));
             char inputString[128];
-            displayTextUnmarshall(buffer, bytesTotal, &lineNum, inputString);
+
+            displayTextUnmarshall(buffer, bytesTotal, lineNum, inputString);
             initializeLCD();
-            displayText(lineNum, inputString);
+            displayText(*lineNum, inputString);
             break;
         }
         case MOVE_MOTOR:
         {
-            int inputVal;
-            moveMotorUnmarshall(buffer, &inputVal);
-            printf("here: %d\n", inputVal);
-            moveMotor(inputVal);
+            int *inputVal = (int *)malloc(sizeof(int));
+
+            moveMotorUnmarshall(buffer, inputVal);
+            moveMotor(*inputVal);
             break;
         }
         case TERMINATE:
         {
             char *inputString;
-            //terminateRPCUnmarshall(buffer, inputString);
+            // terminateRPCUnmarshall(buffer, inputString);
             printf("~~~\n");
             goto terminate_rpc;
             break;
