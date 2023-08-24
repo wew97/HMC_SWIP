@@ -23,12 +23,14 @@ void displayTextResponse(const char* inputString)
     char buffer[8];
 
     int function_id = DISPLAY_TEXT;
-    memcpy(buffer, &function_id, sizeof(function_id));
 
     int strLen = strlen(inputString);
+
+    memcpy(buffer, &function_id, sizeof(function_id));
     memcpy(&buffer[4], &strLen, sizeof(strLen));
 
     sendCANFrames(socketCANDescriptor, buffer, sizeof(buffer));
+    bzero(buffer, sizeof(buffer));
 }
 
 void moveMotorUnmarshall(char *buffer, int *inputVal)
@@ -45,6 +47,7 @@ void moveMotorResponse(int inputValue)
     memcpy(&buffer[4], &inputValue, sizeof(inputValue));
 
     sendCANFrames(socketCANDescriptor, buffer, sizeof(buffer));
+    bzero(buffer, sizeof(buffer));
 }
 void terminateRPC(char *text)
 {

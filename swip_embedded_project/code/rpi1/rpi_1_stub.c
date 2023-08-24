@@ -27,6 +27,7 @@ int displayText(int lineNum, const char* inputString)
 
     sendCANFrames(socketCANDescriptor, buffer, bufferSize);
 
+    bzero(buffer, sizeof(buffer));
     free(buffer);
 
     // Receive displayText response
@@ -34,7 +35,7 @@ int displayText(int lineNum, const char* inputString)
     receiveCANFrames(socketCANDescriptor, res_buffer, PACK_SIZE);
     memcpy(&result, &res_buffer[4], 4);
     printf("Requested RPC displayText(%d, %s) and received return value %d\n", lineNum, inputString, result);
-
+    bzero(res_buffer, sizeof(res_buffer));
     return result;
 }
 
@@ -53,6 +54,7 @@ int moveMotor(int inputVal)
 
     sendCANFrames(socketCANDescriptor, buffer, bufferSize);
 
+    bzero(buffer, sizeof(buffer));
     free(buffer);
 
     // Receive moveMotor response
@@ -60,7 +62,7 @@ int moveMotor(int inputVal)
     receiveCANFrames(socketCANDescriptor, res_buffer, PACK_SIZE);
     memcpy(&result, &res_buffer[4], 4);
     printf("Requested RPC moveMotor(%d) and received return value %d\n", inputVal, result);
-
+    bzero(res_buffer, sizeof(res_buffer));
     return result;
 }
 
