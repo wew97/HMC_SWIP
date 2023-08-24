@@ -58,10 +58,13 @@ int main(void)
         case TERMINATE:
                 char* inputString;
                 terminateRPCUnmarshall(buffer, inputString);
-                // terminate
+                printf("~~~\n");
+                goto terminate;
                 break;
         }
     }
+
+terminate:
 
     if (close(socketCANDescriptor) < 0) 
     {

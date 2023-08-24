@@ -35,7 +35,7 @@ int main(void)
     int socketCANDescriptor;
 
     wiringPiSetupGpio();
-    // initializeLCD();
+    initializeLCD();
     printf("RPi #2 is ready to accept RPC requests.\n");
 
     deviceHandle = wiringPiI2CSetup(Detected_DEVICE_ID_BY_I2C);
@@ -46,49 +46,72 @@ int main(void)
         return -1;
     }
 
-    struct can_frame frame;
-    char quit_command[] = "quit\n";
-    char receiveMessage[8];
-    int nbytesReceived;
-
     while (1)
     {
-        nbytesReceived = read(socketCANDescriptor, &frame, sizeof(struct can_frame));
+        struct can_frame frame;
+        char* buffer;
+        char receiveMessage[8];
 
-        if (nbytesReceived < 0)
-        {
-            perror("Read failed");
-            break;
+        int nbytesReceived = read(socketCANDescriptor, &frame, sizeof(struct can_frame));
+        if (nbytesReceived < 0) {
+                perror("Read failed");
+                return -1;
         }
 
-        printf("0x%03X [%d] ", frame.can_id, frame.can_dlc);
-        memcpy(receiveMessage, (unsigned char *)(frame.data), frame.can_dlc);
-        receiveMessage[frame.can_dlc] = '\n';
-        printf("%d %d\n", receiveMessage[0], receiveMessage[1]);
+        int bytesTotal;
+        memcpy(&bytesTotal, frame.data, 4);
+        receiveCANFrames(socketCANDescriptor, buffer, bytesTotal);
 
-        // 여기서 stub 실행 위에 애들도 바꿔주어야함.
-        unmarshall(receiveMessage);
+        int function_id;
+        memcpy(&function_id, &buffer[PACK_SIZE], 4);
 
-        /*
-        이거 나중에 terminateRPC(char *text)로 뺄거임
-        */
-        if (strncmp(receiveMessage, quit_command, frame.can_dlc) == 0 && (frame.can_dlc == strlen(quit_command)))
+        switch(function_id) {
+        case DISPLAY_TEXT:
         {
-            printf("RPC request 'QUIT' command received\n\n");
-            printf("Terminating RPi #2.\n");
-            displayText(0, "Bye Bye!");
-            delay(2000);
+            int lineNum;
+            char* inputString;
+            displayTextUnmarshall(buffer, &lineNum, inputString);
             initializeLCD();
+            displayText(lineNum, inputString);
+            break; 
+        }
+        case MOVE_MOTOR:
+        {
+            int inputVal;
+            moveMotorUnmarshall(buffer, &inputVal);
+            moveMotor(inputVal);
             break;
         }
-        // 여기까지
+        case TERMINATE:
+        {
+            char* inputString;
+            terminateRPCUnmarshall(buffer, inputString);
+            printf("~~~\n");
+            goto terminate_rpc;
+            break;
+        }
+        }
 
-        initializeLCD();
-        displayText(0, receiveMessage);
+        // // 여기서 stub 실행 위에 애들도 바꿔주어야함.
+        // unmarshall(receiveMessage);
 
-        bzero(receiveMessage, 8);
+        // /*
+        // 이거 나중에 terminateRPC(char *text)로 뺄거임
+        // */
+        // if (strncmp(receiveMessage, quit_command, frame.can_dlc) == 0 && (frame.can_dlc == strlen(quit_command)))
+        // {
+        //     printf("RPC request 'QUIT' command received\n\n");
+        //     printf("Terminating RPi #2.\n");
+        //     displayText(0, "Bye Bye!");
+        //     delay(2000);
+        //     initializeLCD();
+        //     break;
+        // }
+        // // 여기까지
+
     }
 
+terminate_rpc:
     closeCANSocket(socketCANDescriptor);
     return 0;
 }
