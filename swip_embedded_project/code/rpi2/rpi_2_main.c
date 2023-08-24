@@ -51,10 +51,12 @@ int main(void)
     char receiveMessage[8];
     int nbytesReceived;
 
-    while (1) {
-        initializeLCD();
+    while (1)
+    {
         nbytesReceived = read(socketCANDescriptor, &frame, sizeof(struct can_frame));
-        if (nbytesReceived < 0) {
+
+        if (nbytesReceived < 0)
+        {
             perror("Read failed");
             break;
         }
@@ -62,15 +64,16 @@ int main(void)
         printf("0x%03X [%d] ", frame.can_id, frame.can_dlc);
         memcpy(receiveMessage, (unsigned char *)(frame.data), frame.can_dlc);
         receiveMessage[frame.can_dlc] = '\n';
-        printf("%s\n", receiveMessage);
+        printf("%d %d\n", receiveMessage[0], receiveMessage[1]);
 
-        //여기서 stub 실행 위에 애들도 바꿔주어야함.
-        stub(receiveMessage);
+        // 여기서 stub 실행 위에 애들도 바꿔주어야함.
+        unmarshall(receiveMessage);
 
         /*
         이거 나중에 terminateRPC(char *text)로 뺄거임
         */
-        if (strncmp(receiveMessage, quit_command, frame.can_dlc) == 0 && (frame.can_dlc == strlen(quit_command))) {
+        if (strncmp(receiveMessage, quit_command, frame.can_dlc) == 0 && (frame.can_dlc == strlen(quit_command)))
+        {
             printf("RPC request 'QUIT' command received\n\n");
             printf("Terminating RPi #2.\n");
             displayText(0, "Bye Bye!");
@@ -80,11 +83,11 @@ int main(void)
         }
         // 여기까지
 
+        initializeLCD();
         displayText(0, receiveMessage);
 
         bzero(receiveMessage, 8);
     }
-
 
     closeCANSocket(socketCANDescriptor);
     return 0;
