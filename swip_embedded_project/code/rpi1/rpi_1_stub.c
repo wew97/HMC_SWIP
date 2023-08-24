@@ -9,14 +9,12 @@
 // 8: Function ID
 // ~: Args
 
-extern int socketCANDescriptor;
-
 enum FUNC_ID { DISPLAY_TEXT, MOVE_MOTOR, TERMINATE };
 
 // Function ID: 0
 int displayText(int lineNum, const char* inputString)
 {
-    printf("displayText(%d, %s)\n", lineNum, inputString);
+    printf("Requested RPC displayText(%d, %s)\n", lineNum, inputString);
     int result;
 
     int bufferSize = PACK_SIZE*3 + strlen(inputString);
@@ -36,18 +34,18 @@ int displayText(int lineNum, const char* inputString)
 }
 
 // Function ID: 1
-int moveMotor(int width) 
+int moveMotor(int inputVal) 
 {
-    printf("moveMotor(%d)\n", width);
+    printf("Requested RPC moveMotor(%d)\n", inputVal);
     int result;
 
-    int bufferSize = PACK_SIZE*2 + sizeof(width);
+    int bufferSize = PACK_SIZE*2 + sizeof(inputVal);
     char* buffer = malloc(bufferSize);
     int function_id = MOVE_MOTOR;
 
     // Marshall
     memcpy(&buffer[PACK_SIZE * 1], &function_id, sizeof(function_id));
-    memcpy(&buffer[PACK_SIZE * 2], &width, sizeof(width));
+    memcpy(&buffer[PACK_SIZE * 2], &inputVal, sizeof(inputVal));
 
     result = sendCANFrames(socketCANDescriptor, buffer, bufferSize);
 
@@ -59,7 +57,7 @@ int moveMotor(int width)
 // Function ID: 2
 int terminateRPC(const char* text)
 {
-    printf("terminateRPC(%s)\n", text);
+    printf("Requested RPC terminateRPC(%s)\n", text);
     int result;
 
     int bufferSize = PACK_SIZE*2 + strlen(text);

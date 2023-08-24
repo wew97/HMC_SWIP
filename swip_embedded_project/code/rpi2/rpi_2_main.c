@@ -22,17 +22,17 @@
 #include "rpi_2_motor.h"
 #include "rpi_2_stub.h"
 
-#define NUM_MAX 100000
 #define Detected_DEVICE_ID_BY_I2C 0x27 // Device ID detected by I2C
                                        // Seems that it maps to the device's address
 
 int deviceHandle;
+int socketCANDescriptor;
+
+enum FUNC_ID { DISPLAY_TEXT, MOVE_MOTOR, TERMINATE };
 
 int main(void)
 {
     pthread_t threads[4];
-
-    int socketCANDescriptor;
 
     wiringPiSetupGpio();
     initializeLCD();
@@ -87,26 +87,13 @@ int main(void)
         }
         case TERMINATE:
         {
-            char inputString[5];
-            terminateRPCUnmarshall(buffer, inputString);
-            printf("~~~\n");
+            char *inputString;
+            //terminateRPCUnmarshall(buffer, inputString);
+            printf("Terminating RPI #2.\n");
             goto terminate_rpc;
             break;
         }
         }
-        // /*
-        // 이거 나중에 terminateRPC(char *text)로 뺄거임
-        // */
-        // if (strncmp(receiveMessage, quit_command, frame.can_dlc) == 0 && (frame.can_dlc == strlen(quit_command)))
-        // {
-        //     printf("RPC request 'QUIT' command received\n\n");
-        //     printf("Terminating RPi #2.\n");
-        //     displayText(0, "Bye Bye!");
-        //     delay(2000);
-        //     initializeLCD();
-        //     break;
-        // }
-        // // 여기까지
     }
 
 terminate_rpc:

@@ -11,10 +11,14 @@
 // 8: Function ID
 // ~: Args
 
+enum FUNC_ID { DISPLAY_TEXT, MOVE_MOTOR, TERMINATE };
+
 void displayTextUnmarshall(char *buffer, int bytesTotal, int *lineNum, char *inputString)
 {
     memcpy(lineNum, &buffer[PACK_SIZE * 2], 4);
     memcpy(inputString, &buffer[PACK_SIZE * 3], bytesTotal - 24);
+
+    
 }
 void moveMotorUnmarshall(char *buffer, int *inputVal)
 {

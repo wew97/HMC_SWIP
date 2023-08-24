@@ -31,8 +31,7 @@ void readGraph(const char *filename, int (*graph)[MAX_NODES], int *numNodes)
 
 void findShortestPath(int source, int destination, char buffer[], int *len)
 {
-
-    printf("Find shortest path\n");
+    // printf("[Dijkstra] Find shortest path\n");
 
     int graph[MAX_NODES][MAX_NODES];
     int numNodes;

@@ -12,17 +12,9 @@
 #include <linux/can/raw.h>
 
 #include <wiringPiI2C.h>
+#include <wiringPi.h>
 
-#include "wiringPi.h"
 #include "rpi_2_can.h"
-#include "rpi_2_lcd.h"
-
-#define Detected_DEVICE_ID_BY_I2C 0x27 // Device ID detected by I2C
-                                       // Seems that it maps to the device's address
-
-#define NUM_MAX 100000
-
-extern int deviceHandle;
 
 int setupCANSocket(const char *interfaceName) {
     int socketCANDescriptor;
@@ -48,6 +40,7 @@ int setupCANSocket(const char *interfaceName) {
 
     return socketCANDescriptor;
 }
+
 int receiveCANFrames(int socketCANDescriptor, char* buffer, int bufferSize) {
 
     int packetTotal = bufferSize / PACK_SIZE;
@@ -91,6 +84,57 @@ int receiveCANFrames(int socketCANDescriptor, char* buffer, int bufferSize) {
         printf("%d %d\n", receivedMessage[0], receivedMessage[1]);
         for(int j = 0; j < frame.can_dlc; j++) {
             printf("%c ", receivedMessage[j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+int sendCANFrames(int socketCANDescriptor, char* buffer, int bufferSize) {
+
+    int packetTotal = bufferSize / PACK_SIZE;
+    int lastPacketSize = bufferSize % PACK_SIZE;
+    if (lastPacketSize > 0) packetTotal++;
+
+    // Fill buffer[0] with bufferSize
+    memcpy(&buffer[0], &bufferSize, sizeof(bufferSize));
+    
+    // Send CAN frame one by one
+    for (int i = 0; i < packetTotal; i++) {
+
+        // Prepare the CAN frame
+        struct can_frame frame;
+        frame.can_id = 0x123; // Arbitrary CAN ID
+        
+        // For print
+        char sendMessage[PACK_SIZE];
+
+        if (i < packetTotal - 1) { // If this is not last packet
+            frame.can_dlc = PACK_SIZE;
+            memcpy(frame.data, buffer + (i * PACK_SIZE), PACK_SIZE);
+
+            // For print
+            memcpy(sendMessage, buffer + (i * PACK_SIZE), PACK_SIZE);
+        }
+        else { // If this is last packet
+            frame.can_dlc = lastPacketSize;
+            memcpy(frame.data, buffer + (i * PACK_SIZE), lastPacketSize);
+
+            // For print
+            memcpy(sendMessage, buffer + (i * PACK_SIZE), lastPacketSize);
+        }
+
+        if (write(socketCANDescriptor, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) {
+            perror("Write failed");
+            return -1;
+        }   
+
+        // Print packet
+        printf("0x%03X [%d] ",frame.can_id, frame.can_dlc);
+        printf("%d %d\n", sendMessage[0], sendMessage[1]);
+        for(int j = 0; j < frame.can_dlc; j++) {
+            printf("%c ", sendMessage[j]);
         }
         printf("\n");
     }
