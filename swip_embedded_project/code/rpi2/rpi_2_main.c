@@ -87,8 +87,8 @@ int main(void)
         }
         case TERMINATE:
         {
-            char *inputString;
-            // terminateRPCUnmarshall(buffer, inputString);
+            char inputString[5];
+            terminateRPCUnmarshall(buffer, inputString);
             printf("~~~\n");
             goto terminate_rpc;
             break;

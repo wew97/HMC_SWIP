@@ -22,4 +22,5 @@ void moveMotorUnmarshall(char *buffer, int *inputVal)
 }
 void terminateRPCUnmarshall(char *buffer, char *inputString)
 {
+    memcpy(inputString, &buffer[PACK_SIZE * 2], );
 }
