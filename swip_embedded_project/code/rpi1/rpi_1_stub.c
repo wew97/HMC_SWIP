@@ -14,7 +14,7 @@ enum FUNC_ID { DISPLAY_TEXT, MOVE_MOTOR, TERMINATE };
 // Function ID: 0
 int displayText(int lineNum, const char* inputString)
 {
-    int result;
+    int result = -1;
 
     int bufferSize = PACK_SIZE*3 + strlen(inputString);
     char* buffer = malloc(bufferSize);
@@ -32,7 +32,7 @@ int displayText(int lineNum, const char* inputString)
     // Receive displayText response
     char res_buffer[PACK_SIZE];
     receiveCANFrames(socketCANDescriptor, res_buffer, PACK_SIZE);
-    result = ((int*)res_buffer)[1];
+    memcpy(&result, &res_buffer[4], 4);
     printf("Requested RPC displayText(%d, %s) and received return value %d\n", lineNum, inputString, result);
 
     return result;
@@ -41,7 +41,7 @@ int displayText(int lineNum, const char* inputString)
 // Function ID: 1
 int moveMotor(int inputVal) 
 {
-    int result;
+    int result = -1;
 
     int bufferSize = PACK_SIZE*2 + sizeof(inputVal);
     char* buffer = malloc(bufferSize);
@@ -51,15 +51,14 @@ int moveMotor(int inputVal)
     memcpy(&buffer[PACK_SIZE * 1], &function_id, sizeof(function_id));
     memcpy(&buffer[PACK_SIZE * 2], &inputVal, sizeof(inputVal));
 
-    result = sendCANFrames(socketCANDescriptor, buffer, bufferSize);
+    sendCANFrames(socketCANDescriptor, buffer, bufferSize);
 
     free(buffer);
 
     // Receive moveMotor response
     char res_buffer[PACK_SIZE];
     receiveCANFrames(socketCANDescriptor, res_buffer, PACK_SIZE);
-    result = ((int*)res_buffer)[1];
-
+    memcpy(&result, &res_buffer[4], 4);
     printf("Requested RPC moveMotor(%d) and received return value %d\n", inputVal, result);
 
     return result;
