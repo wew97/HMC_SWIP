@@ -26,7 +26,7 @@ int socketCANDescriptor;
 int main(void)
 {
     pthread_t threads[4];
-    char quit_command[] = "quit\n";
+    char quit_command[] = "quit";
 
     wiringPiSetupGpio();
     printf("RPi #1 is ready.\n\n");
@@ -42,15 +42,18 @@ int main(void)
     // buffer => path를 담고 있음 dest -> .. -> source 순서로
     findShortestPath(SOURCE, DEST, buffer, &len);
 
-    char pathStr[128];
+    char pathStr[32];
     int pathStrLen = 0;
     for (int i = len - 1; i >= 0; i--)
     {
-        if (i > 0) {
+        if (i > 0)
+        {
             sprintf(&pathStr[pathStrLen], "%c -> ", buffer[i]);
             pathStrLen += sizeof(buffer[i]) + 4;
-        } else {
-            sprintf(&pathStr[pathStrLen], "%c.\n", buffer[i]);
+        }
+        else
+        {
+            sprintf(&pathStr[pathStrLen], "%c.", buffer[i]);
             pathStrLen += sizeof(buffer[i]) + 2;
         }
     }
@@ -67,21 +70,30 @@ int main(void)
         return -1;
     }
     moveMotor(120);
-    displayText(0, pathStr);
-    displayText(1, "You made it!\n");
-    printf("length: %d\n",pathStrLen);
-    while(1)
+    char *inputPathStr = (char *)malloc(pathStrLen);
+    strncpy(inputPathStr, pathStr, pathStrLen);
+
+    displayText(0, inputPathStr);
+    //displayText(1, "You made it!\n");
+    printf("length: %d\n", pathStrLen);
+    free(inputPathStr);
+    while (1)
     {
         char inputString[128];
         printf("Enter your text to display on RPi #2's LCD: ");
         fgets(inputString, 128, stdin);
 
-        if ((strcmp(inputString, quit_command) == 0) && (strlen(inputString) == strlen(quit_command))){
+        inputString[strlen(inputString) - 1] = '\0';
+
+        if ((strcmp(inputString, quit_command) == 0) && (strlen(inputString) == strlen(quit_command)))
+        {
             terminateRPC(quit_command);
             break;
-        }else{
+        }
+        else
+        {
 
-            displayText(0, (const char*)inputString);
+            displayText(0, (const char *)inputString);
             // displayText(1, (const char*)inputString);
         }
     }
