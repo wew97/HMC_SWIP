@@ -13,6 +13,7 @@
 #include <linux/can/raw.h>
 
 #include "rpi_2_can.h"
+#include "rpi_2_stub.h"
 
 int socketCANDescriptor; 
 
@@ -25,26 +26,41 @@ int main(void)
     }
 
     while(1) {
-            struct can_frame frame;
+        struct can_frame frame;
+        char* buffer;
         char receiveMessage[8];
 
-            int nbytesReceived = read(socketCANDescriptor, &frame, sizeof(struct can_frame));
-            if (nbytesReceived < 0) {
-                    perror("Read failed");
-                    return -1;
-            }
+        int nbytesReceived = read(socketCANDescriptor, &frame, sizeof(struct can_frame));
+        if (nbytesReceived < 0) {
+                perror("Read failed");
+                return -1;
+        }
 
-            printf("0x%03X [%d] ", frame.can_id, frame.can_dlc);                
-            memcpy(receiveMessage, (unsigned char *)(frame.data), frame.can_dlc);
-            receiveMessage[frame.can_dlc] = '\n';
-            printf("%s", receiveMessage);
+        int bytesTotal;
+        memcpy(&bytesTotal, frame.data, 4);
+        receiveCANFrames(socketCANDescriptor, buffer, bytesTotal);
 
-            if ((receiveMessage[0] == 'q') && (frame.can_dlc == 2)) {
-                    printf("QUIT COMMAND!\n");
-                    break;
-            }
+        int function_id;
+        memcpy(&function_id, &buffer[PACK_SIZE], 4);
 
-            bzero(receiveMessage, 8);
+        switch(function_id) {
+        case DISPLAY_TEXT:
+                int lineNum;
+                char* inputString;
+                displayTextUnmarshall(buffer, &lineNum, inputString);
+                displayText(lineNum, inputString);
+                break;
+        case MOVE_MOTOR:
+                int inputVal;
+                moveMotorUnmarshall(buffer, &inputVal);
+                moveMotor(inputVal);
+                break;
+        case TERMINATE:
+                char* inputString;
+                terminateRPCUnmarshall(buffer, inputString);
+                // terminate
+                break;
+        }
     }
 
     if (close(socketCANDescriptor) < 0) 
