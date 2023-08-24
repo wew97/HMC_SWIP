@@ -11,15 +11,15 @@
 
 enum FUNC_ID { DISPLAY_TEXT, MOVE_MOTOR, TERMINATE };
 
-int displayText(char* buffer)
+void displayTextUnmarshall(char* buffer, int* lineNum, char* inputString)
 {
 
 }
-int moveMotor(char* buffer)
+void moveMotorUnmarshall(char* buffer, int* inputVal)
 {
 
 }
-int terminateRPC(char* buffer)
+void terminateRPCUnmarshall(char* buffer, char* inputString)
 {
-
+    
 }
