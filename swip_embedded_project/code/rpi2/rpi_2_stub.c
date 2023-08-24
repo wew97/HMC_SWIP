@@ -35,9 +35,6 @@ void moveMotorUnmarshall(char *buffer, int *inputVal)
 {
     memcpy(inputVal, &buffer[PACK_SIZE*2],4);
 }
-void terminateRPC(char *text)
-{
-    closeCANSocket(socketCANDescriptor);
 void moveMotorResponse(int inputValue)
 {
     char buffer[8];
@@ -48,4 +45,8 @@ void moveMotorResponse(int inputValue)
     memcpy(buffer + 4, &inputValue, sizeof(inputValue));
 
     sendCANFrames(socketCANDescriptor, buffer, sizeof(buffer));
+}
+void terminateRPC(char *text)
+{
+    // memcpy(inputString, &buffer[PACK_SIZE * 2], );
 }

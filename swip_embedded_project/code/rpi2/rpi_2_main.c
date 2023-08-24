@@ -75,6 +75,7 @@ int main(void)
             displayTextUnmarshall(buffer, bytesTotal, lineNum, inputString);
             initializeLCD();
             displayText(*lineNum, inputString);
+            displayTextResponse(inputString);
             // inputString[strlen(inputString)] = '\0';
             // printf("length: %d\n", strlen(inputString));
             printf("RPC request 'displayText(%d, %s)' received and processed.\n\n", *lineNum+1, inputString);
@@ -86,6 +87,7 @@ int main(void)
 
             moveMotorUnmarshall(buffer, inputVal);
             moveMotor(*inputVal);
+            moveMotorResponse(*inputVal);
             printf("RPC request 'moveMotor(%d)' received and processed.\n\n", *inputVal);
             break;
         }
