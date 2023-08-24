@@ -22,17 +22,15 @@
 #include "rpi_2_motor.h"
 #include "rpi_2_stub.h"
 
-#define NUM_MAX 100000
 #define Detected_DEVICE_ID_BY_I2C 0x27 // Device ID detected by I2C
                                        // Seems that it maps to the device's address
 
 int deviceHandle;
+int socketCANDescriptor;
 
 int main(void)
 {
     pthread_t threads[4];
-
-    int socketCANDescriptor;
 
     wiringPiSetupGpio();
     initializeLCD();
