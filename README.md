@@ -32,4 +32,4 @@
 
 ## 온라인 테트리스
 https://jstris.jezevec10.com/
-- 방제: djdj
+- 방제: Sniffy's room
