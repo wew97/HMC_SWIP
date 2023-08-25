@@ -29,3 +29,7 @@
 
 ## skribbl URL (08/18 09:08 updated)
 (Closed) https://skribbl.io/?f8CEVvXF (Closed)
+
+## 온라인 테트리스
+https://jstris.jezevec10.com/
+- 방제: djdj
