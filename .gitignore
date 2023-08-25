@@ -8,3 +8,5 @@ x64/
 
 # Object Files
 *.o
+
+# Matlab + Simulink + Stateflow
