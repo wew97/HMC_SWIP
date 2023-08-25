@@ -71,13 +71,12 @@ int main(void)
         {
             int *lineNum = (int *)malloc(sizeof(int));
             char inputString[128];
+            bzero(inputString, 128);
 
             displayTextUnmarshall(buffer, bytesTotal, lineNum, inputString);
             initializeLCD();
             displayText(*lineNum, inputString);
             displayTextResponse(inputString);
-            // inputString[strlen(inputString)] = '\0';
-            // printf("length: %d\n", strlen(inputString));
             printf("RPC request 'displayText(%d, %s)' received and processed.\n\n", *lineNum+1, inputString);
             break;
         }
@@ -94,18 +93,11 @@ int main(void)
         case TERMINATE:
         {
             char *inputString;
-
+            initializeLCD();
             terminateRPC(inputString);
             printf("RPC request 'QUIT' command received.\n\n");
             printf("Terminating RPi #2.\n");
-            // goto terminate_rpc;
             return 0;
         }
         }
     }
-
-terminate_rpc:
-    initializeLCD();
-    closeCANSocket(socketCANDescriptor);
-    return 0;
-}

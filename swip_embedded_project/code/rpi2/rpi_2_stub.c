@@ -51,5 +51,5 @@ void moveMotorResponse(int inputValue)
 }
 void terminateRPC(char *text)
 {
-    // memcpy(inputString, &buffer[PACK_SIZE * 2], );
+    closeCANSocket(socketCANDescriptor);
 }
