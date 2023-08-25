@@ -25,6 +25,7 @@
 - [Notion](https://www.notion.so/yoonjii/HMC-SWIP-project-c5f215f8196a421c8a00b28efb331d88?pvs=4)
 
 ## Matlab + Simulink + Stateflow ('23/08/25 ~ '23/08/31)
+- Go to [swip_matlab_simulink_stateflow/](https://github.com/wew97/HMC_SWIP/tree/main/swip_matlab_simulink_stateflow)
 
 ## skribbl URL (08/18 09:08 updated)
 (Closed) https://skribbl.io/?f8CEVvXF (Closed)
