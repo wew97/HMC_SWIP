@@ -27,5 +27,14 @@
 ## Matlab + Simulink + Stateflow ('23/08/25 ~ '23/08/31)
 - Go to [swip_matlab_simulink_stateflow/](https://github.com/wew97/HMC_SWIP/tree/main/swip_matlab_simulink_stateflow)
 
+<<<<<<< HEAD
 ## skribbl URL (08/28 09:03 updated)
 (Open) https://skribbl.io/?mKCwEzQ2 (Open)
+=======
+## skribbl URL (08/18 09:08 updated)
+(Closed) https://skribbl.io/?f8CEVvXF (Closed)
+
+## 온라인 테트리스
+https://jstris.jezevec10.com/
+- 방제: Sniffy's room
+>>>>>>> 2ad0f786c421581285da2ca5262a3dc4be4f7270
