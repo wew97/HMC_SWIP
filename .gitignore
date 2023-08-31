@@ -10,3 +10,5 @@ x64/
 *.o
 
 # Matlab + Simulink + Stateflow
+slprj/
+codegen/
