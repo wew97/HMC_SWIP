@@ -26,3 +26,6 @@
 
 ## Matlab + Simulink + Stateflow ('23/08/25 ~ '23/08/31)
 - Go to [swip_matlab_simulink_stateflow/](https://github.com/wew97/HMC_SWIP/tree/main/swip_matlab_simulink_stateflow)
+
+## SW Engineering ('23/09/01 ~ '23/09/07)
+- Go to [swip_sw_engineering/](https://github.com/wew97/HMC_SWIP/tree/main/swip_sw_engineering)
