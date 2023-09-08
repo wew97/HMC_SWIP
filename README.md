@@ -1,7 +1,7 @@
-# SW Intensive Program ('23/07/31 - '23/10/20)
+# SW Intensive Program ('23/07/31 ~ '23/10/20)
 <br>
 
-## C Programming ('23/07/31 - '23/08/04)
+## C Programming ('23/07/31 ~ '23/08/04)
 - [시작/변수/const/typedef/연산자/scanf/제어문 (Day 1)](https://github.com/wew97/HMC_SWIP/tree/main/swip_c_230731)
 
 - [제어문/배열/함수 (Day 2)](https://github.com/wew97/HMC_SWIP/tree/main/swip_c_230801)
@@ -29,3 +29,6 @@
 
 ## SW Engineering ('23/09/01 ~ '23/09/07)
 - Go to [swip_sw_engineering/](https://github.com/wew97/HMC_SWIP/tree/main/swip_sw_engineering)
+
+## C++ Programming ('23/09/08 ~ '23/09/14)
+- Go to [swip_cpp/](https://github.com/wew97/HMC_SWIP/tree/main/swip_cpp/)
