@@ -29,4 +29,5 @@
 
 ## C++ Programming ('23/09/08 ~ '23/09/14)
 - Go to [swip_cpp/](https://github.com/wew97/HMC_SWIP/tree/main/swip_cpp/)
-- [시작/namespace/iostream/변수/const/string/함수/제어문 (Day1)](https://github.com/wew97/HMC_SWIP/tree/main/swip_cpp/swip_cpp_230911)
+- [시작/namespace/iostream/변수/const/string/함수/제어문 (Day1)](https://github.com/wew97/HMC_SWIP/tree/main/swip_cpp/swip_cpp_230908)
+- [레퍼런스/캐스팅/동적메모리할당/nullptr/stack/접근지정자/생성자/소멸자/this (Day2)](https://github.com/wew97/HMC_SWIP/tree/main/swip_cpp/swip_cpp_230911)
