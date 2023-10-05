@@ -1,0 +1,1430 @@
+c:\ts_mirr\python\Portable_Python_2.7.6.1\App\python.exe c:\ts_mirr\scons\scons-local-2.3.4\scons.py -f.\Build\SConstruct GenerateAll -j12
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+Generating MCAL
+Generating HwResource.exe  
+Generating CanIf.exe  
+Generating CanSM.exe  
+Generating CanTp.exe  
+Generating Com.exe Bend 
+Generating ComM.exe  
+Generating Crc.exe  
+Generating Dcm.exe  
+Generating Dem.exe  
+Generating Det.exe  
+Generating FiM.exe  
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *           AUTOSAR Crc Generation Tool Version 1.3.4 [24-May-2016]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: Crc -O Generated\Bsw_Output
+           Configuration\System\BswMd\Bswmd_Crc.arxml
+           Configuration\ECU\Ecud_Crc.arxml
+INF000003: Opened file <Generated/Bsw_Output/inc/Crc_Cfg.h> at [28-Sep-2019 -
+           15:32:28].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+Generating IoHwAb.exe B 
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *        AUTOSAR ComM Generation Tool Version 1.7.14 [19-June-2017]         *
+  *                  Generation Tool Common Code Version 1.0.12               *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: ComM -O Generated\Bsw_Output
+           Configuration\System\BswMd\Bswmd_ComM.arxml
+           Configuration\ECU\Ecud_ComM.arxml
+INF000003: Opened file <Generated/Bsw_Output/inc/ComM_Cfg.h> at [28-Sep-2019 -
+           15:32:28].
+INF000003: Opened file <Generated/Bsw_Output/src/ComM_Cfg.c> at [28-Sep-2019 -
+           15:32:28].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+Generating MemIf.exe  
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *          AUTOSAR Det Generation Tool Version 1.0.5 [30-May-2017]          *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: Det -O Generated\Bsw_Output
+           Configuration\System\BswMd\Bswmd_Det.arxml
+           Configuration\ECU\Ecud_Det.arxml Configuration\ECU\Ecud_EcuC.arxml
+INF000003: Opened file <Generated/Bsw_Output/inc/Det_Cfg.h> at [28-Sep-2019 -
+           15:32:28].
+INF000003: Opened file <Generated/Bsw_Output/src/Det_Cfg.c> at [28-Sep-2019 -
+           15:32:28].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+Generating NvM.exe  
+
+  *****************************************************************************
+  *                             HYUNDAI AUTRON Co., Ltd.                      *
+  *              AUTOSAR CanTp Generation Tool Version 1.7.10 [24-Apr-2017]   *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: CanTp -O Generated\Bsw_Output
+           Configuration\System\BswMd\Bswmd_CanTp.arxml
+           Configuration\ECU\Ecud_CanTp.arxml Configuration\ECU\Ecud_PduR.arxml
+           Configuration\ECU\Ecud_CanIf.arxml
+INF000003: Opened file <Generated/Bsw_Output/inc/CanTp_Cfg.h> at [28-Sep-2019 -
+           15:32:28].
+INF000003: Opened file <Generated/Bsw_Output/src/CanTp_Cfg.c> at [28-Sep-2019 -
+           15:32:28].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *    AUTOSAR HwResource Generation Tool Version 1.1.3 [24-May-2017]         *
+  *****************************************************************************
+
+INF000001: Command line arguments: HwResource -O Generated\Bsw_Output
+           Configuration\ECU\Ecud_HwResource.arxml
+INF000003: Opened file <Generated/Bsw_Output/inc/HwResource.h> at [28-Sep-2019 -
+           15:32:28].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+Generating PduR.exe  
+Generating WdgIf.exe B 
+
+  *****************************************************************************
+  *                             HYUNDAI AUTRON Co., Ltd.                      *
+  *              AUTOSAR CanSM Generation Tool Version 1.10.2 [21 NOV 2017]   *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: CanSM -O Generated\Bsw_Output
+           Configuration\System\BswMd\Bswmd_CanSM.arxml
+           Configuration\System\BswMd\Bswmd_CanIf.arxml
+           Configuration\System\BswMd\Bswmd_ComM.arxml
+           Configuration\ECU\Ecud_CanSM.arxml Configuration\ECU\Ecud_ComM.arxml
+           Configuration\ECU\Ecud_CanIf.arxml Configuration\ECU\Ecud_Dem.arxml
+INF000003: Opened file <Generated/Bsw_Output/inc/CanSM_Cfg.h> at [28-Sep-2019 -
+           15:32:28].
+INF000003: Opened file <Generated/Bsw_Output/src/CanSM_Cfg.c> at [28-Sep-2019 -
+           15:32:28].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *          AUTOSAR FiM Generation Tool Version 1.0.6 [13-Jan-2013]          *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: FiM -O Generated\Bsw_Output
+           Configuration\System\BswMd\Bswmd_FiM.arxml
+           Configuration\ECU\Ecud_FiM.arxml Configuration\ECU\Ecud_Dem.arxml
+INF000003: Opened file <Generated/Bsw_Output/inc/FiM_Cfg.h> at [28-Sep-2019 -
+           15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/src/FiM_Cfg.c> at [28-Sep-2019 -
+           15:32:29].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *         AUTOSAR CanIf Generation Tool Version 2.5.4 [11-Oct-2017]         *
+  *                  Generation Tool Common Code Version 1.0.11               *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: CanIf -O Generated\Bsw_Output
+           Configuration\System\BswMd\Bswmd_CanIf.arxml
+           Configuration\System\BswMd\Bswmd_Can.arxml
+           Configuration\ECU\Ecud_CanIf.arxml Configuration\ECU\Ecud_EcuC.arxml
+           Configuration\ECU\Ecud_CanTp.arxml Configuration\ECU\Ecud_PduR.arxml
+           Configuration\ECU\Mcal\Ecud_Can.arxml
+INF000003: Opened file <Generated/Bsw_Output/src/CanIf_Cfg.c> at [28-Sep-2019 -
+           15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/inc/CanIf_Can.h> at [28-Sep-2019 -
+           15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/inc/CanIf_Cbk.h> at [28-Sep-2019 -
+           15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/inc/CanIf_Cfg.h> at [28-Sep-2019 -
+           15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/inc/CanIf_UserInc.h> at
+           [28-Sep-2019 - 15:32:29].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+Generating WdgM.exe B 
+Generating EcuM.exe B 
+Generating EcuM.exe S 
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *         AUTOSAR WdgIf Generation Tool Version 1.2.1 [10-Sep-2015]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: WdgIf -B -O Generated\Bsw_Output
+           Configuration\ECU\Ecud_WdgIf.arxml
+           Configuration\ECU\Mcal\Ecud_Wdg.arxml
+           Configuration\System\BswMd\Bswmd_Wdg_43.arxml
+INF000003: Opened file <Generated/Bsw_Output/Bswmd/Bswmd_WdgIf.arxml> at
+           [28-Sep-2019 - 15:32:29].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+Generating WdgIf.exe  
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *         AUTOSAR MemIf Generation Tool Version 1.3.4 [25-May-2016]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: MemIf -O Generated\Bsw_Output
+           Configuration\System\BswMd\Bswmd_Fee.arxml
+           Configuration\System\BswMd\Bswmd_Fls.arxml
+           Configuration\System\BswMd\Bswmd_MemIf.arxml
+           Configuration\ECU\Ecud_MemIf.arxml Configuration\ECU\Ecud_NvM.arxml
+           Configuration\ECU\Mcal\Ecud_Fee.arxml
+           Configuration\ECU\Mcal\Ecud_Fls.arxml
+INF000003: Opened file <Generated/Bsw_Output/inc/MemIf_Cfg.h> at [28-Sep-2019 -
+           15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/src/MemIf.c> at [28-Sep-2019 -
+           15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/inc/MemIf.h> at [28-Sep-2019 -
+           15:32:29].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+Generating Dcm.exe S 
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *         AUTOSAR WdgIf Generation Tool Version 1.2.1 [10-Sep-2015]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: WdgIf -O Generated\Bsw_Output
+           Configuration\ECU\Ecud_WdgIf.arxml
+           Configuration\ECU\Mcal\Ecud_Wdg.arxml
+           Generated\Bsw_Output\bswmd\Bswmd_WdgIf.arxml
+           Configuration\System\BswMd\Bswmd_Wdg_43.arxml
+INF000003: Opened file <Generated/Bsw_Output/inc/WdgIf_Version.h> at
+           [28-Sep-2019 - 15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/inc/WdgIf.h> at [28-Sep-2019 -
+           15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/src/WdgIf.c> at [28-Sep-2019 -
+           15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/inc/WdgIf_Types.h> at [28-Sep-2019
+           - 15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/src/WdgIf_Version.c> at
+           [28-Sep-2019 - 15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/inc/WdgIf_Cfg.h> at [28-Sep-2019 -
+           15:32:29].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *          AUTOSAR EcuM Generation Tool Version 2.8.1 [14-Dec-2017]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF 000000: Execution started at <28-Sep-2019 - 15:32:29>
+INF 000001: Command line arguments: EcuM -S -O Generated\Bsw_Output
+            Configuration\ECU\Ecud_EcuM.arxml
+INF 000003: Opened file <Generated/Bsw_Output/swcd/Swcd_Bsw_EcuM.arxml> at
+            [28-Sep-2019 - 15:32:29].
+INF 000004: <0> Error(s) and <0> Warning(s) detected.
+INF 000005: Execution completed successfully at <28-Sep-2019 - 15:32:29>
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *          AUTOSAR EcuM Generation Tool Version 2.8.1 [14-Dec-2017]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF 000000: Execution started at <28-Sep-2019 - 15:32:29>
+INF 000001: Command line arguments: EcuM -B -O Generated\Bsw_Output
+            Configuration\ECU\Ecud_EcuM.arxml
+INF 000003: Opened file <Generated/Bsw_Output/bswmd/Bswmd_EcuM.arxml> at
+            [28-Sep-2019 - 15:32:29].
+INF 000004: <0> Error(s) and <0> Warning(s) detected.
+INF 000005: Execution completed successfully at <28-Sep-2019 - 15:32:29>
+Generating Dem.exe S 
+Generating NvM.exe S P 
+Generating BswM.exe Warn 
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *          AUTOSAR Dem Generation Tool Version 2.7.3 [31-08-2017]           *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: Dem -O Generated\Bsw_Output
+           Configuration\System\BswMd\Bswmd_Dem.arxml
+           Configuration\ECU\Ecud_Dem.arxml Configuration\ECU\Ecud_Dcm.arxml
+           Configuration\ECU\Ecud_NvM.arxml
+WRN054003: Parameter 'DemAgingCycleRef' in the container 'DemEventClass' should
+           not be configured, since value of the parameter 'DemAgingAllowed' in
+           the container 'DemEventClass' is configured as <0>.
+           File Name: Configuration\ECU\Ecud_Dem.arxml
+           Path: /AUTOSAR/Dem/DemConfigSet0/REGMON_E_REG_FAILURE/DemEventClass
+WRN054003: Parameter 'DemAgingCycleCounterThreshold' in the container
+           'DemEventClass' should not be configured, since value of the
+           parameter 'DemAgingAllowed' in the container 'DemEventClass' is
+           configured as <0>.
+           File Name: Configuration\ECU\Ecud_Dem.arxml
+           Path: /AUTOSAR/Dem/DemConfigSet0/REGMON_E_REG_FAILURE/DemEventClass
+INF000003: Opened file <Generated/Bsw_Output/inc/Dem_Cfg.h> at [28-Sep-2019 -
+           15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/src/Dem_Cfg.c> at [28-Sep-2019 -
+           15:32:29].
+INF000004: <0> Error(s) and <2> Warning(s) detected.
+INF000006: Execution completed successfully with warnings
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *           AUTOSAR NvM Generation Tool Version 1.3.5 [30-Jun-2017]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: NvM -O Generated\Bsw_Output
+           Configuration\System\BswMd\Bswmd_NvM.arxml
+           Configuration\ECU\Ecud_NvM.arxml Configuration\ECU\Ecud_Dem.arxml
+           Configuration\ECU\Mcal\Ecud_Gpt.arxml
+           Configuration\ECU\Mcal\Ecud_Fee.arxml
+           Configuration\ECU\Mcal\Ecud_Fls.arxml
+INF000003: Opened file <Generated/Bsw_Output/inc/NvM_Cfg.h> at [28-Sep-2019 -
+           15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/src/NvM_Cfg.c> at [28-Sep-2019 -
+           15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/inc/NvM_Dem_Cfg.h> at [28-Sep-2019
+           - 15:32:29].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *          AUTOSAR Dcm Generation Tool Version 1.7.2 [2017-11-23]           *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: Dcm -O Generated\Bsw_Output
+           Configuration\System\BswMd\Bswmd_Dcm.arxml
+           Configuration\ECU\Ecud_Dcm.arxml Configuration\ECU\Ecud_PduR.arxml
+           Configuration\ECU\Ecud_NvM.arxml Configuration\ECU\Ecud_ComM.arxml
+           Configuration\ECU\Ecud_EcuC.arxml
+INF053051: Tool Expects user to configure DcmCpuByteOrder as (0/1), by default
+           tool will consider  LITTLE_ENDIAN(0). For BIG_ENDIAN(1), (-bend)
+           needs to be passed in  Commandline.
+INF000003: Opened file <Generated/Bsw_Output/inc/Dcm_Routine.h> at [28-Sep-2019
+           - 15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/inc/Dcm_Cfg.h> at [28-Sep-2019 -
+           15:32:29].
+INF000003: Opened file <Generated/Bsw_Output/src/Dcm_Routine.c> at [28-Sep-2019
+Smartmatch is experimental at /<D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_diag_Dcm_R40\generator\Dcm.exe>BswSwcd.pm line 3417.
+Smartmatch is experimental at /<D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_diag_Dcm_R40\generator\Dcm.exe>BswSwcd.pm line 3420.
+Smartmatch is experimental at /<D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_diag_Dcm_R40\generator\Dcm.exe>BswSwcd.pm line 3436.
+Smartmatch is experimental at /<D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_diag_Dcm_R40\generator\Dcm.exe>BswSwcd.pm line 4301.
+           - 15:32:30].
+INF000003: Opened file <Generated/Bsw_Output/src/Dcm_Cfg.c> at [28-Sep-2019 -
+           15:32:30].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *         AUTOSAR WdgM Generation Tool Version 1.2.11 [05-Sep-2016]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: WdgM -B -O Generated\Bsw_Output
+           Configuration\ECU\Ecud_WdgM.arxml Configuration\ECU\Ecud_WdgIf.arxml
+           Configuration\ECU\Ecud_Dem.arxml Configuration\ECU\Ecud_Os.arxml
+           Configuration\ECU\Ecud_EcuC.arxml
+           Configuration\ECU\Mcal\Ecud_Mcu.arxml
+INF000003: Opened file <Generated/Bsw_Output/Bswmd/Bswmd_WdgM.arxml> at
+           [28-Sep-2019 - 15:32:30].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+Generating WdgM.exe S 
+Generating WdgM.exe  
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *       AUTOSAR IoHwAb Generation Tool Version 1.1.21 [27-Sep-2017]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: IoHwAb -B -O Generated\Bsw_Output
+           Configuration\ECU\Ecud_IoHwAb.arxml Configuration\ECU\Ecud_Os.arxml
+           Configuration\ECU\Mcal\Ecud_Port.arxml
+           Configuration\ECU\Mcal\Ecud_Dio.arxml
+           Configuration\ECU\Mcal\Ecud_Adc.arxml
+           Configuration\ECU\Mcal\Ecud_Mcu.arxml
+           Configuration\ECU\Mcal\Ecud_Pwm.arxml
+           Configuration\ECU\Mcal\Ecud_Icu.arxml
+           Configuration\ECU\Mcal\Ecud_Spi.arxml
+           Configuration\ECU\Mcal\Ecud_Gpt.arxml
+INF000003: Opened file <Generated/Bsw_Output/Bswmd/Bswmd_IoHwAb.arxml> at
+           [28-Sep-2019 - 15:32:30].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+Generating IoHwAb.exe S 
+Generating EcuM.exe EcuMConfPrefix 
+Generating IoHwAb.exe  
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *           AUTOSAR NvM Generation Tool Version 1.3.5 [30-Jun-2017]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: NvM -S -P -O Generated\Bsw_Output
+           Configuration\ECU\Ecud_NvM.arxml
+           Configuration\ECU\Mcal\Ecud_Fee.arxml
+           Configuration\ECU\Ecud_Dem.arxml
+           Configuration\System\BswMd\Bswmd_NvM.arxml
+INF000003: Opened file <Generated/Bsw_Output/Swcd/Swcd_Bsw_NvM.arxml> at
+           [28-Sep-2019 - 15:32:30].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+Generating OsProfiler.exe  
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *          AUTOSAR PduR Generation Tool Version 2.2.2 [29-Nov-2017]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: PduR -O Generated\Bsw_Output
+           Configuration\System\BswMd\Bswmd_PduR.arxml
+           Configuration\System\BswMd\Bswmd_Com.arxml
+           Configuration\System\BswMd\Bswmd_CanIf.arxml
+           Configuration\System\BswMd\Bswmd_CanTp.arxml
+           Configuration\System\BswMd\Bswmd_Dcm.arxml
+           Configuration\ECU\Ecud_PduR.arxml Configuration\ECU\Ecud_EcuC.arxml
+           Configuration\ECU\Ecud_Com.arxml Configuration\ECU\Ecud_CanIf.arxml
+           Configuration\ECU\Ecud_Dcm.arxml Configuration\ECU\Ecud_CanTp.arxml
+INF000010: Configuration Variant chosen for module <PduR>: <Pre-Compile>.
+INF000003: Opened file <Generated/Bsw_Output/inc/PduR_CanIf.h> at [28-Sep-2019 -
+           15:32:30].
+INF000003: Opened file <Generated/Bsw_Output/inc/PduR_CanTp.h> at [28-Sep-2019 -
+           15:32:30].
+INF000003: Opened file <Generated/Bsw_Output/inc/PduR_Com.h> at [28-Sep-2019 -
+           15:32:30].
+INF000003: Opened file <Generated/Bsw_Output/inc/PduR_Dcm.h> at [28-Sep-2019 -
+           15:32:30].
+INF000003: Opened file <Generated/Bsw_Output/inc/PduR_Cfg.h> at [28-Sep-2019 -
+           15:32:30].
+INF000003: Opened file <Generated/Bsw_Output/inc/PduR_Incl.h> at [28-Sep-2019 -
+           15:32:30].
+INF000003: Opened file <Generated/Bsw_Output/src/PduR_Cfg.c> at [28-Sep-2019 -
+           15:32:30].
+INF000003: Opened file <Generated/Bsw_Output/src/PduR_CallBk.c> at [28-Sep-2019
+           - 15:32:30].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *    AUTOSAR OSPROFILER Generation Tool Version 1.1.2 [22-Aug-2017]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: OSPROFILER -O Generated\Bsw_Output
+           Configuration\ECU\Ecud_OsProfiler.arxml
+           Configuration\ECU\Ecud_Os.arxml
+           Configuration\System\BswMd\Bswmd_OsProfiler.arxml
+INF000003: Opened file <Generated/Bsw_Output/src/Opf_Cfg.c> at [28-Sep-2019 -
+           15:32:30].
+INF000003: Opened file <Generated/Bsw_Output/inc/Opf_Cfg.h> at [28-Sep-2019 -
+           15:32:30].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *         AUTOSAR WdgM Generation Tool Version 1.2.11 [05-Sep-2016]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: WdgM -S -O Generated\Bsw_Output
+           Configuration\ECU\Ecud_WdgM.arxml Configuration\ECU\Ecud_WdgIf.arxml
+           Configuration\ECU\Ecud_Dem.arxml Configuration\ECU\Ecud_Os.arxml
+           Configuration\ECU\Ecud_EcuC.arxml
+           Configuration\ECU\Mcal\Ecud_Mcu.arxml
+           Generated\Bsw_Output\bswmd\Bswmd_WdgM.arxml
+INF000003: Opened file <Generated/Bsw_Output/Swcd/Swcd_WdgM.arxml> at
+           [28-Sep-2019 - 15:32:31].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *         AUTOSAR WdgM Generation Tool Version 1.2.11 [05-Sep-2016]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: WdgM -O Generated\Bsw_Output
+           Configuration\ECU\Ecud_WdgM.arxml Configuration\ECU\Ecud_WdgIf.arxml
+           Configuration\ECU\Ecud_Dem.arxml Configuration\ECU\Ecud_Os.arxml
+           Configuration\ECU\Ecud_EcuC.arxml
+           Configuration\ECU\Mcal\Ecud_Mcu.arxml
+           Generated\Bsw_Output\bswmd\Bswmd_WdgM.arxml
+INF000003: Opened file <Generated/Bsw_Output/inc/WdgM_Cfg.h> at [28-Sep-2019 -
+           15:32:31].
+INF000003: Opened file <Generated/Bsw_Output/src/WdgM_Cfg.c> at [28-Sep-2019 -
+           15:32:31].
+INF000003: Opened file <Generated/Bsw_Output/inc/WdgM_Dem_Cfg.h> at [28-Sep-2019
+           - 15:32:31].
+INF000003: Opened file <Generated/Bsw_Output/inc/WdgM_GenExterns.h> at
+           [28-Sep-2019 - 15:32:31].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+
+  *****************************************************************************
+Smartmatch is experimental at /<D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_diag_Dcm_R40\generator\Dcm.exe>BswSwcd.pm line 3417.
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *          AUTOSAR Dcm Generation Tool Version 1.7.2 [2017-11-23]           *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+Smartmatch is experimental at /<D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_diag_Dcm_R40\generator\Dcm.exe>BswSwcd.pm line 3420.
+  *****************************************************************************
+
+INF000001: Command line arguments: Dcm -S -O Generated\Bsw_Output
+Smartmatch is experimental at /<D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_diag_Dcm_R40\generator\Dcm.exe>BswSwcd.pm line 3436.
+           Configuration\System\BswMd\Bswmd_Dcm.arxml
+           Configuration\ECU\Ecud_Dcm.arxml Configuration\ECU\Ecud_PduR.arxml
+Smartmatch is experimental at /<D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_diag_Dcm_R40\generator\Dcm.exe>BswSwcd.pm line 4301.
+           Configuration\ECU\Ecud_NvM.arxml Configuration\ECU\Ecud_ComM.arxml
+           Configuration\ECU\Ecud_EcuC.arxml
+INF000003: Opened file <Generated/Bsw_Output/Swcd/Swcd_Bsw_Dcm.arxml> at
+           [28-Sep-2019 - 15:32:31].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *          AUTOSAR Dem Generation Tool Version 2.7.3 [31-08-2017]           *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: Dem -S -O Generated\Bsw_Output
+           Configuration\System\BswMd\Bswmd_Dem.arxml
+           Configuration\ECU\Ecud_Dem.arxml Configuration\ECU\Ecud_Dcm.arxml
+           Configuration\ECU\Ecud_NvM.arxml
+WRN054003: Parameter 'DemAgingCycleCounterThreshold' in the container
+           'DemEventClass' should not be configured, since value of the
+           parameter 'DemAgingAllowed' in the container 'DemEventClass' is
+           configured as <0>.
+           File Name: Configuration\ECU\Ecud_Dem.arxml
+           Path: /AUTOSAR/Dem/DemConfigSet0/REGMON_E_REG_FAILURE/DemEventClass
+WRN054003: Parameter 'DemAgingCycleRef' in the container 'DemEventClass' should
+           not be configured, since value of the parameter 'DemAgingAllowed' in
+           the container 'DemEventClass' is configured as <0>.
+           File Name: Configuration\ECU\Ecud_Dem.arxml
+           Path: /AUTOSAR/Dem/DemConfigSet0/REGMON_E_REG_FAILURE/DemEventClass
+INF000003: Opened file <Generated/Bsw_Output/Swcd/Swcd_Bsw_Dem.arxml> at
+           [28-Sep-2019 - 15:32:32].
+INF000004: <0> Error(s) and <2> Warning(s) detected.
+INF000006: Execution completed successfully with warnings
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *       AUTOSAR IoHwAb Generation Tool Version 1.1.21 [27-Sep-2017]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: IoHwAb -O Generated\Bsw_Output
+           Configuration\ECU\Ecud_IoHwAb.arxml Configuration\ECU\Ecud_Os.arxml
+           Configuration\ECU\Mcal\Ecud_Port.arxml
+           Configuration\ECU\Mcal\Ecud_Dio.arxml
+           Configuration\ECU\Mcal\Ecud_Adc.arxml
+           Configuration\ECU\Mcal\Ecud_Mcu.arxml
+           Configuration\ECU\Mcal\Ecud_Pwm.arxml
+           Configuration\ECU\Mcal\Ecud_Icu.arxml
+           Configuration\ECU\Mcal\Ecud_Spi.arxml
+           Configuration\ECU\Mcal\Ecud_Gpt.arxml
+           Generated\Bsw_Output\bswmd\Bswmd_IoHwAb.arxml
+           Configuration\System\BswMd\Bswmd_Icu_43.arxml
+           Configuration\System\BswMd\Bswmd_Pwm_43.arxml
+INF000003: Opened file <Generated/Bsw_Output/inc/IoHwAb_Cfg.h> at [28-Sep-2019 -
+           15:32:32].
+INF000003: Opened file <Generated/Bsw_Output/src/IoHwAb_Cfg.c> at [28-Sep-2019 -
+           15:32:32].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *       AUTOSAR IoHwAb Generation Tool Version 1.1.21 [27-Sep-2017]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: IoHwAb -S -O Generated\Bsw_Output
+           Configuration\ECU\Ecud_IoHwAb.arxml Configuration\ECU\Ecud_Os.arxml
+           Configuration\ECU\Mcal\Ecud_Pwm.arxml
+           Configuration\ECU\Mcal\Ecud_Icu.arxml
+           Configuration\ECU\Mcal\Ecud_Spi.arxml
+           Configuration\ECU\Mcal\Ecud_Gpt.arxml
+           Configuration\ECU\Mcal\Ecud_Port.arxml
+           Configuration\ECU\Mcal\Ecud_Dio.arxml
+           Configuration\ECU\Mcal\Ecud_Adc.arxml
+           Configuration\ECU\Mcal\Ecud_Mcu.arxml
+           Generated\Bsw_Output\bswmd\Bswmd_IoHwAb.arxml
+           Configuration\System\BswMd\Bswmd_Icu_43.arxml
+           Configuration\System\BswMd\Bswmd_Pwm_43.arxml
+INF000003: Opened file <Generated/Bsw_Output/Swcd/Swcd_IoHwAb.arxml> at
+           [28-Sep-2019 - 15:32:32].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+Generating Rte.exe genmemmap EXCLFUNC StrictUnconnRPortChk CustomPrefix OsSecPerHwTick=0.000001 Macro validate ErrorMsgOnly 
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *           AUTOSAR Com Generation Tool Version 2.2.3 [08-Dec-2017]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF000001: Command line arguments: Com -Bend -O Generated\Bsw_Output
+           Configuration\System\BswMd\Bswmd_Com.arxml
+           Configuration\System\BswMd\Bswmd_CanIf.arxml
+           Configuration\System\BswMd\Bswmd_PduR.arxml
+           Configuration\ECU\Ecud_Com.arxml Configuration\ECU\Ecud_PduR.arxml
+           Configuration\ECU\Ecud_EcuC.arxml
+INF000003: Opened file <Generated/Bsw_Output/inc/Com_Cfg.h> at [28-Sep-2019 -
+           15:32:32].
+INF000003: Opened file <Generated/Bsw_Output/src/Com_Cfg.c> at [28-Sep-2019 -
+           15:32:32].
+INF000003: Opened file <Generated/Bsw_Output/inc/Com_Cbk.h> at [28-Sep-2019 -
+           15:32:32].
+INF000004: <0> Error(s) and <0> Warning(s) detected.
+INF000005: Execution completed successfully.
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *          AUTOSAR BswM Generation Tool Version 2.5.3 [14-Feb-2017]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF 000000: Execution started at <28-Sep-2019 - 15:32:30>
+INF 000001: Command line arguments: BswM -Warn -O Generated\Bsw_Output
+            Configuration\ECU\Ecud_BswM.arxml
+            Configuration\ECU\Ecud_Os.arxml
+            Configuration\ECU\Ecud_Com.arxml
+            Configuration\ECU\Ecud_ComM.arxml
+            Configuration\ECU\Ecud_EcuM.arxml
+            Configuration\ECU\Ecud_NvM.arxml
+            Configuration\System\BswMd\Bswmd_BswM.arxml
+            Configuration\System\BswMd\Bswmd_Dcm.arxml
+            Generated\Bsw_Output\bswmd\Bswmd_EcuM.arxml
+            Static_Code\Modules\b_autosar_sys_EcuM_R40\generator\EcuM_PortInterface.arxml
+            Configuration\System\Swcd_Bsw\Swcd_Bsw_BswM.arxml
+            Generated\Bsw_Output\swcd\Swcd_Bsw_EcuM.arxml
+            Configuration\System\DataTypes\AUTOSAR_DataTypes.arxml
+            Configuration\System\Swcd_Bsw\MODE_PortInterfaces.arxml
+INF 000003: Opened file <Generated/Bsw_Output/inc/BswM_Cfg.h> at [28-Sep-2019 -
+            15:32:32].
+INF 000003: Opened file <Generated/Bsw_Output/inc/BswM_PCTypes.h> at
+            [28-Sep-2019 - 15:32:32].
+INF 000003: Opened file <Generated/Bsw_Output/src/BswM_Rule.c> at [28-Sep-2019 -
+            15:32:32].
+INF 000003: Opened file <Generated/Bsw_Output/inc/BswM_ActionList.h> at
+            [28-Sep-2019 - 15:32:32].
+INF 000003: Opened file <Generated/Bsw_Output/inc/BswM_Ram.h> at [28-Sep-2019 -
+            15:32:32].
+INF 000003: Opened file <Generated/Bsw_Output/src/BswM_ActionList.c> at
+            [28-Sep-2019 - 15:32:32].
+INF 000003: Opened file <Generated/Bsw_Output/inc/BswM_Rule.h> at [28-Sep-2019 -
+            15:32:32].
+INF 000003: Opened file <Generated/Bsw_Output/src/BswM_Ram.c> at [28-Sep-2019 -
+            15:32:32].
+INF 000003: Opened file <Generated/Bsw_Output/src/BswM_Cfg.c> at [28-Sep-2019 -
+            15:32:32].
+INF 000003: Opened file <Generated/Bsw_Output/inc/BswM.h> at [28-Sep-2019 -
+            15:32:32].
+INF 000003: Opened file <Generated/Bsw_Output/src/BswM.c> at [28-Sep-2019 -
+            15:32:32].
+INF 000004: <0> Error(s) and <0> Warning(s) detected.
+INF 000005: Execution completed successfully at <28-Sep-2019 - 15:32:32>
+
+  *****************************************************************************
+  *                          HYUNDAI AUTRON Co., Ltd.                         *
+  *          AUTOSAR EcuM Generation Tool Version 2.8.1 [14-Dec-2017]         *
+  *                     AUTOSAR Architecture Version 4.0.3                    *
+  *****************************************************************************
+
+INF 000000: Execution started at <28-Sep-2019 - 15:32:30>
+INF 000001: Command line arguments: EcuM -EcuMConfPrefix -O Generated\Bsw_Output
+            Configuration\ECU\Ecud_EcuM.arxml
+            Configuration\ECU\Ecud_CanIf.arxml
+            Configuration\ECU\Ecud_CanSM.arxml
+            Configuration\ECU\Ecud_CanTp.arxml
+            Configuration\ECU\Ecud_Com.arxml
+            Configuration\ECU\Ecud_ComM.arxml
+            Configuration\ECU\Ecud_Dcm.arxml
+            Configuration\ECU\Ecud_Dem.arxml
+            Configuration\ECU\Ecud_FiM.arxml
+            Configuration\ECU\Ecud_IoHwAb.arxml
+            Configuration\ECU\Ecud_Os.arxml
+            Configuration\ECU\Ecud_PduR.arxml
+            Configuration\ECU\Ecud_WdgM.arxml
+            Configuration\ECU\Ecud_Det.arxml
+            Configuration\ECU\Mcal\Ecud_Adc.arxml
+            Configuration\ECU\Mcal\Ecud_Can.arxml
+            Configuration\ECU\Mcal\Ecud_Dio.arxml
+            Configuration\ECU\Mcal\Ecud_Gpt.arxml
+            Configuration\ECU\Mcal\Ecud_Icu.arxml
+            Configuration\ECU\Mcal\Ecud_Mcu.arxml
+            Configuration\ECU\Mcal\Ecud_Port.arxml
+            Configuration\ECU\Mcal\Ecud_Pwm.arxml
+            Configuration\ECU\Mcal\Ecud_Spi.arxml
+            Configuration\ECU\Mcal\Ecud_Wdg.arxml
+            Generated\Bsw_Output\bswmd\Bswmd_EcuM.arxml
+            Configuration\System\BswMd\Bswmd_CanIf.arxml
+            Configuration\System\BswMd\Bswmd_CanSM.arxml
+            Configuration\System\BswMd\Bswmd_CanTp.arxml
+            Configuration\System\BswMd\Bswmd_Com.arxml
+            Configuration\System\BswMd\Bswmd_ComM.arxml
+            Configuration\System\BswMd\Bswmd_Dcm.arxml
+            Configuration\System\BswMd\Bswmd_Dem.arxml
+            Configuration\System\BswMd\Bswmd_FiM.arxml
+            Generated\Bsw_Output\bswmd\Bswmd_IoHwAb.arxml
+            Generated\Bsw_Output\bswmd\Bswmd_WdgM.arxml
+            Configuration\System\BswMd\Bswmd_PduR.arxml
+            Configuration\System\BswMd\Bswmd_Spi.arxml
+            Configuration\System\BswMd\Bswmd_Wdg_43.arxml
+            Configuration\System\BswMd\Bswmd_Det.arxml
+            Configuration\System\BswMd\Bswmd_Adc.arxml
+            Configuration\System\BswMd\Bswmd_Can.arxml
+            Configuration\System\BswMd\Bswmd_Dio.arxml
+            Configuration\System\BswMd\Bswmd_Gpt.arxml
+            Configuration\System\BswMd\Bswmd_Icu_43.arxml
+            Configuration\System\BswMd\Bswmd_Mcu.arxml
+            Configuration\System\BswMd\Bswmd_Port.arxml
+            Configuration\System\BswMd\Bswmd_Pwm_43.arxml
+INF 000003: Opened file <Generated/Bsw_Output/src/EcuM_Generated_Callouts.c> at
+            [28-Sep-2019 - 15:32:33].
+INF 000003: Opened file <Generated/Bsw_Output/inc/EcuM_Generated_Callouts.h> at
+            [28-Sep-2019 - 15:32:33].
+INF 000003: Opened file <Generated/Bsw_Output/src/EcuM_PBcfg.c> at [28-Sep-2019
+            - 15:32:33].
+INF 000003: Opened file <Generated/Bsw_Output/inc/EcuM_Generated_Types.h> at
+            [28-Sep-2019 - 15:32:33].
+INF 000003: Opened file <Generated/Bsw_Output/src/EcuM_Lcfg.c> at [28-Sep-2019 -
+            15:32:33].
+INF 000003: Opened file <Generated/Bsw_Output/inc/EcuM_Cfg.h> at [28-Sep-2019 -
+            15:32:33].
+INF 000003: Opened file <Generated/Bsw_Output/inc/EcuM_Dem_Cfg.h> at
+            [28-Sep-2019 - 15:32:33].
+INF 000003: Opened file <Generated/Bsw_Output/src/EcuM_Cfg.c> at [28-Sep-2019 -
+            15:32:33].
+INF 000004: <0> Error(s) and <0> Warning(s) detected.
+INF 000005: Execution completed successfully at <28-Sep-2019 - 15:32:33>
+EB tresos Studio 14.2.1 b140128-1223
+Copyright 2003-2014 Elektrobit Automotive GmbH
+Licensed to: Freescale
+
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Adc.arxml"
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Base.arxml"
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Can.arxml"
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Dem_Mcal.arxml"
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Dio.arxml"
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_EcuM_Mcal.arxml"
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Fee.arxml"
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Fls.arxml"
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Gpt.arxml"
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Icu.arxml"
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Mcu.arxml"
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Port.arxml"
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Spi.arxml"
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Wdg.arxml"
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Pwm.arxml"
+INFO 19-09-28,15:32:32 (2102) Reading file "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Resource.arxml"
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Adc/ELEMENTS/Adc/AdcPublishedInformation/AdcChannelValueSigned to 0 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Adc/ELEMENTS/Adc/AdcPublishedInformation/AdcGroupFirstChannelFixed to 0 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Base/ELEMENTS/Base/CommonPublishedInformation/SwPatchVersion" in container "/Base/Base/CommonPublishedInformation"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Can/ELEMENTS/Can/CommonPublishedInformation/VendorApiInfix" in container "/Can/Can/CommonPublishedInformation"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/ADC_E_TIMEOUT/DemFreezeFrameRecNumClassRef" in container "/Dem/Dem/DemConfigSet_0/ADC_E_TIMEOUT"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/ADC_E_TIMEOUT/DemEventClass/DemOperationCycleRef" in container "/Dem/Dem/DemConfigSet_0/ADC_E_TIMEOUT/DemEventClass"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/FLS_E_COMPARE_FAILED/DemFreezeFrameRecNumClassRef" in container "/Dem/Dem/DemConfigSet_0/FLS_E_COMPARE_FAILED"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/FLS_E_COMPARE_FAILED/DemEventClass/DemOperationCycleRef" in container "/Dem/Dem/DemConfigSet_0/FLS_E_COMPARE_FAILED/DemEventClass"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/FLS_E_ERASE_FAILED/DemFreezeFrameRecNumClassRef" in container "/Dem/Dem/DemConfigSet_0/FLS_E_ERASE_FAILED"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/FLS_E_ERASE_FAILED/DemEventClass/DemOperationCycleRef" in container "/Dem/Dem/DemConfigSet_0/FLS_E_ERASE_FAILED/DemEventClass"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/FLS_E_READ_FAILED/DemFreezeFrameRecNumClassRef" in container "/Dem/Dem/DemConfigSet_0/FLS_E_READ_FAILED"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/FLS_E_READ_FAILED/DemEventClass/DemOperationCycleRef" in container "/Dem/Dem/DemConfigSet_0/FLS_E_READ_FAILED/DemEventClass"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/FLS_E_UNEXPECTED_FLASH_ID/DemFreezeFrameRecNumClassRef" in container "/Dem/Dem/DemConfigSet_0/FLS_E_UNEXPECTED_FLASH_ID"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/FLS_E_UNEXPECTED_FLASH_ID/DemEventClass/DemOperationCycleRef" in container "/Dem/Dem/DemConfigSet_0/FLS_E_UNEXPECTED_FLASH_ID/DemEventClass"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/FLS_E_WRITE_FAILED/DemFreezeFrameRecNumClassRef" in container "/Dem/Dem/DemConfigSet_0/FLS_E_WRITE_FAILED"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/FLS_E_WRITE_FAILED/DemEventClass/DemOperationCycleRef" in container "/Dem/Dem/DemConfigSet_0/FLS_E_WRITE_FAILED/DemEventClass"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/MCU_E_CLOCK_FAILURE/DemFreezeFrameRecNumClassRef" in container "/Dem/Dem/DemConfigSet_0/MCU_E_CLOCK_FAILURE"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/MCU_E_CLOCK_FAILURE/DemEventClass/DemOperationCycleRef" in container "/Dem/Dem/DemConfigSet_0/MCU_E_CLOCK_FAILURE/DemEventClass"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/MCU_E_LOCK_FAILURE/DemFreezeFrameRecNumClassRef" in container "/Dem/Dem/DemConfigSet_0/MCU_E_LOCK_FAILURE"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/MCU_E_LOCK_FAILURE/DemEventClass/DemOperationCycleRef" in container "/Dem/Dem/DemConfigSet_0/MCU_E_LOCK_FAILURE/DemEventClass"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/MCU_E_QUARTZ_FAILURE/DemFreezeFrameRecNumClassRef" in container "/Dem/Dem/DemConfigSet_0/MCU_E_QUARTZ_FAILURE"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/MCU_E_QUARTZ_FAILURE/DemEventClass/DemOperationCycleRef" in container "/Dem/Dem/DemConfigSet_0/MCU_E_QUARTZ_FAILURE/DemEventClass"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/MCU_E_TIMEOUT_TRANSITION/DemFreezeFrameRecNumClassRef" in container "/Dem/Dem/DemConfigSet_0/MCU_E_TIMEOUT_TRANSITION"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/MCU_E_TIMEOUT_TRANSITION/DemEventClass/DemOperationCycleRef" in container "/Dem/Dem/DemConfigSet_0/MCU_E_TIMEOUT_TRANSITION/DemEventClass"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/PWM_E_UNEXPECTED_IRQ/DemFreezeFrameRecNumClassRef" in container "/Dem/Dem/DemConfigSet_0/PWM_E_UNEXPECTED_IRQ"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/PWM_E_UNEXPECTED_IRQ/DemEventClass/DemOperationCycleRef" in container "/Dem/Dem/DemConfigSet_0/PWM_E_UNEXPECTED_IRQ/DemEventClass"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/SPI_E_TIMEOUT/DemFreezeFrameRecNumClassRef" in container "/Dem/Dem/DemConfigSet_0/SPI_E_TIMEOUT"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/SPI_E_TIMEOUT/DemEventClass/DemOperationCycleRef" in container "/Dem/Dem/DemConfigSet_0/SPI_E_TIMEOUT/DemEventClass"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/WDG_E_DISABLE_REJECTED/DemFreezeFrameRecNumClassRef" in container "/Dem/Dem/DemConfigSet_0/WDG_E_DISABLE_REJECTED"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/WDG_E_DISABLE_REJECTED/DemEventClass/DemOperationCycleRef" in container "/Dem/Dem/DemConfigSet_0/WDG_E_DISABLE_REJECTED/DemEventClass"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/WDG_E_MISS_TRIGGER/DemFreezeFrameRecNumClassRef" in container "/Dem/Dem/DemConfigSet_0/WDG_E_MISS_TRIGGER"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/WDG_E_MISS_TRIGGER/DemEventClass/DemOperationCycleRef" in container "/Dem/Dem/DemConfigSet_0/WDG_E_MISS_TRIGGER/DemEventClass"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/WDG_E_MODE_FAILED/DemFreezeFrameRecNumClassRef" in container "/Dem/Dem/DemConfigSet_0/WDG_E_MODE_FAILED"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemConfigSet/DemConfigSet_0/DemEventParameter/WDG_E_MODE_FAILED/DemEventClass/DemOperationCycleRef" in container "/Dem/Dem/DemConfigSet_0/WDG_E_MODE_FAILED/DemEventClass"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/CommonPublishedInformation/SwPatchVersion" in container "/Dem/Dem/CommonPublishedInformation"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemAgingCycleCounterProcessing" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemBswErrorBufferSize" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemClearDTCBehavior" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemDTCSuppressionSupport" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemDebounceCounterBasedSupport" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemDebounceTimeBasedSupport" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemDevErrorDetect" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemDtcStatusAvailabilityMask" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemEnableConditionSupport" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemEventCombinationSupport" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemEventDisplacementSupport" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemMaxNumberEventEntryMirror" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemMaxNumberEventEntryPermanent" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemMaxNumberPrestoredFF" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemOBDSupport" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemOccurrenceCounterProcessing" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemOperationCycleProcessing" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemOperationCycleStatusStorage" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemPTOSupport" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemStatusBitHandlingTestFailedSinceLastClear" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemStatusBitStorageTestFailed" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemStorageConditionSupport" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemTaskTime" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemTriggerDcmReports" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemTriggerDltReports" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemTriggerFiMReports" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemTriggerMonitorInitBeforeClearOk" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemTypeOfDTCSupported" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemTypeOfFreezeFrameRecordNumeration" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dem/ELEMENTS/Dem/DemGeneral/DemVersionInfoApi" in container "/Dem/Dem/DemGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Dio/ELEMENTS/Dio/CommonPublishedInformation/SwPatchVersion" in container "/Dio/Dio/CommonPublishedInformation"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/EcuM/ELEMENTS/EcuM/CommonPublishedInformation/SwPatchVersion" in container "/EcuM/EcuM/CommonPublishedInformation"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Fee/ELEMENTS/Fee/CommonPublishedInformation/SwPatchVersion" in container "/Fee/Fee/CommonPublishedInformation"
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Fls/ELEMENTS/Fls/FlsGeneral/FlsTotalSize to 65536 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Fls/ELEMENTS/Fls/FlsPublishedInformation/FlsAcSizeErase to 60 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Fls/ELEMENTS/Fls/FlsPublishedInformation/FlsAcSizeWrite to 60 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Fls/ELEMENTS/Fls/FlsGeneral/FlsOperationTimeout" in container "/Fls/Fls/FlsGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Fls/ELEMENTS/Fls/FlsGeneral/FlsAbortTimeout" in container "/Fls/Fls/FlsGeneral"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Fls/ELEMENTS/Fls/CommonPublishedInformation/VendorApiInfix" in container "/Fls/Fls/CommonPublishedInformation"
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_WATCHDOG_RESET/McuResetReason to 1 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_SW_RESET/McuResetReason to 2 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_RESET_UNDEFINED/McuResetReason to 3 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_2_7_LOW_VOLTAGE/McuResetReason to 4 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_2_7_LV_VREG_RESET/McuResetReason to 5 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_1_2_LV_PW_DOMAIN_0/McuResetReason to 6 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_1_2_LV_PW_DOMAIN_1/McuResetReason to 7 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_EXR_RESET/McuResetReason to 8 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_JTAG_RESET/McuResetReason to 9 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_CORE_RESET/McuResetReason to 10 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_CHECKSTOP_RESET/McuResetReason to 11 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_PLL0_RESET/McuResetReason to 12 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_CMU_OLR_RESET/McuResetReason to 13 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_CMU_FHL_RESET/McuResetReason to 14 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_4_5_LOW_VOLTAGE/McuResetReason to 15 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuPublishedInformation/McuResetReasonConf/MCU_FLASH_RESET/McuResetReason to 16 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1648) Created required node "/Mcu/Mcu/McuModuleConfiguration_0/McuClockSettingConfig_PLL/McuClkMonitor" in container "/Mcu/Mcu/McuModuleConfiguration_0/McuClockSettingConfig_PLL"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/Mcu/Mcu/McuModuleConfiguration_0/McuClockSettingConfig_QUARTZ/McuClkMonitor" in container "/Mcu/Mcu/McuModuleConfiguration_0/McuClockSettingConfig_QUARTZ"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuModuleConfiguration/McuModuleConfiguration_0/McuDemEventParameterRefs/MCU_E_CLOCK_FAILURE" in container "/Mcu/Mcu/McuModuleConfiguration_0/McuDemEventParameterRefs"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuModuleConfiguration/McuModuleConfiguration_0/McuDemEventParameterRefs/MCU_E_TIMEOUT_TRANSITION" in container "/Mcu/Mcu/McuModuleConfiguration_0/McuDemEventParameterRefs"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuModuleConfiguration/McuModuleConfiguration_0/McuDemEventParameterRefs/MCU_E_QUARTZ_FAILURE" in container "/Mcu/Mcu/McuModuleConfiguration_0/McuDemEventParameterRefs"
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuModuleConfiguration/McuModuleConfiguration_0/McuDemEventParameterRefs/MCU_E_LOCK_FAILURE" in container "/Mcu/Mcu/McuModuleConfiguration_0/McuDemEventParameterRefs"
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Spi/ELEMENTS/Spi/SpiPublishedInformation/ArReleaseRevisionVersion to 4 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Spi/ELEMENTS/Spi/SpiPublishedInformation/SwPatchVersion to 0 because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1134) Cannot set the value of the node /AUTOSAR/TOP-LEVEL-PACKAGES/Wdg/ELEMENTS/Wdg/WdgPublishedInformation/WdgTriggerMode to WDG_TOGGLE because it is readonly. Its DEFAULT is used instead.
+WARNING 19-09-28,15:32:33 (1648) Created required node "/AUTOSAR/TOP-LEVEL-PACKAGES/Wdg/ELEMENTS/Wdg/CommonPublishedInformation/VendorApiInfix" in container "/Wdg/Wdg/CommonPublishedInformation"
+INFO 19-09-28,15:32:34 (2064) Verify module "Mcu"
+WARNING 19-09-28,15:32:34 (1069) The node "/AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuModuleConfiguration/McuModuleConfiguration_0/McuDemEventParameterRefs/MCU_E_CLOCK_FAILURE" with value "" does not refer to nodes.
+WARNING 19-09-28,15:32:34 (1069) The node "/AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuModuleConfiguration/McuModuleConfiguration_0/McuDemEventParameterRefs/MCU_E_TIMEOUT_TRANSITION" with value "" does not refer to nodes.
+WARNING 19-09-28,15:32:34 (1069) The node "/AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuModuleConfiguration/McuModuleConfiguration_0/McuDemEventParameterRefs/MCU_E_QUARTZ_FAILURE" with value "" does not refer to nodes.
+WARNING 19-09-28,15:32:34 (1069) The node "/AUTOSAR/TOP-LEVEL-PACKAGES/Mcu/ELEMENTS/Mcu/McuModuleConfiguration/McuModuleConfiguration_0/McuDemEventParameterRefs/MCU_E_LOCK_FAILURE" with value "" does not refer to nodes.
+INFO 19-09-28,15:32:35 (13030) Running generator "plugin.tresosdb.api.verifygenerator" in mode "generate" for module ""
+INFO 19-09-28,15:32:35 (13030) Running generator "Mcu_TS_T2D13M10I1R0" in mode "generate" for module "Mcu_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:35 (2113) Creating directory "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\output"
+INFO 19-09-28,15:32:35 (20053) Generating file D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\output\Mcu.epc
+INFO 19-09-28,15:32:35 (13030) Running generator "Mcu_TS_T2D13M10I1R0_GeneratorId" in mode "generate" for module "Mcu_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:35 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Mcu_MC_Monitor_LLD.c"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Mcu_PBcfg.c"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\Mcu_Cfg.h"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\Reg_eSys_MagicCarpet.h"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Mcu_MC_Modes_LLD.c"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Mcu_MC_Power_LLD.c"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Mcu_Cfg.c"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Mcu_MC_Clocks_LLD.c"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Mcu_MC_Reset_LLD.c"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Mcu_Dmamux_LLD.c"
+INFO 19-09-28,15:32:36 (13030) Running generator "Resource_TS_T2D13M10I1R0" in mode "generate" for module "Resource_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:36 (20053) Generating file D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\output\Resource.epc
+INFO 19-09-28,15:32:36 (13030) Running generator "Resource_TS_T2D13M10I1R0_GeneratorId" in mode "generate" for module "Resource_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:36 (13030) Running generator "Base_TS_T2D13M10I1R0" in mode "generate" for module "Base_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:36 (20053) Generating file D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\output\Base.epc
+INFO 19-09-28,15:32:36 (13030) Running generator "Base_TS_T2D13M10I1R0_GeneratorId" in mode "generate" for module "Base_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\Soc_Ips.h"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\modules.h"
+INFO 19-09-28,15:32:36 (13030) Running generator "Can_TS_T2D13M10I1R0" in mode "generate" for module "Can_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:36 (20053) Generating file D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\output\Can.epc
+INFO 19-09-28,15:32:36 (13030) Running generator "Can_TS_T2D13M10I1R0_GeneratorId" in mode "generate" for module "Can_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\Can_Cfg.h"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Can_PBcfg.c"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Can_Cfg.c"
+INFO 19-09-28,15:32:36 (13030) Running generator "Adc_TS_T2D13M10I1R0" in mode "generate" for module "Adc_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:36 (20053) Generating file D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\output\Adc.epc
+INFO 19-09-28,15:32:36 (13030) Running generator "Adc_TS_T2D13M10I1R0_GeneratorId" in mode "generate" for module "Adc_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\Adc_Cfg.h"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\Adc_CTU_ipversion.h"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Adc_Cfg.c"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Adc_PBcfg.c"
+INFO 19-09-28,15:32:36 (13030) Running generator "Dio_TS_T2D13M10I1R0" in mode "generate" for module "Dio_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:36 (20053) Generating file D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\output\Dio.epc
+INFO 19-09-28,15:32:36 (13030) Running generator "Dio_TS_T2D13M10I1R0_GeneratorId" in mode "generate" for module "Dio_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:36 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Dio_PBcfg.c"
+INFO 19-09-28,15:32:37 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\Dio_Cfg.h"
+INFO 19-09-28,15:32:37 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Dio_Cfg.c"
+INFO 19-09-28,15:32:37 (13030) Running generator "Gpt_TS_T2D13M10I1R0" in mode "generate" for module "Gpt_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:37 (20053) Generating file D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\output\Gpt.epc
+INFO 19-09-28,15:32:37 (13030) Running generator "Gpt_TS_T2D13M10I1R0_GeneratorId" in mode "generate" for module "Gpt_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:37 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Gpt_Cfg.c"
+INFO 19-09-28,15:32:37 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\Gpt_Cfg.h"
+INFO 19-09-28,15:32:37 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Gpt_PBcfg.c"
+INFO 19-09-28,15:32:37 (13030) Running generator "Port_TS_T2D13M10I1R0" in mode "generate" for module "Port_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:37 (20053) Generating file D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\output\Port.epc
+INFO 19-09-28,15:32:37 (13030) Running generator "Port_TS_T2D13M10I1R0_GeneratorId" in mode "generate" for module "Port_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:37 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Port_PBcfg.c"
+INFO 19-09-28,15:32:37 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Port_Cfg.c"
+INFO 19-09-28,15:32:37 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\Port_Cfg.h"
+INFO 19-09-28,15:32:37 (13030) Running generator "Fee_TS_T2D13M10I1R0" in mode "generate" for module "Fee_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:37 (20053) Generating file D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\output\Fee.epc
+INFO 19-09-28,15:32:37 (13030) Running generator "Fee_TS_T2D13M10I1R0_GeneratorId" in mode "generate" for module "Fee_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:37 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Fee_Cfg.c"
+INFO 19-09-28,15:32:37 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\Fee_Cfg.h"
+INFO 19-09-28,15:32:37 (13030) Running generator "Fls_TS_T2D13M10I1R0" in mode "generate" for module "Fls_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:37 (20053) Generating file D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\output\Fls.epc
+INFO 19-09-28,15:32:37 (13030) Running generator "Fls_TS_T2D13M10I1R0_GeneratorId" in mode "generate" for module "Fls_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:37 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Fls_Cfg.c"
+INFO 19-09-28,15:32:37 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\Fls_Cfg.h"
+INFO 19-09-28,15:32:37 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Fls_PBcfg.c"
+INFO 19-09-28,15:32:37 (13030) Running generator "Icu_TS_T2D13M10I1R0" in mode "generate" for module "Icu_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:37 (20053) Generating file D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\output\Icu.epc
+INFO 19-09-28,15:32:38 (13030) Running generator "Icu_TS_T2D13M10I1R0_GeneratorId" in mode "generate" for module "Icu_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:38 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Icu_Cfg.c"
+INFO 19-09-28,15:32:38 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Icu_PBcfg.c"
+INFO 19-09-28,15:32:38 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\Icu_Cfg.h"
+INFO 19-09-28,15:32:38 (13030) Running generator "Pwm_TS_T2D13M10I1R0" in mode "generate" for module "Pwm_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:38 (20053) Generating file D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\output\Pwm.epc
+INFO 19-09-28,15:32:38 (13030) Running generator "Pwm_TS_T2D13M10I1R0_GeneratorId" in mode "generate" for module "Pwm_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:38 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Pwm_PBcfg.c"
+INFO 19-09-28,15:32:38 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\Pwm_Cfg.h"
+INFO 19-09-28,15:32:38 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Pwm_Cfg.c"
+INFO 19-09-28,15:32:38 (13030) Running generator "Wdg_TS_T2D13M10I1R0" in mode "generate" for module "Wdg_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:38 (20053) Generating file D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\output\Wdg.epc
+INFO 19-09-28,15:32:38 (13030) Running generator "Wdg_TS_T2D13M10I1R0_GeneratorId" in mode "generate" for module "Wdg_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:38 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Wdg_43_Instance0_PBcfg.c"
+INFO 19-09-28,15:32:38 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Wdg_43_Instance0_Cfg.c"
+INFO 19-09-28,15:32:38 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\Wdg_Cfg.h"
+INFO 19-09-28,15:32:38 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Wdg_CfgExt.c"
+INFO 19-09-28,15:32:38 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Wdg_43_Instance0_Lcfg.c"
+INFO 19-09-28,15:32:38 (13030) Running generator "Spi_TS_T2D13M10I1R0" in mode "generate" for module "Spi_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:38 (20053) Generating file D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\output\Spi.epc
+INFO 19-09-28,15:32:38 (13030) Running generator "Spi_TS_T2D13M10I1R0_GeneratorId" in mode "generate" for module "Spi_TS_T2D13M10I1R0"
+INFO 19-09-28,15:32:38 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Spi_Lcfg.c"
+INFO 19-09-28,15:32:38 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Spi_Cfg.c"
+INFO 19-09-28,15:32:38 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\include\Spi_Cfg.h"
+INFO 19-09-28,15:32:38 (13014) Generated "D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Mcal_Output\src\Spi_PBcfg.c"
+
+Errors "0" Warnings "104"
+Mkdir(["Generated\Bsw_Output\inc", "Generated\Bsw_Output\src", "Debug"])
+Generating Freescale Os
+System Generator for AUTOSAR OS/MPC5600 - Version 4.0.69
+Freescale(TM) and the Freescale logo are trademarks of Freescale Semiconductor, Inc.
+All other product or service names are the property of their respective owners.
+(C) Freescale Semiconductor, Inc. 2019
+
+scons: *** [Generated\Bsw_Output\src\Os_cfg.c] Error 7
+error 3238: Error validating XML file 'D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Os.arxml' (absolute path 'D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Os.arxml') against XML schema file 'D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_pf_autosar_sys_Os_mpc5600_r40\ssc\bin\generator\.\FREESCALE_AUTOSAR_4-0.xsd' (absolute path 'D:\과제\과제수행\ITRC과제\ODIN 강의\6차강의\설치파일\Projects\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_pf_autosar_sys_Os_mpc5600_r40\ssc\bin\generator\FREESCALE_AUTOSAR_4-0.xsd')Detailed message: unknown protocol: d
+Configuration\ECU\Ecud_Os.arxml - 1 error(s), 0 warning(s)
+
+  *****************************************************************************
+  *                         HYUNDAI AUTRON Co., Ltd.                          *
+  *          AUTOSAR Rte Generation Tool Version 4.4.2 [09-Nov-2017]          *
+  *                    AUTOSAR Architecture Version 4.0.3                     *
+  *****************************************************************************
+
+OUT 0005: Execution starts at [28-Sep-2019 - 15:32:36]
+          
+OUT 0006: Command line arguments: Rte.exe -genmemmap -EXCLFUNC
+          -StrictUnconnRPortChk -CustomPrefix -OsSecPerHwTick=0.000001 -Macro
+          -validate -ErrorMsgOnly -O Generated\Bsw_Output
+          Configuration\System\BswMd\Bswmd_Adc.arxml
+          Configuration\System\BswMd\Bswmd_BswM.arxml
+          Configuration\System\BswMd\Bswmd_CanTp.arxml
+          Configuration\System\BswMd\Bswmd_ComM.arxml
+          Configuration\System\BswMd\Bswmd_Can.arxml
+          Configuration\System\BswMd\Bswmd_Dio.arxml
+          Configuration\System\BswMd\Bswmd_Fls.arxml
+          Configuration\System\BswMd\Bswmd_Icu_43.arxml
+          Configuration\System\BswMd\Bswmd_Mcu.arxml
+          Configuration\System\BswMd\Bswmd_Port.arxml
+          Configuration\System\BswMd\Bswmd_Spi.arxml
+          Configuration\System\BswMd\Bswmd_Gpt.arxml
+          Configuration\System\BswMd\Bswmd_Pwm_43.arxml
+          Configuration\System\BswMd\Bswmd_Dcm.arxml
+          Configuration\System\BswMd\Bswmd_Dem.arxml
+          Generated\Bsw_Output\bswmd\Bswmd_EcuM.arxml
+          Configuration\System\BswMd\Bswmd_FiM.arxml
+          Configuration\System\BswMd\Bswmd_NvM.arxml
+          Configuration\System\BswMd\Bswmd_CanSM.arxml
+          Configuration\System\BswMd\Bswmd_Com.arxml
+          Configuration\System\BswMd\Bswmd_CanIf.arxml
+          Configuration\System\BswMd\Bswmd_PduR.arxml
+          Configuration\System\BswMd\Bswmd_Os.arxml
+          Generated\Bsw_Output\bswmd\Bswmd_IoHwAb.arxml
+          Configuration\System\BswMd\Bswmd_Wdg_43.arxml
+          Generated\Bsw_Output\bswmd\Bswmd_WdgIf.arxml
+          Generated\Bsw_Output\bswmd\Bswmd_WdgM.arxml
+          Configuration\System\BswMd\Bswmd_Fee.arxml
+          Configuration\System\BswMd\Bswmd_MemIf.arxml
+          Configuration\System\BswMd\Bswmd_Crc.arxml
+          Configuration\ECU\Ecud_Rte.arxml
+          Configuration\ECU\Ecud_Os.arxml
+          Configuration\ECU\Ecud_EcuC.arxml
+          Configuration\ECU\Ecud_Com.arxml
+          Configuration\System\BswMd\Bswmd_Det.arxml
+          Configuration\ECU\Ecud_Det.arxml
+          Configuration\System\Swcd_Bsw\Swcd_Bsw_BswM.arxml
+          Generated\Bsw_Output\swcd\Swcd_Bsw_Dcm.arxml
+          Configuration\System\Swcd_Bsw\Swcd_Det.arxml
+          Configuration\System\Swcd_Bsw\Swcd_ComM.arxml
+          Generated\Bsw_Output\swcd\Swcd_Bsw_Dem.arxml
+          Generated\Bsw_Output\swcd\Swcd_Bsw_EcuM.arxml
+          Configuration\System\Swcd_Bsw\Swcd_FiM.arxml
+          Generated\Bsw_Output\swcd\Swcd_Bsw_NvM.arxml
+          Generated\Bsw_Output\swcd\Swcd_IoHwAb.arxml
+          Generated\Bsw_Output\swcd\Swcd_WdgM.arxml
+          Static_Code\Modules\b_autosar_sys_WdgM_R40\generator\Swcd_WdgM_Fixed.arxml
+          Configuration\System\Swcd_App\App_Dcm.arxml
+          Configuration\System\Swcd_App\App_Dem.arxml
+          Configuration\System\Swcd_App\App_FiM.arxml
+          Configuration\System\Swcd_App\App_ComM.arxml
+          Configuration\System\Swcd_App\App_WdgM.arxml
+          Static_Code\Modules\b_autosar_swc_ErrorManagement\App_ErrM.arxml
+          Configuration\System\Swcd_App\App_Mode.arxml
+          Configuration\System\DBImport\Project.arxml
+          Configuration\ECU\ECUCD_EcucValueCollection.arxml
+          Configuration\System\Composition\EcuExtract.arxml
+          Configuration\System\DataTypes\AUTOSAR_DataTypes.arxml
+          Configuration\System\DataTypes\AUTOSAR_DataTypes_Etc.arxml
+          Static_Code\Modules\b_autosar_sys_EcuM_R40\generator\EcuM_PortInterface.arxml
+          Configuration\System\Swcd_Bsw\MODE_PortInterfaces.arxml
+          
+OUT 0003: Rte Generation Tool is in DEFAULT execution phase.
+          
+OUT 0015: Execution is in progress...
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Adc.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_BswM.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Can.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_CanIf.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_CanSM.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_CanTp.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Com.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_ComM.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Crc.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Dcm.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Dem.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Det.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Dio.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_EcuM.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Fee.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_FiM.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Fls.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Gpt.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Icu.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_IoHwAb.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Mcu.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_MemIf.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_NvM.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Os.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_PduR.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Port.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Pwm.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Spi.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Wdg.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_WdgIf.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_WdgM.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_Type.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/BswM_MemMap.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/ComM_MemMap.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Dcm_MemMap.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Dem_MemMap.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Det_MemMap.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/EcuM_MemMap.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/FiM_MemMap.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/IoHwAb_MemMap.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/NvM_MemMap.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SWC_Actuator_MemMap.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SWC_AppMode_MemMap.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SWC_ComM_MemMap.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file
+          <Generated/Bsw_Output/inc/SWC_DiagnosticMonitor_MemMap.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file
+          <Generated/Bsw_Output/inc/SWC_DiagnosticService_MemMap.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SWC_ErrM_MemMap.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SWC_TestModeManager_MemMap.h>
+          at [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SWC_TestModeUser_MemMap.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SWC_WdgMTest_MemMap.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/WdgM_MemMap.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_PBCfg.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_Cfg.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_BswM.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_ComM.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_Dcm.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_Dem.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_Det.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_EcuM.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_FiM.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_IoHwAb.h> at [28-Sep-2019
+          - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_NvM.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_SWC_Actuator.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_SWC_AppMode.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_SWC_ComM.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_SWC_DiagnosticMonitor.h>
+          at [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_SWC_DiagnosticService.h>
+          at [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_SWC_ErrM.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_SWC_TestModeManager.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_SWC_TestModeUser.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_SWC_WdgMTest.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_WdgM.h> at [28-Sep-2019 -
+          15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_DataHandleType.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_BswM_Type.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_ComM_Type.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_Dcm_Type.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_Dem_Type.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_Det_Type.h> at
+          [28-Sep-2019 - 15:32:43]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_EcuM_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_FiM_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_IoHwAb_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_NvM_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_SWC_Actuator_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_SWC_AppMode_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_SWC_ComM_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file
+          <Generated/Bsw_Output/inc/Rte_SWC_DiagnosticMonitor_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file
+          <Generated/Bsw_Output/inc/Rte_SWC_DiagnosticService_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_SWC_ErrM_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file
+          <Generated/Bsw_Output/inc/Rte_SWC_TestModeManager_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_SWC_TestModeUser_Type.h>
+          at [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_SWC_WdgMTest_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_WdgM_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Adc_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_BswM_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_CanIf_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_CanSM_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_CanTp_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Can_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_ComM_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Com_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Crc_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Dcm_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Dem_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Det_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Dio_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_EcuM_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Fee_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_FiM_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Fls_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Gpt_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Icu_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_IoHwAb_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Mcu_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_MemIf_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_NvM_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Os_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_PduR_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Port_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Pwm_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Spi_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_WdgIf_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_WdgM_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/SchM_Wdg_Type.h> at
+          [28-Sep-2019 - 15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_Hook.h> at [28-Sep-2019 -
+          15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/src/Rte.c> at [28-Sep-2019 -
+          15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_Main.h> at [28-Sep-2019 -
+          15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/inc/Rte_Cbk.h> at [28-Sep-2019 -
+          15:32:44]
+          
+OUT 0007: Generated file <Generated/Bsw_Output/src/Rte_PBCfg.c> at [28-Sep-2019
+          - 15:32:44]
+          
+OUT 0008: <0> Error(s) and <422> Warning(s) detected.
+          
+OUT 0010: Execution is successfully completed with warnings.
+          
+OUT 0013: Execution completes at [28-Sep-2019 - 15:32:44]
+          
+OUT 0014: Execution time of [00:00:08]
+          
+scons: building terminated because of errors.

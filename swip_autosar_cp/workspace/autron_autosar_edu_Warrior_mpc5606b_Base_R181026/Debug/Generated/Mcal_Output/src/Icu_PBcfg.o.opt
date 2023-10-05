@@ -1,0 +1,129 @@
+-proc Zen
+-lang c99
+-opt all
+-common off
+-sdatathreshold 0
+-sdata2threshold 0
+-vle
+-use_lmw_stmw on
+-ppc_asm_to_vle
+-Cpp_exceptions off
+-func_align 4
+-sym dwarf-2,full
+-gdwarf-2
+-r
+-char unsigned
+-nosyspath
+-fp none
+-common off
+-msgstyle gcc
+-nostdinc
+-pragma "read_only_switch_tables on"
+-c
+-prefix
+c:\ts_mirr\cw_mcu\MCU\PA_Support\ewl\EWL_C\include\lib_ewl.prefix
+-prefix
+Build\MPC5606B_FLASH_VLE.prefix
+-DMWERKS
+-DOSCWPPC
+-DFLASH_START
+-DDISABLE_MCAL_INTERMODULE_ASR_CHECK
+-i
+.
+-i
+Static_Code\Modules\b_pf_mcal_freescale_MPC560xB\b_mcal_Fls_freescale_MPC560xB\include
+-i
+Static_Code\Modules\b_pf_mcal_freescale_MPC560xB\b_mcal_Adc_freescale_MPC560xB\include
+-i
+Static_Code\Modules\b_pf_mcal_freescale_MPC560xB\b_mcal_Gpt_freescale_MPC560xB\include
+-i
+Generated\Mcal_Output\include
+-i
+Static_Code\Modules\b_autosar_sys_BswM_R40\delivery
+-i
+Static_Code\Modules\b_autosar_mem_NvM_R40\delivery
+-i
+Static_Code\Modules\b_autosar_cdd_OsProfiler\delivery
+-i
+Static_Code\Modules\b_autosar_com_CanTp_R40\delivery
+-i
+Static_Code\Integration_Code
+-i
+Static_Code\Integration_Code\integration_Mem\usercode
+-i
+Static_Code\Modules\b_autosar_Rte_R40\delivery
+-i
+Generated\Bsw_Output\inc
+-i
+Static_Code\Modules\b_pf_mcal_freescale_MPC560xB\b_mcal_Wdg_freescale_MPC560xB\include
+-i
+Static_Code\Modules\b_pf_mcal_freescale_MPC560xB\b_mcal_Icu_freescale_MPC560xB\include
+-i
+Static_Code\Modules\b_autosar_sys_Crc_R40\delivery
+-i
+Static_Code\Modules\b_autosar_com_PduR_R40\delivery
+-i
+Static_Code\Modules\b_pf_mcal_freescale_MPC560xB\b_mcal_Fee_freescale_MPC560xB\include
+-i
+Static_Code\Modules\b_autosar_diag_FiM_R40\delivery
+-i
+Static_Code\Modules\b_pf_mcal_freescale_MPC560xB\b_mcal_Spi_freescale_MPC560xB\include
+-i
+Static_Code\Modules\b_autosar_sys_ComM_R40\delivery
+-i
+Static_Code\Modules\b_pf_mcal_freescale_MPC560xB\b_mcal_Port_freescale_MPC560xB\include
+-i
+Static_Code\Modules\b_autosar_com_Com_R40\delivery
+-i
+Static_Code\Modules\b_pf_mcal_freescale_MPC560xB\b_mcal_Dio_freescale_MPC560xB\include
+-i
+Static_Code\Modules\b_pf_autosar_sys_Os_mpc5600_r40\ssc\inc
+-i
+Static_Code\Modules\b_pf_mcal_freescale_MPC560xB\b_mcal_mcu_freescale_MPC560xB\include
+-i
+Static_Code\Integration_Code\integration_Wdg\usercode
+-i
+Static_Code\Integration_Code\integration_Dcm_1.0.9\integration_Dcm\fixedcode
+-i
+Static_Code\Modules\b_autosar_mem_MemIf_R40\delivery
+-i
+Static_Code\Modules\b_autosar_diag_Det_R40\delivery
+-i
+Static_Code\Modules\b_autosar_swc_ErrorManagement\delivery
+-i
+Static_Code\Modules\b_autosar_diag_Dcm_R40\delivery
+-i
+Static_Code\Modules\b_autosar_sys_EcuM_R40\delivery
+-i
+Static_Code\Integration_Code\integration_Com_1.0.2\integration_Com_mpc560x\usercode
+-i
+Static_Code\Integration_Code\integration_FBL\usercode
+-i
+Static_Code\Modules\b_autosar_com_CanSm_R40\delivery
+-i
+Static_Code\Modules\b_autosar_per_IoHwAb_R40\delivery
+-i
+Static_Code\Modules\b_pf_mcal_freescale_MPC560xB\b_mcal_Pwm_freescale_MPC560xB\include
+-i
+Static_Code\Integration_Code\integration_Os_mpc560xb-1.1.0
+-i
+Static_Code\Integration_Code\integration_Mem\fixedcode
+-i
+Static_Code\Modules\b_pf_mcal_freescale_MPC560xB\b_mcal_Can_freescale_MPC560xB\include
+-i
+Static_Code\Modules\b_autosar_sys_WdgM_R40\delivery
+-i
+Static_Code\Modules\b_autosar_diag_Dem_R40\delivery
+-i
+Static_Code\Modules\b_autosar_com_CanIf_R40\delivery
+-i
+Static_Code\Reference_Code
+-i
+Static_Code\Modules\b_pf_mcal_freescale_MPC560xB\b_mcal_base_freescale_MPC560xB\include
+-i
+Generated\Bsw_Output\inc
+-I- -Ic:\ts_mirr\cw_mcu\MCU\PA_Support\ewl\EWL_C\include
+-I- -Ic:\ts_mirr\cw_mcu\MCU\PA_Support\ewl\EWL_Runtime\Runtime_PA\Include
+-I- -Ic:\ts_mirr\cw_mcu\MCU\PA_Support\Initialization_Files
+-o Debug\Generated\Mcal_Output\src\Icu_PBcfg.o
+Generated\Mcal_Output\src\Icu_PBcfg.c

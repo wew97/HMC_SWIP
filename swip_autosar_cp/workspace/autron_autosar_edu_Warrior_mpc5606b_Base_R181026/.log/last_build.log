@@ -1,0 +1,34 @@
+c:\ts_mirr\python\Portable_Python_2.7.6.1\App\python.exe c:\ts_mirr\scons\scons-local-2.3.4\scons.py -f.\Build\SConstruct GenerateAll -j12
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+Removing timestamp
+scons: done building targets.
+c:\ts_mirr\python\Portable_Python_2.7.6.1\App\python.exe c:\ts_mirr\scons\scons-local-2.3.4\scons.py -f.\Build\SConstruct Compile -j12
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+Compiling 1th file : BswM.c
+Compiling 2th file : BswM_ActionList.c
+Compiling 3th file : BswM_Cfg.c
+Compiling 4th file : BswM_Ram.c
+Compiling 5th file : BswM_Rule.c
+Compiling 6th file : CanIf_Cfg.c
+Compiling 7th file : CanSM_Cfg.c
+Compiling 8th file : CanTp_Cfg.c
+Compiling 9th file : ComM_Cfg.c
+Compiling 10th file : Com_Cfg.c
+Compiling 11th file : Dcm_Cfg.c
+Compiling 12th file : Dcm_Routine.c
+Compiling 13th file : Dem_Cfg.c
+Compiling 14th file : Det_Cfg.c
+Compiling 15th file : EcuM_Cfg.c
+Compiling 16th file : EcuM_Generated_Callouts.c
+Compiling 17th file : EcuM_Lcfg.c
+Compiling 18th file : EcuM_PBcfg.c
+Compiling 19th file : FiM_Cfg.c
+Compiling 20th file : IoHwAb_Cfg.c
+Compiling 21th file : MemIf.c
+Compiling 22th file : NvM_Cfg.c
+Compiling 23th file : Opf_Cfg.c
+^C^C^C^C^C
