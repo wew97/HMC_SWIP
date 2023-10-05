@@ -37,3 +37,9 @@
 
 ## SW Testing ('23/09/15 ~ '23/09/21)
 - Go to [swip_sw_testing/](https://github.com/wew97/HMC_SWIP/tree/main/swip_sw_testing/)
+
+## CAN Protocol ('23/09/22 ~ '23/10/04)
+- Go to [swip_can_protocol/](https://github.com/wew97/HMC_SWIP/tree/main/swip_can_protocol/)
+
+## Autosar CP ('23/10/05 ~ '23/10/11)
+- Go to [swip_autosar_cp/](https://github.com/wew97/HMC_SWIP/tree/main/swip_autosar_cp/)

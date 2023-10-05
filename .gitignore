@@ -12,3 +12,6 @@ x64/
 # Matlab + Simulink + Stateflow
 slprj/
 codegen/
+
+# Autosar
+.metadata
